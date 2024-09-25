@@ -8,10 +8,10 @@ compiler is assembly language for the CPRL Virtual Machine (CVM), a virtual mach
 architecture that is similar to but much simpler than the Java Virtual Machine (JVM).  Organization of
 the compiler project is described in Appendix A.
 
-Several sections from the book are provided as PDF documents.
-* [Table of Contents](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/TOC.pdf)
-* [Preface](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/Preface.pdf)
-* [Appendix A: The Compiler Project](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/AppendixA.pdf)
-* [Appendix C: Definition of the Programming Language CPRL](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/AppendixC.pdf)
-* [Appendix E: Definition of the CPRL Virtual Machine](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/AppendixE.pdf)
-* [Appendix G: JIT Compilation versus AOT Compilatio](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SoftMoore/CPRL-Java-4th/main/Book/AppendixG.pdf)
+The following sections from the book are provided as PDF documents in the Book folder.
+* Table of Contents
+* Preface
+* Appendix A: The Compiler Project
+* Appendix C: Definition of the Programming Language CPRL
+* Appendix E: Definition of the CPRL Virtual Machine
+* Appendix G: JIT Compilation versus AOT Compilation
