@@ -8,7 +8,7 @@ compiler is assembly language for the CPRL Virtual Machine (CVM), a virtual mach
 architecture that is similar to but much simpler than the Java Virtual Machine (JVM).  Organization of
 the compiler project is described in Appendix A.
 
-The following sections from the book are provided as PDF documents in the Book folder.
+The following sections from the book are provided as PDF documents in the `Book` folder.
 * Table of Contents
 * Preface
 * Appendix A: The Compiler Project
