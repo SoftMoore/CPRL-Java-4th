@@ -1,0 +1,17 @@
+type Point = record
+  {
+    x : Integer;
+    y : Integer;
+  };
+
+proc main()
+  {
+    var x : Point := { 5, 2 };
+    var y : Point;
+
+    writeln "Point(", x.x, ", ", x.y, ")";
+
+    y := x;
+    writeln "Point(", y.x, ", ", y.y, ")";
+  }
+

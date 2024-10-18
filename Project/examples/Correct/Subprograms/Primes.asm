@@ -1,0 +1,125 @@
+   CALL _main
+   HALT
+_isPrime:
+   PROC 8
+   LDLADDR -4
+   LOADW
+   LDCINT 1
+   BNE L4
+   LDCB 1
+   BR L5
+L4:
+   LDLADDR -4
+   LOADW
+   LDCINT 0
+   BNE L2
+   LDCB 1
+   BR L3
+L2:
+   LDCB 0
+L3:
+L5:
+   BZ L6
+   LDLADDR -5
+   LDCB 0
+   STOREB
+   RET 4
+L6:
+   LDLADDR 8
+   LDLADDR -4
+   LOADW
+   LDCINT 2
+   DIV
+   STOREW
+   LDLADDR 12
+   LDCINT 2
+   STOREW
+L8:
+   LDLADDR 12
+   LOADW
+   LDLADDR 8
+   LOADW
+   BG L9
+   LDLADDR -4
+   LOADW
+   LDLADDR 12
+   LOADW
+   MOD
+   LDCINT 0
+   BNE L12
+   LDLADDR -5
+   LDCB 0
+   STOREB
+   RET 4
+L12:
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L8
+L9:
+   LDLADDR -5
+   LDCB 1
+   STOREB
+   RET 4
+_main:
+   PROC 12
+   LDLADDR 12
+   LDCINT 0
+   STOREW
+   LDCSTR "Enter an upper bound for the list of primes: "
+   PUTSTR 45
+   LDLADDR 8
+   GETINT
+   LDCSTR "List of primes from 1 to "
+   PUTSTR 25
+   LDLADDR 8
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR 16
+   LDCINT 1
+   STOREW
+L14:
+   LDLADDR 16
+   LOADW
+   LDLADDR 8
+   LOADW
+   BG L15
+   ALLOC 1
+   LDLADDR 16
+   LOADW
+   CALL _isPrime
+   BZ L20
+   LDCSTR "  "
+   PUTSTR 2
+   LDLADDR 16
+   LOADW
+   PUTINT
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDLADDR 12
+   LOADW
+   LDCINT 15
+   MOD
+   LDCINT 0
+   BNE L18
+   PUTEOL
+L18:
+L20:
+   LDLADDR 16
+   LDLADDR 16
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L14
+L15:
+   PUTEOL
+   RET 0

@@ -1,0 +1,27 @@
+type Text = string[80];
+
+proc main()
+  {
+    var str1 : Text;
+    var str2 : Text;
+    str1 := "Hello, ";
+    str2 := "world.";
+    write "\"", str1, "\" concatenated with \"", str2, "\" is ";
+    strcat(str1, str2);
+    writeln (str1);
+  }
+
+// concatenate src to the end of dest; assumes that dest is big enough
+proc strcat(var dest : Text, src : Text)
+  {
+    var iDest : Integer;
+    iDest := dest.length;
+
+    for iSrc in 0..src.length loop
+      {
+        dest[iDest] := src[iSrc];
+        iDest := iDest + 1;
+      }
+
+    dest.length := dest.length + src.length;
+  }

@@ -1,0 +1,5 @@
+proc main()
+  {
+    for i in 9..0 loop      // invalid range
+        writeln "i = ", i;
+  }

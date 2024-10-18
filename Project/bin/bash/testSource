@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Run CPRL TestSource on the specified file.
+#
+
+# set config environment variables
+source cprl_config
+
+CLASSPATH=$COMPILER_PROJECT_PATH
+java -ea -cp "$CLASSPATH" test.common.TestSource "$1"

@@ -1,0 +1,30 @@
+const arraySize := 10;
+
+type A = array[arraySize] of Integer;
+var a : A;
+var b : array[arraySize] of Integer;
+
+proc main()
+  {
+    // initialize arrays
+    for i in 0..arraySize - 1 loop
+      {
+        a[i] := 2*i;
+        b[i] := a[i];
+      }
+
+    // print values in array a
+    printArray(a);
+
+    // print values in array b (Note: Can't use procedure printArray below)
+    for i in 0..arraySize - 1 loop
+        write b[i], " ";
+    writeln;
+  }
+
+proc printArray(a : A)
+  {
+    for i in 0..arraySize - 1 loop
+        write a[i], " ";
+    writeln;
+  }

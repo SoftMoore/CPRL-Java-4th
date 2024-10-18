@@ -1,0 +1,18 @@
+// check that maxIndex is allowed as a field name
+
+type Range = record
+  {
+    lowIndex : Integer;
+    maxIndex : Integer;
+  };
+
+proc main()
+  {
+    var r : Range := { 0, 5 };
+    writeln "Range(", r.lowIndex, "..", r.maxIndex, ")";
+
+    for i in r.lowIndex..r.maxIndex loop
+        write i, "  ";
+    writeln;
+  }
+

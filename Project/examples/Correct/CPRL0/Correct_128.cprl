@@ -1,0 +1,17 @@
+const startIndex := -10;
+const endIndex   := -1;
+
+proc main()
+  {
+    for i in 1..10 loop
+        write i, " ";
+    writeln;
+
+    for i in -10..-1 loop
+        write i, " ";
+    writeln;
+
+    for i in startIndex..endIndex loop
+        write i, " ";
+    writeln;
+  }

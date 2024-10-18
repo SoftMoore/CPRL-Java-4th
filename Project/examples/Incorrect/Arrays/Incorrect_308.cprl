@@ -1,0 +1,14 @@
+type T = array[5] of Integer;
+
+var a1, a2 : array[5] of Integer := { 1, 2, 3, 4, 5 };
+var a3     : array[5] of Integer := { 1, 2, 3, 4, 5 };
+
+var a4 : T := { 1, 2, 3, 4, 5 };
+
+proc main()
+  {
+    a1[0] := 99;
+    a2 := a1;    // o.k.; same types
+    a3 := a1;    // o.k.; same types
+    a1 := a4;    // *** different types ***
+  }

@@ -1,0 +1,9 @@
+proc main()
+  {
+    var x : array[10] of array[10] of Integer;  // can't nest array type constructors
+    for i in 0..9 loop
+      {
+        for j in 0..9 loop
+            writeln x[i][j];
+      }
+  }

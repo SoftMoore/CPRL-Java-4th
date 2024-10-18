@@ -1,0 +1,22 @@
+// Tests bitwise and shift operators.
+
+var n1, n2, mask : Integer;
+
+proc main()
+  {
+    mask := 0b11;            // mask out all but the last two digits
+
+    // test with integers
+    n1 := 0b1111;            // 15
+    n2 := 0b1010;            // 10
+
+    writeln n1 & mask;       // output is 3
+    writeln n2 & mask;       // output is 2
+    writeln n1 | 32;         // output is 47
+    writeln n1 << 1;         // output is 30
+    writeln n2 >> 2;         // output is 2
+
+    n1 := -256;
+    writeln n1 >> 1;         // output is -128
+    writeln ~n1;             // output is 255
+  }

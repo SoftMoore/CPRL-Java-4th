@@ -1,0 +1,54 @@
+const IntBits := 32;    // 32 bits
+const IntHex  := 8;     // 8 hex chars
+
+type IntBinStr = string[IntBits];
+type IntHexStr = string[IntHex];
+
+var HEXCHARS : string[16] := "0123456789ABCDEF";
+
+proc main()
+  {
+    var i : Integer := 0x06A12D0F;
+
+    writeln "i = ", i;
+    writeln "to binary string: ", intToBinaryString(i);
+    writeln "   to hex string: ", intToHexString(i);
+    writeln;
+  }
+
+// Returns a binary string representation of the specified integer.
+fun intToBinaryString(n : Integer) : IntBinStr
+  {
+    var result : IntBinStr;
+    var mask   : Integer;
+
+    for i in 0..IntBits - 1 loop
+      {
+        mask := 1 << (IntBits - 1 - i);
+        if n & mask = 0 then
+            result[i] := '0';
+        else
+            result[i] := '1';
+      }
+
+    result.length := IntBits;
+    return result;
+  }
+
+// Returns a hexadecimal string representation of the specified integer.
+fun intToHexString(n : Integer) : IntHexStr
+  {
+    var result : IntHexStr;
+
+    result[0] := HEXCHARS[n >> 28 & 0x0000000F];
+    result[1] := HEXCHARS[n >> 24 & 0x0000000F];
+    result[2] := HEXCHARS[n >> 20 & 0x0000000F];
+    result[3] := HEXCHARS[n >> 16 & 0x0000000F];
+    result[4] := HEXCHARS[n >> 12 & 0x0000000F];
+    result[5] := HEXCHARS[n >>  8 & 0x0000000F];
+    result[6] := HEXCHARS[n >>  4 & 0x0000000F];
+    result[7] := HEXCHARS[n       & 0x0000000F];
+    result.length := 8;
+
+    return result;
+  }

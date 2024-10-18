@@ -1,0 +1,27 @@
+   CALL _main
+   HALT
+_main:
+   PROC 4
+   LDLADDR 8
+   LDCINT 9
+   STOREW
+L0:
+   LDLADDR 8
+   LOADW
+   LDCINT 0
+   BG L1
+   LDCSTR "i = "
+   PUTSTR 4
+   LDLADDR 8
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L0
+L1:
+   RET 0

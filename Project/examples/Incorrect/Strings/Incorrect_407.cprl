@@ -1,0 +1,10 @@
+var s1, s2 : string[10] := "abc";
+var s3     : string[5];
+
+proc main()
+  {
+    s1 := "wxyz";
+    s2 := s1;    // o.k.; same types
+    s3 := s1;    // *** different types ***
+    s1 := s3;    // *** different types ***
+  }

@@ -1,0 +1,322 @@
+   CALL _main
+   HALT
+_main:
+   PROC 108
+   LDLADDR 8
+   LDCINT 2
+   LDCINT 0
+   LDCINT 0
+   LDCINT 0
+   LDCINT 1
+   LDCINT 0
+   LDCINT 0
+   LDCINT 0
+   LDCINT 0
+   STORE 36
+   LDLADDR 44
+   ALLOC 36
+   LDCINT 1
+   LDCINT 2
+   LDCINT 3
+   LDCINT 4
+   LDCINT 5
+   LDCINT 6
+   LDCINT 7
+   LDCINT 8
+   LDCINT 9
+   CALL _makeMatrix
+   STORE 36
+   LDLADDR 80
+   ALLOC 36
+   LDLADDR 8
+   LDLADDR 44
+   CALL _multiply
+   STORE 36
+   LDCSTR "Matrix a"
+   PUTSTR 8
+   PUTEOL
+   LDLADDR 8
+   CALL _writeMatrix
+   LDCSTR "Matrix b"
+   PUTSTR 8
+   PUTEOL
+   LDLADDR 44
+   CALL _writeMatrix
+   LDCSTR "Matrix c (a*b)"
+   PUTSTR 14
+   PUTEOL
+   LDLADDR 80
+   CALL _writeMatrix
+   RET 0
+_multiply:
+   PROC 52
+   LDLADDR 48
+   LDCINT 0
+   STOREW
+L0:
+   LDLADDR 48
+   LOADW
+   LDCINT 2
+   BG L1
+   LDLADDR 52
+   LDCINT 0
+   STOREW
+L2:
+   LDLADDR 52
+   LOADW
+   LDCINT 2
+   BG L3
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+   LDLADDR 56
+   LDCINT 0
+   STOREW
+L4:
+   LDLADDR 56
+   LOADW
+   LDCINT 2
+   BG L5
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDLADDR -8
+   LOADW
+   LDLADDR 48
+   LOADW
+   LDCINT 12
+   MUL
+   ADD
+   LDLADDR 56
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   LDLADDR -4
+   LOADW
+   LDLADDR 56
+   LOADW
+   LDCINT 12
+   MUL
+   ADD
+   LDLADDR 52
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   MUL
+   ADD
+   STOREW
+   LDLADDR 56
+   LDLADDR 56
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L4
+L5:
+   LDLADDR 12
+   LDLADDR 48
+   LOADW
+   LDCINT 12
+   MUL
+   ADD
+   LDLADDR 52
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR 8
+   LOADW
+   STOREW
+   LDLADDR 52
+   LDLADDR 52
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L2
+L3:
+   LDLADDR 48
+   LDLADDR 48
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L0
+L1:
+   LDLADDR -44
+   LDLADDR 12
+   LOAD 36
+   STORE 36
+   RET 8
+_makeMatrix:
+   PROC 36
+   LDLADDR 8
+   LDCINT 0
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 0
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -36
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 0
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 1
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -32
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 0
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 2
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -28
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 1
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 0
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -24
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 1
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 1
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -20
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 1
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 2
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -16
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 2
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 0
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -12
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 2
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 1
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -8
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDCINT 2
+   LDCINT 12
+   MUL
+   ADD
+   LDCINT 2
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -4
+   LOADW
+   STOREW
+   LDLADDR -72
+   LDLADDR 8
+   LOAD 36
+   STORE 36
+   RET 36
+_writeMatrix:
+   PROC 8
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+L6:
+   LDLADDR 8
+   LOADW
+   LDCINT 2
+   BG L7
+   LDLADDR 12
+   LDCINT 0
+   STOREW
+L8:
+   LDLADDR 12
+   LOADW
+   LDCINT 2
+   BG L9
+   LDLADDR -4
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 12
+   MUL
+   ADD
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   PUTINT
+   LDCCH ' '
+   PUTCH
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L8
+L9:
+   PUTEOL
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L6
+L7:
+   PUTEOL
+   RET 4

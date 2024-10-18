@@ -1,0 +1,32 @@
+const five := 5;
+var n1, n2 : Integer;
+var n : Integer := 4;
+
+proc main()
+  {
+    n1 := 0b0011;
+    n2 := 0xE;
+
+    if n1 < n2 then
+        writeln "n1 < n2";
+    else
+        writeln "n1 >= n2";
+
+    writeln n1;           // output is 3
+    writeln n2;           // output is 14
+    writeln n1 + n2;      // output is 17
+    writeln n1 - n2;      // output is -11
+    writeln 2*n1;         // output is 6
+    writeln n2 - five;    // output is 9
+    writeln n1*n;         // output is 12
+    n2 := n1 + 1;
+    writeln n2;           // output is 4
+    n2 := n;
+    writeln n2;           // output is 4
+
+    n1 := 255;
+    writeln n1 + 1;       // output is 256
+
+    n := n1;
+    writeln n;            // output is 256
+  }

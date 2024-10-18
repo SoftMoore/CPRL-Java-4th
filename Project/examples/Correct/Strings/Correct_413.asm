@@ -1,0 +1,114 @@
+   CALL _main
+   HALT
+_main:
+   PROC 164
+   LDLADDR 8
+   LDCSTR "Jane"
+   STORE 12
+   LDLADDR 8
+   LDCSTR " "
+   ALLOC 158
+   CALL _strcat
+   LDLADDR 8
+   LDCSTR "Doe"
+   ALLOC 154
+   CALL _strcat
+   LDLADDR 8
+   LOAD 164
+   CALL _writeHelloName
+   LDCSTR "John Doe"
+   ALLOC 144
+   CALL _writeHelloName
+   RET 0
+_strcat:
+   PROC 8
+   LDLADDR 8
+   LDLADDR -168
+   LOADW
+   LOADW
+   STOREW
+   LDLADDR 12
+   LDCINT 0
+   STOREW
+L0:
+   LDLADDR 12
+   LOADW
+   LDLADDR -164
+   LOADW
+   BG L1
+   LDLADDR -168
+   LOADW
+   LDCINT 4
+   ADD
+   LDLADDR 8
+   LOADW
+   LDCINT 2
+   MUL
+   ADD
+   LDLADDR -164
+   LDCINT 4
+   ADD
+   LDLADDR 12
+   LOADW
+   LDCINT 2
+   MUL
+   ADD
+   LOAD2B
+   STORE2B
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L0
+L1:
+   LDLADDR -168
+   LOADW
+   LDLADDR -168
+   LOADW
+   LOADW
+   LDLADDR -164
+   LOADW
+   ADD
+   STOREW
+   RET 168
+_writeHelloName:
+   PROC 4
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+L2:
+   LDLADDR 8
+   LOADW
+   LDLADDR -164
+   LOADW
+   LDCINT 1
+   SUB
+   BG L3
+   LDLADDR -164
+   LDCINT 4
+   ADD
+   LDLADDR 8
+   LOADW
+   LDCINT 2
+   MUL
+   ADD
+   LOAD2B
+   PUTCH
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L2
+L3:
+   PUTEOL
+   RET 164

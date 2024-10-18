@@ -1,0 +1,6 @@
+proc main()
+  {
+    var name : string;       // need a type name or a string type definition
+    name := "Johnny";
+    writeln "Name is ", name;
+  }

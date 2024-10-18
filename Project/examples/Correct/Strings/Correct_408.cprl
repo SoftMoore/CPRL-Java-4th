@@ -1,0 +1,12 @@
+type Name = string[20];
+
+proc main()
+  {
+    var name : string[20] := "Mary";
+    writeln "length of \"Mary\" = ", name.length;
+
+    name.length := 5;
+    name[3] := 'i';
+    name[4] := 'e';
+    writeln "name changed to ", name;
+  }

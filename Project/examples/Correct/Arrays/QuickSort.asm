@@ -1,0 +1,216 @@
+   CALL _main
+   HALT
+_main:
+   PROC 44
+   LDLADDR 12
+   LDCINT 0
+   LDCINT 2
+   LDCINT 99
+   LDCINT 6
+   LDCINT 8
+   LDCINT 10
+   LDCINT 12
+   LDCINT -1
+   LDCINT 16
+   LDCINT 5
+   STORE 40
+   LDCSTR "initial array:"
+   PUTSTR 14
+   PUTEOL
+   LDLADDR 12
+   CALL _printArray
+   LDLADDR 12
+   LDCINT 0
+   LDCINT 9
+   CALL _quickSort
+   LDCSTR "sorted array:"
+   PUTSTR 13
+   PUTEOL
+   LDLADDR 12
+   CALL _printArray
+   RET 0
+_quickSort:
+   PROC 16
+   LDLADDR 8
+   LDLADDR -8
+   LOADW
+   STOREW
+   LDLADDR 12
+   LDLADDR -4
+   LOADW
+   STOREW
+   LDLADDR 16
+   LDLADDR -12
+   LOADW
+   LDLADDR -8
+   LOADW
+   LDLADDR -4
+   LOADW
+   ADD
+   LDCINT 2
+   DIV
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   STOREW
+L0:
+   LDLADDR 8
+   LOADW
+   LDLADDR 12
+   LOADW
+   BG L1
+L4:
+   LDLADDR -12
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   LDLADDR 16
+   LOADW
+   BGE L5
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L4
+L5:
+L8:
+   LDLADDR -12
+   LOADW
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   LDLADDR 16
+   LOADW
+   BLE L9
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   SUB
+   STOREW
+   BR L8
+L9:
+   LDLADDR 8
+   LOADW
+   LDLADDR 12
+   LOADW
+   BG L14
+   LDLADDR 20
+   LDLADDR -12
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   STOREW
+   LDLADDR -12
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR -12
+   LOADW
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   STOREW
+   LDLADDR -12
+   LOADW
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LDLADDR 20
+   LOADW
+   STOREW
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   SUB
+   STOREW
+L14:
+   BR L0
+L1:
+   LDLADDR -8
+   LOADW
+   LDLADDR 12
+   LOADW
+   BGE L18
+   LDLADDR -12
+   LOADW
+   LDLADDR -8
+   LOADW
+   LDLADDR 12
+   LOADW
+   CALL _quickSort
+L18:
+   LDLADDR 8
+   LOADW
+   LDLADDR -4
+   LOADW
+   BGE L22
+   LDLADDR -12
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDLADDR -4
+   LOADW
+   CALL _quickSort
+L22:
+   RET 12
+_printArray:
+   PROC 4
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+L24:
+   LDLADDR 8
+   LOADW
+   LDCINT 9
+   BG L25
+   LDLADDR -4
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   PUTINT
+   LDCSTR "  "
+   PUTSTR 2
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L24
+L25:
+   PUTEOL
+   RET 4

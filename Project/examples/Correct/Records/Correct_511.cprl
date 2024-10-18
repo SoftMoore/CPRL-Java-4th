@@ -1,0 +1,18 @@
+type Point = record
+  {
+    x : Integer;
+    y : Integer;
+  };
+
+var points : array[3] of Point:= { { 0, 5 }, { 1, 3 }, { -2, 99 } };
+
+proc main()
+  {
+    for i in 0..2 loop
+        writePoint(points[i]);
+  }
+
+proc writePoint(p : Point)
+  {
+    writeln "(", p.x, ", ", p.y, ")";
+  }

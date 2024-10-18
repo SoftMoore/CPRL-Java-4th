@@ -1,0 +1,102 @@
+initializing...
+starting main loop...
+
+line:  2   char:  1   token: Reserved Word -> Boolean
+line:  2   char: 11   token: Reserved Word -> Byte
+line:  2   char: 21   token: Reserved Word -> Char
+line:  2   char: 31   token: Reserved Word -> Integer
+line:  2   char: 41   token: Reserved Word -> and
+line:  2   char: 51   token: Reserved Word -> array
+line:  3   char:  1   token: Reserved Word -> class
+line:  3   char: 11   token: Reserved Word -> const
+line:  3   char: 21   token: Reserved Word -> else
+line:  3   char: 31   token: Reserved Word -> enum
+line:  3   char: 41   token: Reserved Word -> exit
+line:  3   char: 51   token: Reserved Word -> false
+line:  4   char:  1   token: Reserved Word -> for
+line:  4   char: 11   token: Reserved Word -> fun
+line:  4   char: 21   token: Reserved Word -> if
+line:  4   char: 31   token: Reserved Word -> in
+line:  4   char: 41   token: Reserved Word -> loop
+line:  4   char: 51   token: Reserved Word -> mod
+line:  5   char:  1   token: Reserved Word -> not
+line:  5   char: 11   token: Reserved Word -> of
+line:  5   char: 21   token: Reserved Word -> or
+line:  5   char: 31   token: Reserved Word -> private
+line:  5   char: 41   token: Reserved Word -> proc
+line:  5   char: 51   token: Reserved Word -> protected
+line:  6   char:  1   token: Reserved Word -> public
+line:  6   char: 11   token: Reserved Word -> read
+line:  6   char: 21   token: Reserved Word -> readln
+line:  6   char: 31   token: Reserved Word -> record
+line:  6   char: 41   token: Reserved Word -> return
+line:  6   char: 51   token: Reserved Word -> string
+line:  7   char:  1   token: Reserved Word -> then
+line:  7   char: 11   token: Reserved Word -> true
+line:  7   char: 21   token: Reserved Word -> type
+line:  7   char: 31   token: Reserved Word -> var
+line:  7   char: 41   token: Reserved Word -> when
+line:  7   char: 51   token: Reserved Word -> while
+line:  8   char:  1   token: Reserved Word -> write
+line:  8   char: 11   token: Reserved Word -> writeln
+line: 11   char:  1   token: +
+line: 11   char:  5   token: -
+line: 11   char:  9   token: *
+line: 11   char: 13   token: /
+line: 14   char:  1   token: =
+line: 14   char:  5   token: !=
+line: 14   char: 10   token: <
+line: 14   char: 14   token: <=
+line: 14   char: 19   token: >
+line: 14   char: 23   token: >=
+line: 17   char:  1   token: ~
+line: 17   char:  5   token: &
+line: 17   char:  9   token: |
+line: 17   char: 13   token: ^
+line: 17   char: 17   token: <<
+line: 17   char: 22   token: >>
+line: 20   char:  1   token: :=
+line: 20   char:  6   token: (
+line: 20   char: 10   token: )
+line: 20   char: 14   token: [
+line: 20   char: 18   token: ]
+line: 20   char: 22   token: {
+line: 20   char: 26   token: }
+line: 20   char: 30   token: ,
+line: 20   char: 34   token: :
+line: 20   char: 38   token: ;
+line: 20   char: 42   token: .
+line: 20   char: 46   token: ..
+line: 23   char:  1   token: Identifier -> x
+line: 23   char:  5   token: Identifier -> y
+line: 23   char:  9   token: Identifier -> x1
+line: 23   char: 14   token: Identifier -> i
+line: 23   char: 18   token: Identifier -> aVeryLongIdentifier
+line: 26   char:  1   token: Identifier -> IF
+line: 26   char:  6   token: Identifier -> While
+line: 26   char: 14   token: Identifier -> LOOP
+line: 26   char: 21   token: Identifier -> End
+line: 26   char: 27   token: Identifier -> Array
+line: 26   char: 35   token: Identifier -> TYPE
+line: 29   char:  1   token: Integer Literal -> 1
+line: 29   char:  7   token: Integer Literal -> 0
+line: 29   char: 13   token: Integer Literal -> 10
+line: 29   char: 22   token: Integer Literal -> 123456789
+line: 30   char:  1   token: Integer Literal -> 0B1
+line: 30   char:  7   token: Integer Literal -> 0B0
+line: 30   char: 13   token: Integer Literal -> 0B1011
+line: 30   char: 22   token: Integer Literal -> 0B0111010110111100110100010101
+line: 31   char:  1   token: Integer Literal -> 0X1
+line: 31   char:  7   token: Integer Literal -> 0X1
+line: 31   char: 13   token: Integer Literal -> 0XA
+line: 31   char: 22   token: Integer Literal -> 0X75BCD15
+line: 34   char:  1   token: Char Literal -> 'a'
+line: 34   char:  7   token: Char Literal -> 'x'
+line: 34   char: 13   token: Char Literal -> '\"'
+line: 34   char: 20   token: Char Literal -> '\''
+line: 35   char:  1   token: String Literal -> "a"
+line: 35   char:  7   token: String Literal -> "a longer string"
+line: 35   char: 27   token: String Literal -> "yet a longer string with a quote (\") in the middle"
+line: 38   char:  1   token: End-of-File
+
+...done

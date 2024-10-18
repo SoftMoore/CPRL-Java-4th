@@ -1,0 +1,44 @@
+// Program to compute all prime numbers in range 1..N
+
+// returns true if n is a prime number
+fun isPrime(n : Integer) : Boolean
+  {
+    var n2 : Integer;
+
+    if n = 1 or n = 0 then
+        return false;
+
+    n2 := n/2;    // check possible divisors in range 2..n/2
+    for i in 2..n2 loop
+      {
+        if n mod i = 0 then
+            return false;
+      }
+
+    // if you get this far, n must be a prime number
+    return true;
+  }
+
+proc main()
+  {
+    var upperBound, primeCount : Integer;
+
+    primeCount := 0;
+    write "Enter an upper bound for the list of primes: ";
+    read upperBound;
+
+    writeln "List of primes from 1 to ", upperBound;
+
+    // check every number in range 1..n
+    for i in 1..upperBound loop
+      {
+        if isPrime(i) then
+          {
+            write "  ", i;
+            primeCount := primeCount + 1;
+            if primeCount mod 15 = 0 then
+                writeln;
+          }
+      }
+    writeln;
+  }

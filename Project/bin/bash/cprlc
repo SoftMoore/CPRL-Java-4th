@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Run CPRL compiler on one or more ".cprl" files.
+#
+
+# set config environment variables
+source cprl_config
+
+CLASSPATH=$COMPILER_PROJECT_PATH
+java -ea -cp "$CLASSPATH" edu.citadel.cprl.Compiler "$@"

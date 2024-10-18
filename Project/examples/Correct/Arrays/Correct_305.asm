@@ -1,0 +1,88 @@
+   CALL _main
+   HALT
+_inc:
+   LDLADDR -4
+   LOADW
+   LDLADDR -4
+   LOADW
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   RET 4
+_printArray:
+   PROC 4
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+L0:
+   LDLADDR 8
+   LOADW
+   LDCINT 5
+   LDCINT 1
+   SUB
+   BG L1
+   LDLADDR -4
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   PUTINT
+   LDCSTR "  "
+   PUTSTR 2
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L0
+L1:
+   PUTEOL
+   RET 4
+_main:
+   PROC 24
+   LDLADDR 8
+   LDCINT 0
+   LDCINT 2
+   LDCINT 4
+   LDCINT 6
+   LDCINT 8
+   STORE 20
+   LDCSTR "    initial array: "
+   PUTSTR 19
+   LDLADDR 8
+   CALL _printArray
+   LDLADDR 28
+   LDCINT 0
+   STOREW
+L2:
+   LDLADDR 28
+   LOADW
+   LDCINT 5
+   LDCINT 1
+   SUB
+   BG L3
+   LDLADDR 8
+   LDLADDR 28
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   CALL _inc
+   LDLADDR 28
+   LDLADDR 28
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L2
+L3:
+   LDCSTR "incremented array: "
+   PUTSTR 19
+   LDLADDR 8
+   CALL _printArray
+   RET 0

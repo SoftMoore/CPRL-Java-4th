@@ -1,0 +1,26 @@
+// Test that an array element can be returned from a function.
+// 0  1  2  3  4
+
+const arraySize := 5;
+type A = array[arraySize] of Integer;
+
+proc main()
+  {
+    var a : A;
+    a := makeArray();
+    printArray(a);
+  }
+
+fun makeArray() : A
+  {
+    var a : A := { 0, 1, 2, 3, 4 };
+    return a;
+  }
+
+proc printArray(x : A)
+  {
+    for i in 0..arraySize - 1 loop
+        write x[i], "  ";
+
+    writeln;
+  }

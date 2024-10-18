@@ -1,0 +1,91 @@
+// Illustrates creation, printing, and mutiplying arrays of integers.
+
+const numRows := 3;
+const numCols := 3;
+type Row    = array[numCols] of Integer;
+type Matrix = array[numRows] of Row;    // a 3x3 matrix of integers
+
+proc main()
+  {
+    var a : Matrix := {
+                        { 2, 0, 0 },    // doubles elements in first row
+                        { 0, 1, 0 },    // leaves second row unchanged
+                        { 0, 0, 0 }     // zeros out the third row
+                      };
+    var b, c : Matrix;
+
+    b := makeMatrix(1, 2, 3,
+                    4, 5, 6,
+                    7, 8, 9);
+
+    c := multiply(a, b);
+
+    writeln "Matrix a";
+    writeMatrix(a);
+
+    writeln "Matrix b";
+    writeMatrix(b);
+
+    writeln "Matrix c (a*b)";
+    writeMatrix(c);
+  }
+
+
+// multiplies two 3x3 matrices
+fun multiply(a : Matrix, b : Matrix) : Matrix
+  {
+    var sum : Integer;
+    var result : Matrix;
+
+    // result[i][j] = sum over k of a[i][k]*b[k][j]
+
+    for i in 0..2 loop
+      {
+        for j in 0..2 loop
+          {
+            sum := 0;
+            for k in 0..2 loop
+                sum := sum + a[i][k]*b[k][j];
+
+            result[i][j] := sum;
+          }
+      }
+
+    return result;
+  }
+
+
+// Creates a 3x3 matrix of integers with the specified values.
+fun makeMatrix(a00 : Integer, a01 : Integer, a02 : Integer,
+               a10 : Integer, a11 : Integer, a12 : Integer,
+               a20 : Integer, a21 : Integer, a22 : Integer) : Matrix
+  {
+    var result : Matrix;
+
+    result[0][0] := a00;
+    result[0][1] := a01;
+    result[0][2] := a02;
+    result[1][0] := a10;
+    result[1][1] := a11;
+    result[1][2] := a12;
+    result[2][0] := a20;
+    result[2][1] := a21;
+    result[2][2] := a22;
+
+    return result;
+  }
+
+
+// Formats and prints a 3x3 array of integers in standard matrix form.
+proc writeMatrix(m : Matrix)
+  {
+    for i in 0..2 loop
+      {
+        for j in 0..2 loop
+            write m[i][j], ' ';
+
+        writeln;
+      }
+
+    writeln;
+  }

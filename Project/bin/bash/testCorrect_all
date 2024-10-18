@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#
+# Run testCorrect on all ".cprl" files in the current directory.
+#
+
+# count number of cprl files
+count=$(find . -type f -name "*.cprl" | wc -l)
+if [ "$count" -eq 0 ]
+then
+    echo no \".cprl\" files found in current directory
+    echo
+    exit
+fi
+
+echo ...deleting all \".asm\", \".obj\", and \".tmp\" files
+rm -f ./*.asm
+rm -f ./*.obj
+rm -f ./*.tmp
+
+echo ...recompiling all \".cprl\" files
+cprlc ./*.cprl 1>/dev/null
+
+echo ...reasembling all \".asm\" files
+assemble ./*.asm 1>/dev/null
+echo
+
+for file in ./*.cprl
+do
+   filename=$(basename "$file" .cprl)
+   testCorrect -n "$filename"
+done

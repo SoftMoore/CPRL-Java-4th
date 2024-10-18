@@ -1,0 +1,71 @@
+type Point = record
+  {
+    x : Integer;
+    y : Integer;
+  };
+
+const arraySize := 10;
+
+type PointArray = array[arraySize] of Point;
+
+proc writePoint(p : Point)
+  {
+    write "Point(", p.x, ", ", p.y, ")";
+  }
+
+// compare two points using lexicographic order
+fun lessThan(p1 : Point, p2 : Point) : Boolean
+  {
+    return p1.x < p2.x or (p1.x = p2.x and p1.y < p2.y);
+  }
+
+// insertion sort
+proc sort(var a : PointArray)
+  {
+    var j : Integer;
+    var save : Point;
+
+    for i in 1..arraySize - 1 loop
+      {
+        // insert a[i] into the sorted slice a[0]..a[i - 1]
+        save := a[i];
+        j := i - 1;
+
+        while j >= 0 and lessThan(save, a[j]) loop
+          {
+            a[j + 1] := a[j];
+            j := j - 1;
+          }
+
+        a[j + 1] := save;  // insert saved value at proper position
+     }
+  }
+
+proc writeArray(a : PointArray)
+  {
+    for i in 0..arraySize - 1 loop
+      {
+        write("   ");
+        writePoint(a[i]);
+        writeln;
+      }
+  }
+
+proc main()
+  {
+    var i  : Integer;
+    var pa : PointArray := {
+                             {  0,   5 }, {  2,   5 },
+                             { 99, -99 }, {  6,   5 },
+                             { -6,  -8 }, { 10,   0 },
+                             { 12,   5 }, { -1,   5 },
+                             { 16,   5 }, {  0,  -3 }
+                           };
+
+    writeln "initial array:";
+    writeArray(pa);
+    writeln;
+    sort(pa);
+    writeln "sorted array:";
+    writeArray(pa);
+  }

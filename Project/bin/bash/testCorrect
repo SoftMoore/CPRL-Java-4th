@@ -1,0 +1,68 @@
+#!/bin/bash
+
+#
+# Test a CPRL program for correct execution.
+
+# usage: $0 [-n] baseFileName
+#  - n            : don't compile/assemble the program
+#  - baseFileName : the base name of the file to test without an extension
+# Example: testCorrect -n Correct_101
+
+if [ -z "$1" ]
+then
+    echo missing base name of the file to test
+    echo
+    exit
+fi
+
+if [ "$1" = "-n" ]
+then
+    shift
+else
+    echo ...deleting files "$1".asm, "$1".obj, and "$1".tmp
+    rm -f "$1".asm
+    rm -f "$1".obj
+    rm -f "$1".tmp
+
+    echo ...recompiling "$1".cprl
+    cprlc "$1".cprl > /dev/null
+
+    echo ...reasembling "$1".asm
+    assemble "$1".asm > /dev/null
+    echo
+fi
+
+echo Testing Program "$1"
+
+if [ ! -f "$1".obj ]
+then
+    echo Can\'t find "$1".obj
+    echo
+    exit 1
+fi
+
+if [ ! -f "$1".out.txt ]
+then
+    echo Can\'t find "$1".out.txt
+    echo
+    exit 1
+fi
+
+if [ -f "$1".in.txt ]
+then
+    cprl "$1".obj < "$1".in.txt > "$1".out.tmp
+else
+    cprl "$1".obj > "$1".out.tmp
+fi
+
+# comparing output files
+echo ...comparing files "$1".out.tmp and "$1".out.txt
+diff --strip-trailing-cr "$1".out.tmp "$1".out.txt
+if [ $? -ne 0 ]
+then
+    echo "*** Test Failed ***"
+else
+    echo "Test Passed"
+fi
+
+echo

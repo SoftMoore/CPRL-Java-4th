@@ -1,0 +1,13 @@
+// array: 0  1  2  3  4  5  6  7  8  9
+
+const arraySize := 10;
+proc main()
+  {
+    var a : array[arraySize] of Integer := { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+    write "array: ";
+
+    for i in 0..arraySize - 1 loop
+        write a[i], "  ";
+    writeln;
+  }

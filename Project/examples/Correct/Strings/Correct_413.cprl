@@ -1,0 +1,34 @@
+// test pass string literals as parameter
+
+type Text = string[80];
+
+proc main()
+  {
+    var name : Text := "Jane";
+    strcat(name, " ");
+    strcat(name, "Doe");
+    writeHelloName(name);
+    writeHelloName("John Doe");
+  }
+
+// concatenate src to the end of dest; assumes that dest is big enough
+proc strcat(var dest : Text, src : Text)
+  {
+    var iDest : Integer;
+    iDest := dest.length;
+
+    for iSrc in 0..src.length loop
+      {
+        dest[iDest] := src[iSrc];
+        iDest := iDest + 1;
+      }
+
+    dest.length := dest.length + src.length;
+  }
+
+proc writeHelloName(name : Text)
+  {
+    for i in 0..name.length - 1 loop
+        write name[i];
+    writeln;
+  }

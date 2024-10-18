@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#
+# Configuration settings for the CPRL compiler project.
+#
+# These settings assume an Eclipse workspace named "workspace" with a project
+# named "compiler".  Class files are placed in the Eclipse default "bin" directory.
+
+# set EXAMPLES_HOME to the directory for the test examples
+EXAMPLES_HOME=/mnt/c/Compilers/examples
+
+# set PROJECT_HOME to the directory for your compiler project
+PROJECT_HOME=/mnt/c/Compilers/workspace
+
+COMPILER_HOME=$PROJECT_HOME/compiler
+
+# set BIN to the directory name used for compiled Java classes (e.g., bin)
+BIN=bin
+
+# Add all project-related class directory to COMPILER_PROJECT_PATH.
+COMPILER_PROJECT_PATH=$COMPILER_HOME/$BIN

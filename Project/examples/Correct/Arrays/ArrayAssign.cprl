@@ -1,0 +1,26 @@
+// test assignment of arrays with the same type
+
+type T = array[5] of Integer;
+
+proc main()
+  {
+    // a1 and a2 have the same type
+    var a1 : T := { 0, 1, 2, 3, 4 };
+    var a2 : T;
+
+    // a3 and a4 have the same type
+    var a3 : array[5] of Integer := { 5, 4, 3, 2, 1 };
+    var a4 : array[5] of Integer;
+
+    a2 := a1;
+    write a2[0];
+    for i in 1..4 loop
+        write ", ", a2[i];
+    writeln;
+
+    a4 := a3;
+    write a4[0];
+    for i in 1..4 loop
+        write ", ", a4[i];
+    writeln;
+  }

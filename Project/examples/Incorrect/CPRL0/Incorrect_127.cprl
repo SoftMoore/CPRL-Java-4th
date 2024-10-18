@@ -1,0 +1,18 @@
+type String10 = string[10];
+var i : Integer;
+var c : Char;
+var s1, s2 : String10;
+
+proc main()
+  {
+    i := 1;
+    c := 'c';
+    s1 := "John";
+    s2 := "Kiera";
+
+    if i = c then      // Not both same type
+        writeln "i = c";
+
+    if s1 = s2 then    // Not both scalar
+        writeln "s1 = s2";
+  }

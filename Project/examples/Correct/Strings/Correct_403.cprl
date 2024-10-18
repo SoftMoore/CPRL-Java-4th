@@ -1,0 +1,19 @@
+type Name = string[20];
+
+proc main()
+  {
+    var firstName : Name := "John";
+
+    writeln "Hello, ", firstName, ".";
+
+    write "Hello, ";
+    writeName(firstName);
+    writeln ".";
+  }
+
+proc writeName(n : Name)
+  {
+    for i in 0..n.length - 1 loop
+        write n[i];
+  }
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#
+# Run CPRL Assembler on one or more ".asm" files.
+#
+
+# set config environment variables
+source cprl_config
+
+# The assembler permits the command-line switch -opt:off/-opt:on.
+
+CLASSPATH=$COMPILER_PROJECT_PATH
+java -ea -cp "$CLASSPATH" edu.citadel.assembler.Assembler "$@"

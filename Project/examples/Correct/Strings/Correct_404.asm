@@ -1,0 +1,33 @@
+   CALL _main
+   HALT
+_main:
+   PROC 48
+   LDLADDR 8
+   LDCSTR "John"
+   STORE 12
+   LDCSTR "Hello, "
+   PUTSTR 7
+   LDLADDR 8
+   LOAD 24
+   PUTSTR 10
+   PUTEOL
+   LDLADDR 32
+   LDLADDR 8
+   LOAD 24
+   STORE 24
+   LDLADDR 32
+   LDCINT 4
+   ADD
+   LDCINT 2
+   LDCINT 2
+   MUL
+   ADD
+   LDCCH 'a'
+   STORE2B
+   LDCSTR "Hello, "
+   PUTSTR 7
+   LDLADDR 32
+   LOAD 24
+   PUTSTR 10
+   PUTEOL
+   RET 0

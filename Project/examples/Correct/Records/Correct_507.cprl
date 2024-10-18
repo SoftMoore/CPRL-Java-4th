@@ -1,0 +1,35 @@
+type Data = array[10] of Char;
+type Name = string[10];
+
+type MyString = record
+  {
+    length : Integer;
+    data   : Data;
+  };
+
+proc writeStr(s : MyString)
+  {
+    for i in 0..s.length - 1 loop
+         write s.data[i];
+  }
+
+fun makeMyString(name : Name) : MyString
+  {
+    var result : MyString;
+    result.length := name.length;
+
+    for i in 0..name.length - 1 loop
+        result.data[i] := name[i];
+
+    return result;
+  }
+
+
+proc main()
+  {
+    var str  : MyString;
+    str := makeMyString("Chloe");
+    write "Hello, ";
+    writeStr(str);
+    writeln ".";
+  }

@@ -1,0 +1,127 @@
+   CALL _main
+   HALT
+_main:
+   PROC 40
+   LDLADDR 8
+   ALLOC 40
+   CALL _makeArray
+   STORE 40
+   LDCSTR "array: "
+   PUTSTR 7
+   LDLADDR 8
+   CALL _writeArray
+   LDCSTR "max value in array is "
+   PUTSTR 22
+   ALLOC 4
+   LDLADDR 8
+   CALL _max
+   PUTINT
+   RET 0
+_makeArray:
+   PROC 40
+   LDLADDR 8
+   LDCINT 12
+   LDCINT -1
+   LDCINT 3
+   LDCINT 7
+   LDCINT 99
+   LDCINT -99
+   LDCINT 1000
+   LDCINT 18
+   LDCINT 15
+   LDCINT 2
+   STORE 40
+   LDLADDR -40
+   LDLADDR 8
+   LOAD 40
+   STORE 40
+   RET 0
+_writeArray:
+   PROC 4
+   LDLADDR 8
+   LDCINT 0
+   STOREW
+L0:
+   LDLADDR 8
+   LOADW
+   LDCINT 10
+   LDCINT 1
+   SUB
+   BG L1
+   LDLADDR -4
+   LOADW
+   LDLADDR 8
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   PUTINT
+   LDCSTR "  "
+   PUTSTR 2
+   LDLADDR 8
+   LDLADDR 8
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L0
+L1:
+   PUTEOL
+   RET 4
+_max:
+   PROC 8
+   LDLADDR 8
+   LDLADDR -4
+   LOADW
+   LDCINT 0
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   STOREW
+   LDLADDR 12
+   LDCINT 1
+   STOREW
+L2:
+   LDLADDR 12
+   LOADW
+   LDCINT 10
+   LDCINT 1
+   SUB
+   BG L3
+   LDLADDR -4
+   LOADW
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   LDLADDR 8
+   LOADW
+   BLE L6
+   LDLADDR 8
+   LDLADDR -4
+   LOADW
+   LDLADDR 12
+   LOADW
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   STOREW
+L6:
+   LDLADDR 12
+   LDLADDR 12
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   BR L2
+L3:
+   LDLADDR -8
+   LDLADDR 8
+   LOADW
+   STOREW
+   RET 4

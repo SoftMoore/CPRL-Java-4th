@@ -1,0 +1,12 @@
+var n : Integer := -1;       // o.k.
+var h : Integer := -0XABCD;  // o.k.
+var i : Integer := -0B1001;  // o.k.
+var b : Boolean := -true;    // minus sign applicable only for type Integer
+
+proc main()
+  {
+    writeln "n = ", n;
+    writeln "h = ", h;
+    writeln "i = ", i;
+    writeln "b = ", b;
+  }

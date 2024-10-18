@@ -1,0 +1,39 @@
+type MonthName = string[9];
+
+type Month = record
+  {
+    name    : MonthName;
+    maxDays : Integer;
+  };
+
+type Months = array[13] of Month;
+var  months : Months := {
+                          { "invalid",    0 },
+                          { "January",   31 },
+                          { "February",  29 },
+                          { "March",     31 },
+                          { "April",     30 },
+                          { "May",       31 },
+                          { "June",      30 },
+                          { "July",      31 },
+                          { "August",    31 },
+                          { "September", 30 },
+                          { "October",   31 },
+                          { "November",  30 },
+                          { "December",  31 }
+                        };
+
+proc writelnMonth(m : Month)
+  {
+    writeln "Month ", m.name, " has a maximum of ", m.maxDays, " days.";
+  }
+
+proc main()
+  {
+    var i : Integer := 1;
+    while i <= 12 loop
+      {
+        writelnMonth(months[i]);
+        i := i + 1;
+      }
+  }

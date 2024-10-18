@@ -1,0 +1,42 @@
+// Test that functions can have array parameters even though they are passed by value
+
+const arraySize := 10;
+type A = array[arraySize] of Integer;
+
+proc main()
+  {
+    var a : A;
+    a := makeArray();
+    write "array: ";
+    writeArray(a);
+    write "max value in array is ", max(a);
+  }
+
+fun makeArray() : A
+  {
+    var a : A := { 12, -1, 3, 7, 99, -99, 1000, 18, 15, 2 };
+    return a;
+  }
+
+proc writeArray(a : A)
+  {
+    for i in 0..arraySize - 1 loop
+        write a[i], "  ";
+
+    writeln;
+  }
+
+fun max(a : A) : Integer
+  {
+    var max : Integer;
+
+    max := a[0];
+
+    for i in 1..arraySize - 1 loop
+      {
+        if a[i] > max then
+            max := a[i];
+      }
+
+    return max;
+  }

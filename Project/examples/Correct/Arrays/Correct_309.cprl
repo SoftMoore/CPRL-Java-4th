@@ -1,0 +1,13 @@
+// array: 0  1  2  253  254  255
+
+proc main()
+  {
+    var a : array[6] of Integer := { 0x00, 0x01, 0x02, 0xFD, 0xFE, 0xFF };
+
+    write "array: ";
+
+    for i in 0..5 loop
+        write a[i], "  ";
+
+    writeln;
+  }

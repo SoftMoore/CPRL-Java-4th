@@ -1,0 +1,44 @@
+type Point = record
+  {
+    x : Integer;
+    y : Integer;
+  };
+
+type Rectangle = record
+  {
+    point1 : Point;
+    point2 : Point;
+  };
+
+fun makeRectangleFromPoints(point1 : Point, point2 : Point) : Rectangle
+  {
+    var rect : Rectangle;
+    rect.point1 := point1;
+    rect.point2 := point2;
+    return rect;
+  }
+
+proc writelnPoint(p : Point)
+  {
+    writeln "Point(", p.x, ", ", p.y, ")";
+  }
+
+proc writelnRectangle(r : Rectangle)
+  {
+    writeln "Rectangle(Point(", r.point1.x, ", ", r.point1.y, "), Point(", r.point2.x, ", ", r.point2.y, "))";
+  }
+
+proc main()
+  {
+    var p1 : Point := { 1, 2 };
+    var p2 : Point := { 5, 8 };
+    var r1 : Rectangle := { {1, 2 }, { 5, 8 } };
+    var r2 : Rectangle;
+
+    writelnPoint(p1);
+    writelnPoint(p2);
+    writelnRectangle(r1);
+
+    r2 := makeRectangleFromPoints(p1, p2);
+    writelnRectangle(r2);
+  }
