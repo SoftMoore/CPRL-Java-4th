@@ -1,0 +1,5 @@
+proc main()
+  {
+    for i in x..10 loop      // x has not been declared
+        writeln "i = ", i;
+  }

@@ -258,3 +258,16 @@ Starting compilation for Incorrect_137.cprl
     Invalid range for loop variable.
 Errors detected in Incorrect_137.cprl -- compilation terminated.
 
+Starting compilation for Incorrect_138.cprl
+...parsing
+*** Syntax error detected near line 3, character 14:
+    Identifier "x" has not been declared.
+Errors detected in Incorrect_138.cprl -- compilation terminated.
+
+Starting compilation for Incorrect_139.cprl
+...parsing
+...checking constraints
+*** Constraint error detected near line 3, character 14:
+    The first expression of a range should have type Integer.
+Errors detected in Incorrect_139.cprl -- compilation terminated.
+

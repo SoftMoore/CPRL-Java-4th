@@ -177,3 +177,11 @@ Errors detected in Incorrect_136.cprl -- parsing terminated.
 Parsing Incorrect_137.cprl...
 Parsing complete.
 
+Parsing Incorrect_138.cprl...
+*** Syntax error detected near line 3, character 14:
+    Identifier "x" has not been declared.
+Errors detected in Incorrect_138.cprl -- parsing terminated.
+
+Parsing Incorrect_139.cprl...
+Parsing complete.
+

@@ -1,0 +1,5 @@
+proc main()
+  {
+    for i in true..10 loop      // first range value is not an integer
+        writeln "i = ", i;
+  }
