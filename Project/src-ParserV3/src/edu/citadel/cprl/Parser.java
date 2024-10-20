@@ -47,8 +47,8 @@ public final class Parser
         Symbol.plus,        Symbol.minus,       Symbol.times,
         Symbol.divide,      Symbol.modRW,       Symbol.rightBracket,
         Symbol.comma,       Symbol.bitwiseAnd,  Symbol.bitwiseOr,
-        Symbol.bitwiseXor,  Symbol.leftShift,   Symbol.rightShift
-      );
+        Symbol.bitwiseXor,  Symbol.leftShift,   Symbol.rightShift,
+        Symbol.dotdot);
 
     /**
      * Symbols that can follow an initial declaration.

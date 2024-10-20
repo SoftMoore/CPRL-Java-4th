@@ -18,17 +18,23 @@ public final class Parser
     private IdTable idTable;
     private ErrorHandler errorHandler;
 
-    /** Symbols that can follow a statement. */
+    /**
+     * Symbols that can follow a statement.
+     */
     private final Set<Symbol> stmtFollowers = EnumSet.of(
 // ...
       );
 
-    /** Symbols that can follow a subprogram declaration. */
+    /**
+     * Symbols that can follow a subprogram declaration.
+     */
     private final Set<Symbol> subprogDeclFollowers = EnumSet.of(
 // ...
       );
 
-    /** Symbols that can follow a factor. */
+    /**
+     * Symbols that can follow a factor.
+     */
     private final Set<Symbol> factorFollowers = EnumSet.of(
         Symbol.semicolon,   Symbol.loopRW,      Symbol.thenRW,
         Symbol.rightParen,  Symbol.andRW,       Symbol.orRW,
@@ -37,11 +43,13 @@ public final class Parser
         Symbol.plus,        Symbol.minus,       Symbol.times,
         Symbol.divide,      Symbol.modRW,       Symbol.rightBracket,
         Symbol.comma,       Symbol.bitwiseAnd,  Symbol.bitwiseOr,
-        Symbol.bitwiseXor,  Symbol.leftShift,   Symbol.rightShift
-      );
+        Symbol.bitwiseXor,  Symbol.leftShift,   Symbol.rightShift,
+        Symbol.dotdot);
 
-    /** Symbols that can follow an initial declaration (computed property).
-     *  Set is computed dynamically based on the scope level. */
+    /**
+     * Symbols that can follow an initial declaration (computed property).
+     * Set is computed dynamically based on the scope level.
+     */
     private Set<Symbol> initialDeclFollowers()
       {
         // An initial declaration can always be followed by another
