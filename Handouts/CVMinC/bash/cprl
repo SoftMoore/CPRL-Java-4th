@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#
+# Run CPRL Virtual Machine interpreter on a single ".obj" file
+#
+
+cvm $1

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#
+# make the cvm executable
+#
+
+gcc cvm.c opcode.c -o cvm
