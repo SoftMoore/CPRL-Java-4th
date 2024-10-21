@@ -72,9 +72,9 @@ public class CharUtil
 
     /**
      * Unescapes characters.  For example, if parameter ch is a tab,
-     * this method will return "\\t"
+     * this method will return "\t"
      *
-     * @return the string for an escaped character.
+     * @return The string for an escaped character.
      */
     public static String unescapedChar(int ch)
       {

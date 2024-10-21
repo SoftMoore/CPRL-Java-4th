@@ -29,7 +29,7 @@ public class ErrorHandler
     /**
      * Reports the error.
      *
-     * @throws FatalException if the number of errors exceeds the maximum.
+     * @throws FatalException Thrown if the number of errors exceeds the maximum.
      */
     public void reportError(CompilerException e)
       {
