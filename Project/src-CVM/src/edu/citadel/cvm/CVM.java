@@ -534,9 +534,9 @@ public class CVM
      * Writes the word value to the specified memory address.
      * Does not alter pc, sp, or bp.
      */
-    private void putWordToAddr(int value, int address)
+    private void putWordToAddr(int word, int address)
       {
-        putIntToAddr(value, address);
+        putIntToAddr(word, address);
       }
 
     // ----------------------------------------------------------------------
@@ -754,6 +754,7 @@ public class CVM
 
             putIntToAddr(length, destAddr);
             destAddr = destAddr + Constants.BYTES_PER_INTEGER;
+
             for (int i = 0; i < length; ++i)
               {
                 putCharToAddr(data.charAt(i), destAddr);
