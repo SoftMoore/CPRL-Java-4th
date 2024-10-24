@@ -1,10 +1,10 @@
 package edu.citadel.cvm;
 
+import edu.citadel.common.util.ByteUtil;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-
-import edu.citadel.common.util.ByteUtil;
 
 /**
  * This class implements a virtual machine for the programming language
@@ -12,7 +12,7 @@ import edu.citadel.common.util.ByteUtil;
  */
 public class CVM
   {
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG  = false;
     private static final String  SUFFIX = ".obj";
 
     // exit return value for failure
