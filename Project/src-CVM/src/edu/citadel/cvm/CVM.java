@@ -293,79 +293,86 @@ public class CVM
         running = true;
         pc = 0;
 
-        while (running)
+        try
           {
-            if (DEBUG)
+            while (running)
               {
-                printRegisters();
-                printMemory();
-                pause();
-              }
+                if (DEBUG)
+                  {
+                    printRegisters();
+                    printMemory();
+                    pause();
+                  }
 
-            switch (Opcode.toOpcode(fetchByte()))
-              {
-                case ADD      -> add();
-                case ALLOC    -> allocate();
-                case BITAND   -> bitAnd();
-                case BITOR    -> bitOr();
-                case BITXOR   -> bitXor();
-                case BITNOT   -> bitNot();
-                case BR       -> branch();
-                case BE       -> branchEqual();
-                case BNE      -> branchNotEqual();
-                case BG       -> branchGreater();
-                case BGE      -> branchGreaterOrEqual();
-                case BL       -> branchLess();
-                case BLE      -> branchLessOrEqual();
-                case BZ       -> branchZero();
-                case BNZ      -> branchNonZero();
-                case BYTE2INT -> byteToInteger();
-                case CALL     -> call();
-                case DEC      -> decrement();
-                case DIV      -> divide();
-                case GETCH    -> getCh();
-                case GETINT   -> getInt();
-                case GETSTR   -> getString();
-                case HALT     -> halt();
-                case INC      -> increment();
-                case INT2BYTE -> intToByte();
-                case LDCB     -> loadConstByte();
-                case LDCB0    -> loadConstByteZero();
-                case LDCB1    -> loadConstByteOne();
-                case LDCCH    -> loadConstCh();
-                case LDCINT   -> loadConstInt();
-                case LDCINT0  -> loadConstIntZero();
-                case LDCINT1  -> loadConstIntOne();
-                case LDCSTR   -> loadConstStr();
-                case LDLADDR  -> loadLocalAddress();
-                case LDGADDR  -> loadGlobalAddress();
-                case LOAD     -> load();
-                case LOADB    -> loadByte();
-                case LOAD2B   -> load2Bytes();
-                case LOADW    -> loadWord();
-                case MOD      -> modulo();
-                case MUL      -> multiply();
-                case NEG      -> negate();
-                case NOT      -> not();
-                case PROC     -> procedure();
-                case PROGRAM  -> program();
-                case PUTBYTE  -> putByte();
-                case PUTCH    -> putChar();
-                case PUTEOL   -> putEOL();
-                case PUTINT   -> putInt();
-                case PUTSTR   -> putString();
-                case RET      -> returnInst();
-                case RET0     -> returnZero();
-                case RET4     -> returnFour();
-                case SHL      -> shl();
-                case SHR      -> shr();
-                case STORE    -> store();
-                case STOREB   -> storeByte();
-                case STORE2B  -> store2Bytes();
-                case STOREW   -> storeWord();
-                case SUB      -> subtract();
-                default       -> error("invalid machine instruction");
+                switch (Opcode.toOpcode(fetchByte()))
+                  {
+                    case ADD      -> add();
+                    case ALLOC    -> allocate();
+                    case BITAND   -> bitAnd();
+                    case BITOR    -> bitOr();
+                    case BITXOR   -> bitXor();
+                    case BITNOT   -> bitNot();
+                    case BR       -> branch();
+                    case BE       -> branchEqual();
+                    case BNE      -> branchNotEqual();
+                    case BG       -> branchGreater();
+                    case BGE      -> branchGreaterOrEqual();
+                    case BL       -> branchLess();
+                    case BLE      -> branchLessOrEqual();
+                    case BZ       -> branchZero();
+                    case BNZ      -> branchNonZero();
+                    case BYTE2INT -> byteToInteger();
+                    case CALL     -> call();
+                    case DEC      -> decrement();
+                    case DIV      -> divide();
+                    case GETCH    -> getCh();
+                    case GETINT   -> getInt();
+                    case GETSTR   -> getString();
+                    case HALT     -> halt();
+                    case INC      -> increment();
+                    case INT2BYTE -> intToByte();
+                    case LDCB     -> loadConstByte();
+                    case LDCB0    -> loadConstByteZero();
+                    case LDCB1    -> loadConstByteOne();
+                    case LDCCH    -> loadConstCh();
+                    case LDCINT   -> loadConstInt();
+                    case LDCINT0  -> loadConstIntZero();
+                    case LDCINT1  -> loadConstIntOne();
+                    case LDCSTR   -> loadConstStr();
+                    case LDLADDR  -> loadLocalAddress();
+                    case LDGADDR  -> loadGlobalAddress();
+                    case LOAD     -> load();
+                    case LOADB    -> loadByte();
+                    case LOAD2B   -> load2Bytes();
+                    case LOADW    -> loadWord();
+                    case MOD      -> modulo();
+                    case MUL      -> multiply();
+                    case NEG      -> negate();
+                    case NOT      -> not();
+                    case PROC     -> procedure();
+                    case PROGRAM  -> program();
+                    case PUTBYTE  -> putByte();
+                    case PUTCH    -> putChar();
+                    case PUTEOL   -> putEOL();
+                    case PUTINT   -> putInt();
+                    case PUTSTR   -> putString();
+                    case RET      -> returnInst();
+                    case RET0     -> returnZero();
+                    case RET4     -> returnFour();
+                    case SHL      -> shl();
+                    case SHR      -> shr();
+                    case STORE    -> store();
+                    case STOREB   -> storeByte();
+                    case STORE2B  -> store2Bytes();
+                    case STOREW   -> storeWord();
+                    case SUB      -> subtract();
+                    default       -> error("invalid machine instruction");
+                  }
               }
+          }
+        catch (Throwable t)
+          {
+            System.err.println("Virtual Machine Error: " + t.getMessage());
           }
       }
 
