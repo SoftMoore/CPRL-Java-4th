@@ -12,6 +12,9 @@ public class CompoundStmt extends Statement
     // the list of statements in the compound statement
     private List<Statement> statements;
 
+    /**
+     * Returns the list of statements in this compound statement.
+     */
     public CompoundStmt(List<Statement> statements)
       {
         this.statements = statements;
