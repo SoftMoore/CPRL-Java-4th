@@ -6,6 +6,11 @@ import edu.citadel.common.CodeGenException;
 import java.util.List;
 import java.util.LinkedList;
 
+/**
+ * An initializer for composite types.  Composite initializers are enclosed
+ * in braces, which can be nested for initialization of nested composite types.
+ * Implements the composite pattern.
+ */
 public final class CompositeInitializer extends AST implements Initializer
   {
     private Position position;
