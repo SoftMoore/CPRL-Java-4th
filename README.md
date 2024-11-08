@@ -1,5 +1,5 @@
 ## *Compiler Design Using Java&reg;: An Object-Oriented Approach (Fourth Edition)*
-![Image of Book Cover](https://image-hub-cloud.lightningsource.com/2011-04-01/Images/front_cover/x200/sku/1734139137.jpg?viewkey=a8222fcf395ef64776fd86979c03044409b85cd9e416ad3e69974a51cfdace4c)
+<img align="left" src="https://image-hub-cloud.lightningsource.com/2011-04-01/Images/front_cover/x200/sku/1734139137.jpg?viewkey=a8222fcf395ef64776fd86979c03044409b85cd9e416ad3e69974a51cfdace4c" alt="Image of Book Cover">
 This repository contains handouts, PowerPoint slides, and Java source files to accompany the book
 [*Compiler Design Using Java&reg;: An Object-Oriented Approach* (Fourth Edition)](https://shop.ingramspark.com/b/084?fCF6byedMYiVeq7pkgBXIolmwhBXHWSPGiQjiC3O1Ta)
 by John I. Moore, Jr.  The book covers implementation of a compiler for CPRL (Compiler PRoject Language),
