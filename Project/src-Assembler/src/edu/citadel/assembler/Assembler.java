@@ -148,8 +148,8 @@ public class Assembler
           }
 
         if (errorHandler.errorsExist())
-            errorHandler.printMessage("*** Errors detected in " + sourceFile.getName()
-                                    + " -- assembly terminated. ***");
+            errorHandler.printMessage("Errors detected in " + sourceFile.getName()
+                                    + " -- assembly terminated.");
         else
             printProgressMessage("Assembly complete.");
       }
