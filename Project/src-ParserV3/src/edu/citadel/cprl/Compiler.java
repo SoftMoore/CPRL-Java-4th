@@ -20,7 +20,7 @@ public class Compiler
      * This method drives the compilation process.
      *
      * @param args Must include the name of the CPRL source file, either the complete
-     *             file name or the base file name without the ".cprl" suffix.
+     *             file name or the base file name with suffix ".cprl" omitted.
      */
     public static void main(String[] args) throws Exception
       {
@@ -131,7 +131,7 @@ public class Compiler
         var baseName = sourceFile.getName();
         int suffixIndex = baseName.lastIndexOf(SUFFIX);
         if (suffixIndex > 0)
-            baseName = sourceFile.getName().substring(0, suffixIndex);
+            baseName = baseName.substring(0, suffixIndex);
 
         var targetFileName = baseName + ".asm";
 
@@ -155,8 +155,8 @@ public class Compiler
 
     private static void printUsageAndExit()
       {
-        System.out.println("Usage: Compiler expecting one or more CPRL source files");
-        System.out.println();
+        System.err.println("Usage: cprlc file1 file2 ...");
+        System.err.println();
         System.exit(0);
       }
   }

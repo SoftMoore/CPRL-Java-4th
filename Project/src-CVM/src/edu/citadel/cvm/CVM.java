@@ -69,10 +69,7 @@ public class CVM
     public static void main(String[] args) throws FileNotFoundException
       {
         if (args.length != 1)
-          {
-            System.err.println("Usage: java edu.citadel.cvm.CVM filename");
-            System.exit(0);
-          }
+            printUsageAndExit();
 
         var filename = args[0];
         var file = new File(filename);
@@ -374,6 +371,13 @@ public class CVM
           {
             System.err.println("Virtual Machine Error: " + t.getMessage());
           }
+      }
+
+    private static void printUsageAndExit()
+      {
+        System.err.println("Usage: cprl filename");
+        System.out.println();
+        System.exit(0);
       }
 
     // Start: internal machine instructions that do NOT correspond to opcodes

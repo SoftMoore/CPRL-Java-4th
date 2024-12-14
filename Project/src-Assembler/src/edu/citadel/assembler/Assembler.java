@@ -27,7 +27,6 @@ public class Assembler
      */
     public static void main(String[] args) throws Exception
       {
-        // check arguments
         if (args.length == 0)
             printUsageAndExit();
 
@@ -57,12 +56,12 @@ public class Assembler
                         sourceFile = new File(fileName);
 
                         if (!sourceFile.isFile())
-                            throw new FatalException("*** File " + fileName + " not found ***");
+                            throw new FatalException("File " + fileName + " not found");
                       }
                     else
                       {
                         // don't try to append the suffix
-                        throw new FatalException("*** File " + fileName + " not found ***");
+                        throw new FatalException("File " + fileName + " not found");
                       }
                   }
 
@@ -174,11 +173,11 @@ public class Assembler
 
     private static void printUsageAndExit()
       {
-        System.out.println("Usage: Expecting [<option>] and one or more source files");
-        System.out.println("where the option is omitted or is one of the following:");
-        System.out.println("-opt:off  Turns off all assembler optimizations");
-        System.out.println("-opt:on   Turns on all assembler optimizations (default)");
-        System.out.println();
+        System.err.println("Usage: assemble [option] file1 file2 ...");
+        System.err.println("where the option is omitted or is one of the following:");
+        System.err.println("-opt:off  Turns off all assembler optimizations");
+        System.err.println("-opt:on   Turns on all assembler optimizations (default)");
+        System.err.println();
         System.exit(0);
       }
 
@@ -192,7 +191,7 @@ public class Assembler
           }
       }
 
-    private OutputStream getTargetOutputStream(File sourceFile)
+    private static OutputStream getTargetOutputStream(File sourceFile)
       {
         // get source file name minus the suffix
         var baseName = sourceFile.getName();
@@ -211,8 +210,7 @@ public class Assembler
           {
             e.printStackTrace();
             System.exit(FAILURE);
+            return null;   // satisfies Java compiler but shouldn't be necessary
           }
-
-        return null;   // satisfies Java compiler but shouldn't be necessary
       }
   }
