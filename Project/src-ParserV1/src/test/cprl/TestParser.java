@@ -1,8 +1,9 @@
 package test.cprl;
 
-import edu.citadel.cprl.Scanner;
 import edu.citadel.common.ErrorHandler;
 import edu.citadel.common.FatalException;
+
+import edu.citadel.cprl.Scanner;
 import edu.citadel.cprl.IdTable;
 import edu.citadel.cprl.Parser;
 
@@ -39,18 +40,18 @@ public class TestParser
                         sourceFile  = new File(fileName);
 
                         if (!sourceFile.isFile())
-                            throw new FatalException("\"*** File " + fileName + " not found ***\"");
+                            throw new FatalException("File \"" + fileName + "\" not found");
                       }
                     else
                       {
                         // don't try to append the suffix
-                        throw new FatalException("\"*** File " + fileName + " not found ***\"");
+                        throw new FatalException("File \"" + fileName + "\" not found");
                       }
                   }
 
                 printProgressMessage("Parsing " + fileName + "...");
 
-                var scanner = new Scanner(sourceFile, 4, errorHandler);                                  // 4
+                var scanner = new Scanner(sourceFile, 4, errorHandler);   // 4 lookahead tokens
                 var idTable = new IdTable();
                 var parser  = new Parser(scanner, idTable, errorHandler);
 
@@ -79,7 +80,7 @@ public class TestParser
 
     private static void printUsageAndExit()
       {
-        System.out.println("Usage: TestParser expecting one or more CPRL source files");
+        System.out.println("Usage: testParser file1 file2 ...");
         System.out.println();
         System.exit(0);
       }
