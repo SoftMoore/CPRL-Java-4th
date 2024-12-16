@@ -8,4 +8,4 @@
 source cprl_config
 
 CLASSPATH=$COMPILER_PROJECT_PATH
-java -ea -cp "$CLASSPATH" test.cprl.TestScanner "$1"
+java -ea -cp "$CLASSPATH" test.cprl.TestScanner $1
