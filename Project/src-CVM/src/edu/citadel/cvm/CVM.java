@@ -376,7 +376,7 @@ public class CVM
     private static void printUsageAndExit()
       {
         System.err.println("Usage: cprl filename");
-        System.out.println();
+        System.err.println();
         System.exit(0);
       }
 

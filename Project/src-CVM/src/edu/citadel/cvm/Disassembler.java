@@ -130,7 +130,6 @@ public class Disassembler
         byte b1 = (byte) in.read();
         byte b2 = (byte) in.read();
         byte b3 = (byte) in.read();
-
         return ByteUtil.bytesToInt(b0, b1, b2, b3);
       }
 
@@ -141,7 +140,6 @@ public class Disassembler
       {
         byte b0 = (byte) in.read();
         byte b1 = (byte) in.read();
-
         return ByteUtil.bytesToChar(b0, b1);
       }
 
@@ -155,8 +153,8 @@ public class Disassembler
 
     private static void printUsageAndExit()
       {
-        System.out.println("Usage: Expecting one or more file names ending in \".obj\"");
-        System.out.println();
+        System.err.println("Usage: disassemble file1 file2 ...");
+        System.err.println();
         System.exit(0);
       }
   }

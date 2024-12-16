@@ -1,15 +1,18 @@
 package test.common;
 
+import edu.citadel.common.Source;
+
 import java.io.FileReader;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
-
-import edu.citadel.common.Source;
 
 public class TestSource
   {
     public static void main(String[] args)
       {
+        if (args.length != 1)
+            printUsageAndExit();
+
         try
           {
             var fileName = args[0];
@@ -33,5 +36,12 @@ public class TestSource
           {
             e.printStackTrace();
           }
+      }
+
+    private static void printUsageAndExit()
+      {
+        System.err.println("Usage: testSource filename");
+        System.err.println();
+        System.exit(0);
       }
   }

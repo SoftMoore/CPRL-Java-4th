@@ -16,22 +16,16 @@ public class TestScanner
 
     public static void main(String[] args)
       {
+        if (args.length != 1)
+            printUsageAndExit();
+
         try
           {
-            // check arguments
-            if (args.length != 1)
-                printUsageAndExit();
-
-            out.println("initializing...");
-
-            var fileName = args[0];
-            var sourceFile = new File(fileName);
+            var fileName     = args[0];
+            var sourceFile   = new File(fileName);
             var errorHandler = new ErrorHandler();
-            var scanner = new Scanner(sourceFile, 4, errorHandler);   // 4 lookahead tokens
+            var scanner      = new Scanner(sourceFile, 4, errorHandler);   // 4 lookahead tokens
             Token token;
-
-            out.println("starting main loop...");
-            out.println();
 
             do
               {
@@ -68,8 +62,8 @@ public class TestScanner
 
     private static void printUsageAndExit()
       {
-        out.println("Usage: java test.cprl.TestScanner <test file>");
-        out.println();
+        System.err.println("Usage: testScanner filename");
+        System.err.println();
         System.exit(0);
       }
   }
