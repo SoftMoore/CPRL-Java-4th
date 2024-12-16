@@ -86,7 +86,7 @@ public class Program extends AST
     @Override
     public String toString()
       {
-        StringBuffer buffer = new StringBuffer(1000);
+        var buffer = new StringBuffer(1000);
 
         for (Instruction inst : instructions)
             buffer.append(inst.toString())
