@@ -2,19 +2,17 @@
 
 rem
 rem Test a CPRL program for correct execution.
-
-rem Command-line arguments are as follows:
-rem - %0 : the name of this file
-rem - %1 : the base name of the file to test without an extension
-rem Example: testCorrect Correct_101
+rem
 
 if "%~1"=="" (
-  echo missing base name of the file to test
-
-  exit /b
+    echo Usage: testCorrect [-n] baseFileName
+    echo   - n            : don't compile/assemble the program
+    echo   - baseFileName : the base name of the file to test without an extension
+    echo Example: testCorrect -n Correct_101
+    exit /b
 )
 
-if %1==calledFromTestCorrect_all (
+if "%1"=="-n" (
     shift
 ) else (
     echo ...deleting files %1.asm, %1.obj, and %1.tmp
@@ -27,20 +25,20 @@ if %1==calledFromTestCorrect_all (
 
     echo ...reasembling %1.asm
     call assemble %1.asm > nul
-    echo;
+    echo.
 )
 
 echo Testing Program %1
 
 if not exist %1.obj (
     echo Can't find %1.obj
-    echo;
+    echo.
     goto :eof
 )
 
 if not exist %1.out.txt (
     echo Can't find %1.out.txt
-    echo;
+    echo.
     goto :eof
 )
 
@@ -54,4 +52,4 @@ rem comparing output files
 echo ...comparing files %1.out.tmp and %1.out.txt
 fc /n %1.out.tmp %1.out.txt > nul
 if errorlevel 1 (echo *** Test Failed ***) else (echo Test Passed)
-echo;
+echo.

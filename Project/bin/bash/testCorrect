@@ -2,15 +2,14 @@
 
 #
 # Test a CPRL program for correct execution.
-
-# usage: $0 [-n] baseFileName
-#  - n            : don't compile/assemble the program
-#  - baseFileName : the base name of the file to test without an extension
-# Example: testCorrect -n Correct_101
+#
 
 if [ -z "$1" ]
 then
-    echo missing base name of the file to test
+    echo "Usage: testCorrect [-n] baseFileName"
+    echo "  - n            : don't compile/assemble the program"
+    echo "  - baseFileName : the base name of the file to test without an extension"
+    echo "Example: testCorrect -n Correct_101"
     echo
     exit
 fi

@@ -3,6 +3,7 @@
 rem
 rem Configuration settings for the CPRL compiler project.
 rem
+
 rem These settings assume an Eclipse workspace named "workspace" with a project
 rem named "compiler".  Class files are placed in the Eclipse default "bin" directory.
 
