@@ -7,8 +7,11 @@ rem
 if "%~1"=="" (
     echo Usage: testCorrect [-n] baseFileName
     echo   - n            : don't compile/assemble the program
-    echo   - baseFileName : the base name of the file to test without an extension
-    echo Example: testCorrect -n Correct_101
+    echo                    ^(default is to recompile/reassemble^)
+    echo   - baseFileName : base name of the CPRL program to test
+    echo                    ^(without an extension^)
+    echo Example 1: testCorrect Correct_101
+    echo Example 2: testCorrect -n Correct_101
     exit /b
 )
 
