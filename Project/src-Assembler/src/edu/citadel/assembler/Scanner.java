@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * Performs lexical analysis for CVM assembly language.
  */
-public class Scanner
+public final class Scanner
   {
     private Source source;
     private ErrorHandler errorHandler;

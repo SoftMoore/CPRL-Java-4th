@@ -92,7 +92,7 @@ public abstract class AST
      * Returns a new value for a label number.  This method should
      * be called once for each label before code generation.
      */
-    protected String newLabel()
+    protected final String newLabel()
       {
         ++currentLabelNum;
         return "L" + currentLabelNum;

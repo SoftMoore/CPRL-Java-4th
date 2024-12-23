@@ -77,7 +77,7 @@ public final class Scanner
      */
     public Token lookahead(int i)
       {
-        assert i >= 1 & i <= tokenBuffer.capacity() : "Range check for lookahead token index";
+        assert i >= 1 && i <= tokenBuffer.capacity() : "Range check for lookahead token index";
         return tokenBuffer.get(i - 1);
       }
 

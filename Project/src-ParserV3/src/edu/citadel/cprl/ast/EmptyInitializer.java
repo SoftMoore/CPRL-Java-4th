@@ -12,6 +12,11 @@ public final class EmptyInitializer implements Initializer
   {
     private static EmptyInitializer instance = new EmptyInitializer();
 
+    private EmptyInitializer()
+      {
+        // private constructor
+      }
+
     /**
      * Returns the single instance of this class.
      */
