@@ -11,7 +11,7 @@ import java.util.Set;
 public class ErrorHandler
   {
     // Maximum number of errors to be reported.
-    private final int MAX_ERRORS = 15;
+    private static final int MAX_ERRORS = 15;
 
     private PrintWriter err = new PrintWriter(System.err, true, StandardCharsets.UTF_8);
     private int errorCount  = 0;
