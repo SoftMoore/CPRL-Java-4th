@@ -51,15 +51,6 @@ public class Type
       }
 
     /**
-     * Sets the number of machine addressable units
-     * (e.g., bytes or words) for this type.
-     */
-    public void setSize(int size)
-      {
-        this.size = size;
-      }
-
-    /**
      * Returns true if and only if this type is a scalar type.
      * The scalar types in CPRL are Integer, Boolean, Char.
      */
