@@ -10,10 +10,7 @@ public class EmptyStatement extends Statement
   {
     private static EmptyStatement instance = new EmptyStatement();
 
-    private EmptyStatement()
-      {
-        // private constructor
-      }
+    private EmptyStatement() { }   // private constructor
 
     /**
      * Returns the single instance of this class.
