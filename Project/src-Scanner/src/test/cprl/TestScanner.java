@@ -21,11 +21,16 @@ public class TestScanner
 
         try
           {
+            out.println("initializing...");
+
             var fileName     = args[0];
             var sourceFile   = new File(fileName);
             var errorHandler = new ErrorHandler();
             var scanner      = new Scanner(sourceFile, 4, errorHandler);   // 4 lookahead tokens
             Token token;
+
+            out.println("starting main loop...");
+            out.println();
 
             do
               {
