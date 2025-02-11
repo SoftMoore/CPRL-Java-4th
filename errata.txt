@@ -1,0 +1,11 @@
+Errata for original printing of the book
+
+On pages 73, 98, 302, and 318, change
+    hexLiteral = [ "0x" | "0X" ] hexDigit { hexDigit} .
+to
+    hexLiteral = ( "0x" | "0X" ) hexDigit { hexDigit } .
+
+On pages 73, 98, 302, and 318, change
+    binaryLiteral = [ "0b" | "0B ] binaryDigit { binaryDigit } .
+to
+    binaryLiteral = ( "0b" | "0B" ) binaryDigit { binaryDigit } .
