@@ -311,7 +311,7 @@ public final class Scanner
     /**
      * Scans characters in the source file for a valid binary (base 2)
      * integer literal using the rules:<br>
-     * <code>binaryLiteral = [ "0b" | "0B ] binaryDigit { binaryDigit } .<br>
+     * <code>binaryLiteral = ( "0b" | "0B" ) binaryDigit { binaryDigit } .<br>
      * binaryDigit = '0'..'1' .</code>
      */
     private void scanBinaryLiteral() throws ScannerException, IOException
@@ -334,7 +334,7 @@ public final class Scanner
     /**
      * Scans characters in the source file for a valid hexadecimal (base 16)
      * integer literal using the rules:<br>
-     * <code>hexLiteral = [ "0x" | "0X" ] hexDigit { hexDigit} .<br>
+     * <code>hexLiteral = ( "0x" | "0X" ) hexDigit { hexDigit} .<br>
      * hexDigit = '0'..'9' + 'A'..'F' + 'a'..'f' .</code>
      */
     private void scanHexLiteral() throws ScannerException, IOException
