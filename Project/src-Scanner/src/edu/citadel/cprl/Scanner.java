@@ -234,7 +234,7 @@ public final class Scanner
       }
 
     /**
-     * Scans characters in the source file for a valid identifier using the lexical rule<br>
+     * Scans characters in the source file for a valid identifier using the lexical rule:<br>
      * <code>identifier = letter { letter | digit } .</code>
      *
      * @return the string of letters and digits for the identifier.
