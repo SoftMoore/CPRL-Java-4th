@@ -25,6 +25,9 @@ x   y   x1   i   aVeryLongIdentifier
 // identifiers that look like reserved words (CPRL is case sensitive)
 IF   While   LOOP   End   Array   TYPE
 
+// identifiers that could be confused with existing symbols
+unknown   Unknown   EOF
+
 // literals
 1     0     10       123456789
 0b1   0B0   0b1011   0B0111010110111100110100010101

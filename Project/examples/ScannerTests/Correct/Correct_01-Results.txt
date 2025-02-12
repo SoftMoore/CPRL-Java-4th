@@ -78,25 +78,28 @@ line: 26   char: 14   token: Identifier -> LOOP
 line: 26   char: 21   token: Identifier -> End
 line: 26   char: 27   token: Identifier -> Array
 line: 26   char: 35   token: Identifier -> TYPE
-line: 29   char:  1   token: Integer Literal -> 1
-line: 29   char:  7   token: Integer Literal -> 0
-line: 29   char: 13   token: Integer Literal -> 10
-line: 29   char: 22   token: Integer Literal -> 123456789
-line: 30   char:  1   token: Integer Literal -> 0B1
-line: 30   char:  7   token: Integer Literal -> 0B0
-line: 30   char: 13   token: Integer Literal -> 0B1011
-line: 30   char: 22   token: Integer Literal -> 0B0111010110111100110100010101
-line: 31   char:  1   token: Integer Literal -> 0X1
-line: 31   char:  7   token: Integer Literal -> 0X1
-line: 31   char: 13   token: Integer Literal -> 0XA
-line: 31   char: 22   token: Integer Literal -> 0X75BCD15
-line: 34   char:  1   token: Char Literal -> 'a'
-line: 34   char:  7   token: Char Literal -> 'x'
-line: 34   char: 13   token: Char Literal -> '\"'
-line: 34   char: 20   token: Char Literal -> '\''
-line: 35   char:  1   token: String Literal -> "a"
-line: 35   char:  7   token: String Literal -> "a longer string"
-line: 35   char: 27   token: String Literal -> "yet a longer string with a quote (\") in the middle"
-line: 38   char:  1   token: End-of-File
+line: 29   char:  1   token: Identifier -> unknown
+line: 29   char: 11   token: Identifier -> Unknown
+line: 29   char: 21   token: Identifier -> EOF
+line: 32   char:  1   token: Integer Literal -> 1
+line: 32   char:  7   token: Integer Literal -> 0
+line: 32   char: 13   token: Integer Literal -> 10
+line: 32   char: 22   token: Integer Literal -> 123456789
+line: 33   char:  1   token: Integer Literal -> 0B1
+line: 33   char:  7   token: Integer Literal -> 0B0
+line: 33   char: 13   token: Integer Literal -> 0B1011
+line: 33   char: 22   token: Integer Literal -> 0B0111010110111100110100010101
+line: 34   char:  1   token: Integer Literal -> 0X1
+line: 34   char:  7   token: Integer Literal -> 0X1
+line: 34   char: 13   token: Integer Literal -> 0XA
+line: 34   char: 22   token: Integer Literal -> 0X75BCD15
+line: 37   char:  1   token: Char Literal -> 'a'
+line: 37   char:  7   token: Char Literal -> 'x'
+line: 37   char: 13   token: Char Literal -> '\"'
+line: 37   char: 20   token: Char Literal -> '\''
+line: 38   char:  1   token: String Literal -> "a"
+line: 38   char:  7   token: String Literal -> "a longer string"
+line: 38   char: 27   token: String Literal -> "yet a longer string with a quote (\") in the middle"
+line: 41   char:  1   token: End-of-File
 
 ...done
