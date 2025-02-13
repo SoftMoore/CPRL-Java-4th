@@ -1,11 +1,48 @@
-Errata for original printing of the book
+Errata for original printing of the book.  Thes changes will be made in a subsequent
+release of the book sometime around the middle of 2025.
+
+____________________________________________________________________
+
+On page 31, change
+   One such place is the rule for subprogramDecls, which always includes at least one subprogramDecl.
+      subprogramDecls = subprogramDecl { subprogramDecl } .
+to
+   One such place is the lexical rule for decimalLiteral, which always includes at least one digit.
+      decimalLiteral = digit { digit } .
+
+____________________________________________________________________
+
+
+On pages 95, 124, and 315, change
+   subprogramDecls = subprogramDecl { subprogramDecl } .
+to
+   subprogramDecls = { subprogramDecl } .
+
+While it is true that a program requires at least one subprogram, procedure main(),
+it is simpler to parse the rule for zero or more subprogram declarations and then
+add a constraint in AST Program to check for procedure main.
+
+____________________________________________________________________
+
 
 On pages 73, 98, 302, and 318, change
     hexLiteral = [ "0x" | "0X" ] hexDigit { hexDigit} .
 to
     hexLiteral = ( "0x" | "0X" ) hexDigit { hexDigit } .
 
-On pages 73, 98, 302, and 318, change
-    binaryLiteral = [ "0b" | "0B ] binaryDigit { binaryDigit } .
+___________________________________________________________________
+
+
+On page 98, change
+   As an aside, note that the structural grammar for CPRL uses “one or more” in only one rule.
+   subprogramDecls = subprogramDecl { subprogramDecl } .
+      // one or more subprogram declarations
+   Similarly, the lexical grammar for CPRL uses “one or more” in only three rules.
 to
-    binaryLiteral = ( "0b" | "0B" ) binaryDigit { binaryDigit } .
+   As an aside, note that the structural grammar for CPRL does not use “one or more” in any
+   rules, and the lexical grammar for CPRL uses “one or more” in only three rules
+
+___________________________________________________________________
+
+
+At the top of page 103, the rule statement is missing the nonterminal forLoopStmt.
