@@ -1,4 +1,4 @@
-Errata for original printing of the book.  Thes changes will be made in a subsequent
+Errata for original printing of the book.  These changes will be made in a subsequent
 release of the book sometime around the middle of 2025.
 
 ____________________________________________________________________
@@ -46,3 +46,11 @@ ___________________________________________________________________
 
 
 At the top of page 103, the rule statement is missing the nonterminal forLoopStmt.
+
+___________________________________________________________________
+
+
+Page 161, add the following constraint rule.
+
+•   Program
+–   Miscellaneous Rule: A program must contain a parameterless procedure named main().
