@@ -3,7 +3,7 @@ release of the book sometime around the middle of 2025.
 
 ____________________________________________________________________
 
-On page 31, change
+Page 31, change
    One such place is the rule for subprogramDecls, which always includes at least one subprogramDecl.
       subprogramDecls = subprogramDecl { subprogramDecl } .
 to
@@ -13,27 +13,41 @@ to
 ____________________________________________________________________
 
 
-On pages 95, 124, and 315, change
+Pages 95, 124, and 315, change
    subprogramDecls = subprogramDecl { subprogramDecl } .
 to
    subprogramDecls = { subprogramDecl } .
 
 While it is true that a program requires at least one subprogram, procedure main(),
 it is simpler to parse the rule for zero or more subprogram declarations and then
-add a constraint in AST Program to check for procedure main.
+add a constraint in AST class Program to check for procedure main.
 
 ____________________________________________________________________
 
 
-On pages 73, 98, 302, and 318, change
+Pages 73, 98, 302, and 318, change
     hexLiteral = [ "0x" | "0X" ] hexDigit { hexDigit} .
 to
     hexLiteral = ( "0x" | "0X" ) hexDigit { hexDigit } .
 
+Also change
+   binaryLiteral = [ "0b" | "0B ] binaryDigit { binaryDigit } .
+to
+   binaryLiteral = ( "0b" | "0B" ) binaryDigit { binaryDigit } .
+
 ___________________________________________________________________
 
 
-On page 98, change
+Near the bottom of page 95, the same follow set is repeated.  For the second follow set,
+change
+   Follow(loopStmt)
+to
+   Follow(statement)
+
+___________________________________________________________________
+
+
+Page 98, change
    As an aside, note that the structural grammar for CPRL uses “one or more” in only one rule.
    subprogramDecls = subprogramDecl { subprogramDecl } .
       // one or more subprogram declarations
@@ -45,12 +59,22 @@ to
 ___________________________________________________________________
 
 
-At the top of page 103, the rule statement is missing the nonterminal forLoopStmt.
+Top of page 103, the rule statement is missing the nonterminal forLoopStmt.
 
 ___________________________________________________________________
 
 
 Page 161, add the following constraint rule.
 
-•   Program
-–   Miscellaneous Rule: A program must contain a parameterless procedure named main().
+•  Program
+   – Miscellaneous Rule: A program must contain a parameterless procedure named main().
+
+___________________________________________________________________
+
+
+Page 315, change
+       // constraint: optional "-" applicable only for integer
+   literalscompositeInitializer = "{" initializer { "," initializer } "}" .
+to
+       // constraint: optional "-" applicable only for integer literals
+   compositeInitializer = "{" initializer { "," initializer } "}" .
