@@ -559,7 +559,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.semicolon,  Symbol.comma,
+            recover(EnumSet.of(Symbol.assign,     Symbol.semicolon,  Symbol.comma,
                                Symbol.rightParen, Symbol.leftBrace));
             return Type.UNKNOWN;
           }
