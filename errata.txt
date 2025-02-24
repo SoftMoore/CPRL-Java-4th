@@ -63,6 +63,12 @@ Top of page 103, the rule statement is missing the nonterminal forLoopStmt.
 
 ___________________________________________________________________
 
+Bottom of page 147 and top of page 159
+
+In the rectangle for SubprogramDecl, change "PROGRAM" to "GLOBAL"
+
+___________________________________________________________________
+
 
 Page 161, add the following constraint rule.
 
