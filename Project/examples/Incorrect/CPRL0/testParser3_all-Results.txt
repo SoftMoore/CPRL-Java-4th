@@ -168,10 +168,6 @@ Errors detected in Incorrect_135.cprl -- parsing terminated.
 Parsing Incorrect_136.cprl...
 *** Syntax error detected near line 4, character 20:
     Invalid constant.
-*** Syntax error detected near line 4, character 20:
-    Expecting ";" but found "-" instead.
-*** Syntax error detected near line 11, character 21:
-    Identifier "b" has not been declared.
 Errors detected in Incorrect_136.cprl -- parsing terminated.
 
 Parsing Incorrect_137.cprl...

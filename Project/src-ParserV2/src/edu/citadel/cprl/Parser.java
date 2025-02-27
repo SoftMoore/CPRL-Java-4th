@@ -263,7 +263,7 @@ public final class Parser
      */
     private void parseCompositeInitializer() throws IOException
       {
-// ...
+// ...  Hint: There are 3 symbols in the recover set for parseCompositeInitializer()
       }
 
     /**
@@ -380,7 +380,7 @@ public final class Parser
      */
     private void parseFieldDecl() throws IOException
       {
-// ...
+// ...  Hint: There are 2 symbols in the recover set for parseFieldDecl()
       }
 
     /**
@@ -962,7 +962,7 @@ public final class Parser
      */
     private void parseConstValue() throws IOException
       {
-// ...
+// ...  Hint: There are 4 symbols in the recover set for parseConstValue()
       }
 
     /**

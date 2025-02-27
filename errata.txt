@@ -78,6 +78,14 @@ Page 161, add the following constraint rule.
 ___________________________________________________________________
 
 
+Page 301, near the middle of the page, change
+   end the of file
+to
+   end of the file
+
+___________________________________________________________________
+
+
 Page 315, change
        // constraint: optional "-" applicable only for integer
    literalscompositeInitializer = "{" initializer { "," initializer } "}" .
