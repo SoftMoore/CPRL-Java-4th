@@ -63,9 +63,21 @@ Top of page 103, the rule statement is missing the nonterminal forLoopStmt.
 
 ___________________________________________________________________
 
+
 Bottom of page 147 and top of page 159
 
 In the rectangle for SubprogramDecl, change "PROGRAM" to "GLOBAL"
+
+___________________________________________________________________
+
+
+Page 148 in subsection ConstValue
+
+For the first constructor add this line at the end.
+   this.decl = null;
+
+For the second constructor add this line at the end.
+   this.decl = decl;
 
 ___________________________________________________________________
 
