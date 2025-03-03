@@ -821,7 +821,7 @@ public final class Parser
             subprogDecl.initialDecls().add(varDecl);
 
             // Add the corresponding single variable declaration to the identifier tables.
-            var loopSvDecl = varDecl.singleVarDecls().getLast();
+            var loopSvDecl = varDecl.singleVarDecls().get(0);
             idTable.add(loopSvDecl);
 
             // Create loop variable to add to AST class ForLoopStmt
