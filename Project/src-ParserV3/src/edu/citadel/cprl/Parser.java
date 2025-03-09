@@ -185,7 +185,7 @@ public final class Parser
 
     /**
      * Parse the following grammar rule:<br>
-     * <code>varDecl = "var" identifiers ":" ( typeName | arrayTypeConstr | stringTypeConstr)
+     * <code>varDecl = "var" identifiers ":" ( typeName | arrayTypeConstr | stringTypeConstr )
      *               [ ":=" initializer] ";" .</code>
      *
      * @return The parsed variable declaration.  Returns an

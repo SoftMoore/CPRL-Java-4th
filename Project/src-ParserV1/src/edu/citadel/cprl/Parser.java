@@ -102,7 +102,7 @@ public final class Parser
 
     /**
      * Parse the following grammar rule:<br>
-     * <code>varDecl = "var" identifiers ":" ( typeName | arrayTypeConstr | stringTypeConstr)
+     * <code>varDecl = "var" identifiers ":" ( typeName | arrayTypeConstr | stringTypeConstr )
      *               [ ":=" initializer] ";" .</code>
      */
     private void parseVarDecl() throws IOException
