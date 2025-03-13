@@ -153,7 +153,10 @@ public final class Parser
      */
     private InitialDecl parseConstDecl() throws IOException
       {
-// ...
+// ... Hint: Handle initialization with negative integer literals as a special case.  If
+//           you see a minus sign followed by an integer literal, then modify the text in
+//           the integer literal so that it contains a minus sign.  If the minus sign is
+//           not followed by an integer literal, create an appropriate error message.
       }
 
     /**
