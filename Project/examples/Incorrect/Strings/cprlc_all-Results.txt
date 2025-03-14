@@ -51,6 +51,13 @@ Starting compilation for Incorrect_407.cprl
     Type mismatch for assignment statement.
 Errors detected in Incorrect_407.cprl -- compilation terminated.
 
+Starting compilation for Incorrect_408.cprl
+...parsing
+...checking constraints
+*** Constraint error detected near line 1, character 26:
+    Type mismatch for variable initialization.
+Errors detected in Incorrect_408.cprl -- compilation terminated.
+
 Starting compilation for Incorrect_409.cprl
 ...parsing
 ...checking constraints

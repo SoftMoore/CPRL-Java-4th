@@ -1,0 +1,6 @@
+var name : string[10] := "Alexander the Great";   // string literal is too big
+
+proc main()
+  {
+    writeln name;
+  }
