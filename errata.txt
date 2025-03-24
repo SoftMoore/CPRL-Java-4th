@@ -3,12 +3,21 @@ release of the book sometime around the middle of 2025.
 
 ____________________________________________________________________
 
+
 Page 31, change
    One such place is the rule for subprogramDecls, which always includes at least one subprogramDecl.
       subprogramDecls = subprogramDecl { subprogramDecl } .
 to
    One such place is the lexical rule for decimalLiteral, which always includes at least one digit.
       decimalLiteral = digit { digit } .
+
+____________________________________________________________________
+
+
+Near the middle of p. 58, change
+   (except that arrays are always passed by value, regardless of how the parameter is declared)
+to
+   (except that arrays are always passed by reference, regardless of how the parameter is declared)
 
 ____________________________________________________________________
 
