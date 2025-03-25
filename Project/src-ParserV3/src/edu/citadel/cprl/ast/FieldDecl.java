@@ -1,5 +1,7 @@
 package edu.citadel.cprl.ast;
 
+import edu.citadel.common.CodeGenException;
+
 import edu.citadel.cprl.Token;
 import edu.citadel.cprl.Type;
 
@@ -11,7 +13,7 @@ import edu.citadel.cprl.Type;
 public class FieldDecl extends Declaration
   {
     private int offset;   // offset for this field within the record; initialized
-                          // to 0 but updated when constructing the record type
+                          // to 0 but can be updated during constraint analysis
 
     // The size (number of bytes) associated with this field declaration,
     // which is simply the number of bytes associated with its type.
@@ -56,5 +58,11 @@ public class FieldDecl extends Declaration
       {
         assert type() != Type.UNKNOWN && type() != Type.none && type() != Type.Address
             : "Invalid CPRL type in field declaration.";
+      }
+
+    @Override
+    public void emit() throws CodeGenException
+      {
+        // nothing to emit for field declarations
       }
   }

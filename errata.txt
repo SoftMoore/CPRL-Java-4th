@@ -120,10 +120,18 @@ Also on page 161, add the following constraint rule.
 ___________________________________________________________________
 
 
-Page 169 in the table comparing CVM and JVM Opcodes, change
+Page 169, in the table comparing CVM and JVM Opcodes, change
    BREQ
 to
    BE
+
+___________________________________________________________________
+
+
+Page 194, in method emit() for class AssignmentStmt, change
+   var.emit();
+to
+   variable.emit();
 
 ___________________________________________________________________
 

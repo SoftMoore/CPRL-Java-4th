@@ -1,5 +1,7 @@
 package edu.citadel.cprl.ast;
 
+import edu.citadel.common.CodeGenException;
+
 import edu.citadel.cprl.ScopeLevel;
 import edu.citadel.cprl.Token;
 import edu.citadel.cprl.Type;
@@ -69,6 +71,12 @@ public final class ParameterDecl extends Declaration implements VariableDecl
       {
         assert type() != null && type() != Type.UNKNOWN && type() != Type.none
             : "Invalid CPRL type in parameter declaration.";
+      }
+
+    @Override
+    public void emit() throws CodeGenException
+      {
+        // nothing to emit for parameter declarations
       }
 
     @Override
