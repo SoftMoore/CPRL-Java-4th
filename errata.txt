@@ -99,6 +99,14 @@ For the second constructor add this line at the end.
 ___________________________________________________________________
 
 
+Page 152, Section 8.8, change
+   initilizers
+to
+   initializers
+
+___________________________________________________________________
+
+
 Page 160, in the bullet for ConstDecl and ConstValue, change
    package edu.citadel.common
 to
