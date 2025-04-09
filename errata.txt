@@ -144,6 +144,15 @@ to
 ___________________________________________________________________
 
 
+Page 257, approximately two-thirds the way down the page, checkInitializer()
+is mispelled.  Change
+   simply calls checkInitialzer()
+to
+   simply calls checkInitializer()
+
+___________________________________________________________________
+
+
 Page 301, near the middle of the page, change
    end the of file
 to
