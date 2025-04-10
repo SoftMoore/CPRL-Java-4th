@@ -69,11 +69,11 @@ _gcd:
    LOADW
    CALL _abs
    STOREW
-L4:
+L6:
    LDLADDR -4
    LOADW
    LDCINT 0
-   BE L5
+   BE L7
    LDLADDR 8
    LDLADDR -8
    LOADW
@@ -89,8 +89,8 @@ L4:
    LOADW
    MOD
    STOREW
-   BR L4
-L5:
+   BR L6
+L7:
    LDLADDR -12
    LDLADDR -8
    LOADW

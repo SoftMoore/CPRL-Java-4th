@@ -54,13 +54,13 @@ _quickSort:
    ADD
    LOADW
    STOREW
-L0:
+L2:
    LDLADDR 8
    LOADW
    LDLADDR 12
    LOADW
-   BG L1
-L4:
+   BG L3
+L6:
    LDLADDR -12
    LOADW
    LDLADDR 8
@@ -71,16 +71,16 @@ L4:
    LOADW
    LDLADDR 16
    LOADW
-   BGE L5
+   BGE L7
    LDLADDR 8
    LDLADDR 8
    LOADW
    LDCINT 1
    ADD
    STOREW
-   BR L4
-L5:
-L8:
+   BR L6
+L7:
+L10:
    LDLADDR -12
    LOADW
    LDLADDR 12
@@ -91,15 +91,15 @@ L8:
    LOADW
    LDLADDR 16
    LOADW
-   BLE L9
+   BLE L11
    LDLADDR 12
    LDLADDR 12
    LOADW
    LDCINT 1
    SUB
    STOREW
-   BR L8
-L9:
+   BR L10
+L11:
    LDLADDR 8
    LOADW
    LDLADDR 12
@@ -154,8 +154,8 @@ L9:
    SUB
    STOREW
 L14:
-   BR L0
-L1:
+   BR L2
+L3:
    LDLADDR -8
    LOADW
    LDLADDR 12

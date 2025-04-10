@@ -13,8 +13,8 @@ Parsing Incorrect_404.cprl...
 Parsing complete.
 
 Parsing Incorrect_405.cprl...
-*** Syntax error detected near line 3, character 17:
-    Invalid type name.
+*** Syntax error detected near line 3, character 22:
+    Expecting "[" but found ";" instead.
 *** Fatal exception: No error recovery -- parsing terminated.
 
 Parsing Incorrect_406.cprl...
@@ -27,5 +27,8 @@ Parsing Incorrect_408.cprl...
 Parsing complete.
 
 Parsing Incorrect_409.cprl...
+Parsing complete.
+
+Parsing Incorrect_410.cprl...
 Parsing complete.
 

@@ -5,19 +5,19 @@
    CALL _main
    HALT
 _main:
-L0:
+L2:
    LDGADDR 0
    LOADW
    LDCINT 5
-   BG L1
+   BG L3
    LDGADDR 0
    LDGADDR 0
    LOADW
    LDCINT 1
    ADD
    STOREW
-   BR L0
-L1:
+   BR L2
+L3:
    LDCSTR "x = "
    PUTSTR 4
    LDGADDR 0

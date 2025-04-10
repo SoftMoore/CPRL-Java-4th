@@ -65,3 +65,12 @@ Starting compilation for Incorrect_409.cprl
     String capacity cannot be greater than 512.
 Errors detected in Incorrect_409.cprl -- compilation terminated.
 
+Starting compilation for Incorrect_410.cprl
+...parsing
+...checking constraints
+*** Constraint error detected near line 5, character 24:
+    Type mismatch for variable initialization.
+*** Constraint error detected near line 6, character 21:
+    Type mismatch for variable initialization.
+Errors detected in Incorrect_410.cprl -- compilation terminated.
+

@@ -10,16 +10,16 @@ _main:
    PUTSTR 19
    LDGADDR 4
    GETINT
-L0:
+L2:
    LDGADDR 0
    LOADW
    LDCINT 10
-   BG L1
-L4:
+   BG L3
+L6:
    LDGADDR 4
    LOADW
    LDCINT 10
-   BG L5
+   BG L7
    LDGADDR 0
    LDGADDR 0
    LOADW
@@ -32,16 +32,16 @@ L4:
    LDCINT 2
    ADD
    STOREW
-   BR L4
-L5:
+   BR L6
+L7:
    LDGADDR 0
    LDGADDR 0
    LOADW
    LDCINT 3
    ADD
    STOREW
-   BR L0
-L1:
+   BR L2
+L3:
    LDCSTR "i = "
    PUTSTR 4
    LDGADDR 0

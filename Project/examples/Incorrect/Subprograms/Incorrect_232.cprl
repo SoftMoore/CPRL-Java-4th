@@ -1,10 +1,11 @@
-type Name = string[20];
-
 proc main()
   {
-    var x : Integer := "Hello";   // can't initialize integer with string
-    var n : Name := 5;            // can't initialize string with integer
+    p(5);
+    p(true, 5);
+  }
 
-    write x;
-    write n;
+proc p(n : Integer, b : Boolean)
+  {
+    if b then
+        writeln "n = ", n;
   }

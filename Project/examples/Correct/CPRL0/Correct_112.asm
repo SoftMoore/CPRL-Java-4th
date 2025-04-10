@@ -21,13 +21,13 @@ _main:
    LDCINT 1
    SUB
    STOREW
-L0:
+L2:
    LDGADDR 0
    LOADW
    LDCINT 2
    LDCINT 5
    MUL
-   BG L1
+   BG L3
    LDGADDR 0
    LDGADDR 0
    LOADW
@@ -64,7 +64,7 @@ L11:
    LDGADDR 0
    LOADW
    LDCINT 9
-   BE L1
-   BR L0
-L1:
+   BE L3
+   BR L2
+L3:
    RET 0

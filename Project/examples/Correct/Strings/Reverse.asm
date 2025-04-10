@@ -31,12 +31,12 @@ _reverse:
    LDCINT 1
    SUB
    STOREW
-L0:
+L2:
    LDLADDR 8
    LOADW
    LDLADDR 12
    LOADW
-   BGE L1
+   BGE L3
    LDLADDR 16
    LDLADDR -4
    LOADW
@@ -93,6 +93,6 @@ L0:
    LDCINT 1
    SUB
    STOREW
-   BR L0
-L1:
+   BR L2
+L3:
    RET 4

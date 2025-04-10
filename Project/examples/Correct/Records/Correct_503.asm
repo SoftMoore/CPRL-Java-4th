@@ -80,14 +80,14 @@ L10:
    LDCINT 1
    SUB
    STOREW
-L12:
+L16:
    LDLADDR 8
    LOADW
    LDCINT 0
-   BGE L16
+   BGE L14
    LDCB 0
-   BR L17
-L16:
+   BR L15
+L14:
    ALLOC 1
    LDLADDR 12
    LOAD 8
@@ -100,8 +100,8 @@ L16:
    ADD
    LOAD 8
    CALL _lessThan
-L17:
-   BZ L13
+L15:
+   BZ L17
    LDLADDR -4
    LOADW
    LDLADDR 8
@@ -126,8 +126,8 @@ L17:
    LDCINT 1
    SUB
    STOREW
-   BR L12
-L13:
+   BR L16
+L17:
    LDLADDR -4
    LOADW
    LDLADDR 8
