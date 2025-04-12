@@ -31,11 +31,7 @@ public class RecordType extends Type
             fieldNameMap.put(fieldDecl.idToken().text(), fieldDecl);
 
         // compute fieldDecl offsets
-        for (int i = 1; i < fieldDecls.size(); ++i)
-          {
-            FieldDecl prevDecl = fieldDecls.get(i - 1);
-            fieldDecls.get(i).setOffset(prevDecl.offset() + prevDecl.size());
-          }
+// ...
       }
 
     /**
