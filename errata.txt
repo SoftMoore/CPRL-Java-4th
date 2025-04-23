@@ -14,6 +14,18 @@ to
 ____________________________________________________________________
 
 
+Near the bottom of page 44, the rule for syntaxFactor is missing the grouping with parentheses
+plus a period at the end.
+Change
+   syntaxFactor = identifier | terminalSym
+                | "{" syntaxExpr "}" | "[" syntaxExpr "]"
+to
+   syntaxFactor = identifier | terminalSym
+                | "{" syntaxExpr "}" | "[" syntaxExpr "]" | "(" syntaxExpr ")" .
+
+____________________________________________________________________
+
+
 Near the middle of p. 58, change
    (except that arrays are always passed by value, regardless of how the parameter is declared)
 to
