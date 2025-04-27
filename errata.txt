@@ -75,7 +75,7 @@ Page 98, change
    Similarly, the lexical grammar for CPRL uses “one or more” in only three rules.
 to
    As an aside, note that the structural grammar for CPRL does not use “one or more” in any
-   rules, and the lexical grammar for CPRL uses “one or more” in only three rules
+   rules, and the lexical grammar for CPRL uses “one or more” in only three rules.
 
 ___________________________________________________________________
 
@@ -95,7 +95,7 @@ ___________________________________________________________________
 
 Bottom of page 147 and top of page 159
 
-In the rectangle for SubprogramDecl, change "PROGRAM" to "GLOBAL"
+In the rectangle for SingleVarDecl, change "PROGRAM" to "GLOBAL"
 
 ___________________________________________________________________
 
@@ -112,7 +112,7 @@ ___________________________________________________________________
 
 
 Page 152, Section 8.8, change
-   initilizers
+   initializers
 to
    initializers
 
@@ -157,7 +157,7 @@ ___________________________________________________________________
 
 
 Page 257, approximately two-thirds the way down the page, checkInitializer()
-is mispelled.  Change
+is misspelled.  Change
    simply calls checkInitialzer()
 to
    simply calls checkInitializer()
