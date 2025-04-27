@@ -112,7 +112,7 @@ ___________________________________________________________________
 
 
 Page 152, Section 8.8, change
-   initializers
+   initilizers
 to
    initializers
 
