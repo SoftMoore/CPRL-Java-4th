@@ -385,9 +385,16 @@ public final class Parser
             match(Symbol.rightBracket);
             match(Symbol.ofRW);
             var elemType = parseTypeName();
-            var nElements = numElements.intValue();
-            var typeName  = "array[" + nElements + "] of " + elemType;
-            return new ArrayType(typeName, nElements, elemType);
+            var typeName  = "array[" + numElements.intValue() + "] of " + elemType;
+
+            // check that numElements is positive
+            if (numElements.intValue() <= 0)
+              {
+                var errorMsg = "Array size must be a positive integer.";
+                throw error(numElements.position(), errorMsg);
+              }
+
+            return new ArrayType(typeName, numElements.intValue(), elemType);
           }
         catch (ParserException e)
           {
@@ -488,11 +495,23 @@ public final class Parser
           {
             match(Symbol.stringRW);
             match(Symbol.leftBracket);
-            var numElements = parseIntConstValue();
+            var capacity = parseIntConstValue();
             match(Symbol.rightBracket);
-            var nElements = numElements.intValue();
-            var typeName  = "string[" + nElements + "]";
-            return new StringType(typeName, nElements);
+            var typeName  = "string[" + capacity.intValue() + "]";
+
+            // check that 0 < capacity <= 512
+            if (capacity.intValue() <= 0)
+              {
+                var errorMsg = "String capacity must be a positive integer.";
+                throw error(capacity.position(), errorMsg);
+              }
+            else if (capacity.intValue() > 512)
+              {
+                var errorMsg = "String capacity cannot be greater than 512.";
+                throw error(capacity.position(), errorMsg);
+              }
+
+            return new StringType(typeName, capacity.intValue());
           }
         catch (ParserException e)
           {
@@ -562,7 +581,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.assign,     Symbol.semicolon,  Symbol.comma,
+            recover(EnumSet.of(Symbol.assign,     Symbol.semicolon, Symbol.comma,
                                Symbol.rightParen, Symbol.leftBrace));
             return Type.UNKNOWN;
           }
@@ -1222,8 +1241,8 @@ public final class Parser
     // Utility parsing methods
 
     /**
-     * Wrapper around method parseConstValue() that always
-     * returns a valid constant integer value.
+     * Wrapper around method parseConstValue() that always returns a valid constant
+     * integer value.  Reports errors but returns constant value 1 if an error is detected.
      */
     private ConstValue parseIntConstValue() throws IOException
       {
