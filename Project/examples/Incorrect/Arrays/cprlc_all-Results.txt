@@ -76,3 +76,19 @@ Starting compilation for Incorrect_309.cprl
     Invalid type name.
 Errors detected in Incorrect_309.cprl -- compilation terminated.
 
+Starting compilation for Incorrect_310.cprl
+...parsing
+*** Syntax error detected near line 1, character 16:
+    Constant value should have type Integer.
+*** Syntax error detected near line 6, character 20:
+    Constant value should have type Integer.
+Errors detected in Incorrect_310.cprl -- compilation terminated.
+
+Starting compilation for Incorrect_311.cprl
+...parsing
+*** Syntax error detected near line 1, character 16:
+    Array size must be a positive integer.
+*** Syntax error detected near line 6, character 20:
+    Array size must be a positive integer.
+Errors detected in Incorrect_311.cprl -- compilation terminated.
+

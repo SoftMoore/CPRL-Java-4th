@@ -1,0 +1,7 @@
+type T = array[0] of Integer;       // array size must be positive
+
+proc main()
+  {
+    var t1 : T;
+    var t2 : array[0] of Integer;   // array size must be positive
+  }

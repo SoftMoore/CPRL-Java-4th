@@ -34,3 +34,18 @@ Parsing complete.
 Parsing Incorrect_410.cprl...
 Parsing complete.
 
+Parsing Incorrect_411.cprl...
+*** Syntax error detected near line 6, character 25:
+    Expecting "of" but found ";" instead.
+Errors detected in Incorrect_411.cprl -- parsing terminated.
+
+Parsing Incorrect_412.cprl...
+Parsing complete.
+
+Parsing Incorrect_413.cprl...
+*** Syntax error detected near line 1, character 13:
+    Invalid type declaration.
+*** Syntax error detected near line 5, character 13:
+    Identifier "Name" has not been declared.
+Errors detected in Incorrect_413.cprl -- parsing terminated.
+

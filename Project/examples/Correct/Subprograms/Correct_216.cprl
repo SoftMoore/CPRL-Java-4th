@@ -1,0 +1,30 @@
+proc main()
+  {
+    var x: Integer := 10;
+    writeln "in Main: x = ", x;
+    f1(x);
+    writeln "in Main: x = ", x;
+  }
+
+proc f1(var x : Integer)
+  {
+    x := x + 1;
+    writeln "in f1: x = ", x;
+    f2(x);
+    writeln "in f1: x = ", x;
+  }
+
+proc f2(var x : Integer)
+  {
+    x := x + 1;
+    writeln "in f2: x = ", x;
+    f3(x);
+    writeln "in f2: x = ", x;
+  }
+
+proc f3(x : Integer)
+  {
+    writeln "in f3: x = ", x;
+    x := x + 1;
+    writeln "in f3: x = ", x;
+  }

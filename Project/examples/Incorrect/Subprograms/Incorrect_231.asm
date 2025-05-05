@@ -1,0 +1,32 @@
+   CALL _main
+   HALT
+_main:
+   PROC 20
+   LDLADDR 8
+   LDCINT 1
+   LDCINT 2
+   LDCINT 3
+   LDCINT 4
+   LDCINT 5
+   STORE 20
+   LDLADDR 8
+   ALLOC 20
+   LDLADDR 8
+   CALL _f
+   STORE 20
+   LDLADDR 8
+   LDCINT 2
+   LDCINT 4
+   MUL
+   ADD
+   LOADW
+   PUTINT
+   PUTEOL
+   RET 0
+_f:
+   LDLADDR -24
+   LDLADDR -4
+   LOADW
+   LOAD 20
+   STORE 20
+   RET 4

@@ -31,3 +31,9 @@ Parsing Incorrect_309.cprl...
     Invalid type name.
 Errors detected in Incorrect_309.cprl -- parsing terminated.
 
+Parsing Incorrect_310.cprl...
+Parsing complete.
+
+Parsing Incorrect_311.cprl...
+Parsing complete.
+

@@ -22,11 +22,8 @@ Errors detected in Incorrect_403.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_404.cprl
 ...parsing
-...checking constraints
-*** Constraint error detected near line 1, character 20:
+*** Syntax error detected near line 1, character 20:
     String capacity must be a positive integer.
-*** Constraint error detected near line 6, character 11:
-    Type mismatch for assignment statement.
 Errors detected in Incorrect_404.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_405.cprl
@@ -60,8 +57,7 @@ Errors detected in Incorrect_408.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_409.cprl
 ...parsing
-...checking constraints
-*** Constraint error detected near line 1, character 20:
+*** Syntax error detected near line 1, character 20:
     String capacity cannot be greater than 512.
 Errors detected in Incorrect_409.cprl -- compilation terminated.
 
@@ -73,4 +69,30 @@ Starting compilation for Incorrect_410.cprl
 *** Constraint error detected near line 6, character 21:
     Type mismatch for variable initialization.
 Errors detected in Incorrect_410.cprl -- compilation terminated.
+
+Starting compilation for Incorrect_411.cprl
+...parsing
+*** Syntax error detected near line 1, character 17:
+    Constant value should have type Integer.
+*** Syntax error detected near line 6, character 20:
+    Constant value should have type Integer.
+*** Syntax error detected near line 6, character 25:
+    Expecting "of" but found ";" instead.
+Errors detected in Incorrect_411.cprl -- compilation terminated.
+
+Starting compilation for Incorrect_412.cprl
+...parsing
+*** Syntax error detected near line 1, character 17:
+    String capacity must be a positive integer.
+*** Syntax error detected near line 6, character 21:
+    String capacity must be a positive integer.
+Errors detected in Incorrect_412.cprl -- compilation terminated.
+
+Starting compilation for Incorrect_413.cprl
+...parsing
+*** Syntax error detected near line 1, character 13:
+    Invalid type declaration.
+*** Syntax error detected near line 5, character 13:
+    Identifier "Name" has not been declared.
+Errors detected in Incorrect_413.cprl -- compilation terminated.
 

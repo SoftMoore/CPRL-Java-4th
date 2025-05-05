@@ -1,7 +1,13 @@
-type Name = String[20];     // invalid type declaration
+type T = array[5] of Integer;
 
 proc main()
   {
-    var n : Name :=  "Nate";
-    write n;
+    var a: T := { 1, 2, 3, 4, 5 };
+    a := f(a);
+    writeln a[2];
+  }
+
+fun f(var t : T) : T     // function parameters can't be declared as var
+  {
+    return t;
   }

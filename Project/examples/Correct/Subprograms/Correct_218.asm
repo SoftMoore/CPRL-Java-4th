@@ -1,0 +1,31 @@
+   CALL _main
+   HALT
+_main:
+   ALLOC 4
+   LDCINT 3
+   CALL _f
+   PUTINT
+   PUTEOL
+   ALLOC 4
+   LDCINT 7
+   CALL _f
+   PUTINT
+   PUTEOL
+   RET 0
+_f:
+   LDLADDR -4
+   LOADW
+   LDCINT 5
+   BGE L2
+   LDLADDR -4
+   LDLADDR -4
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+L2:
+   LDLADDR -8
+   LDLADDR -4
+   LOADW
+   STOREW
+   RET 4

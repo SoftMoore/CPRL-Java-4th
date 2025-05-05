@@ -78,7 +78,7 @@ Starting compilation for Incorrect_212.cprl
 ...parsing
 ...checking constraints
 *** Constraint error detected near line 3, character 11:
-    A function cannot have var parameters.
+    A function cannot declare var parameters.
 Errors detected in Incorrect_212.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_213.cprl
@@ -205,10 +205,9 @@ Errors detected in Incorrect_230.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_231.cprl
 ...parsing
-*** Syntax error detected near line 1, character 13:
-    Invalid type declaration.
-*** Syntax error detected near line 5, character 13:
-    Identifier "Name" has not been declared.
+...checking constraints
+*** Constraint error detected near line 10, character 11:
+    A function cannot declare var parameters.
 Errors detected in Incorrect_231.cprl -- compilation terminated.
 
 Starting compilation for Incorrect_232.cprl

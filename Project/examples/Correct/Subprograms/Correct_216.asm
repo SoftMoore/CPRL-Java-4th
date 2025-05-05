@@ -1,0 +1,97 @@
+   CALL _main
+   HALT
+_main:
+   PROC 4
+   LDLADDR 8
+   LDCINT 10
+   STOREW
+   LDCSTR "in Main: x = "
+   PUTSTR 13
+   LDLADDR 8
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR 8
+   CALL _f1
+   LDCSTR "in Main: x = "
+   PUTSTR 13
+   LDLADDR 8
+   LOADW
+   PUTINT
+   PUTEOL
+   RET 0
+_f1:
+   LDLADDR -4
+   LOADW
+   LDLADDR -4
+   LOADW
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDCSTR "in f1: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR -4
+   LOADW
+   CALL _f2
+   LDCSTR "in f1: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   LOADW
+   PUTINT
+   PUTEOL
+   RET 4
+_f2:
+   LDLADDR -4
+   LOADW
+   LDLADDR -4
+   LOADW
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDCSTR "in f2: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR -4
+   LOADW
+   LOADW
+   CALL _f3
+   LDCSTR "in f2: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   LOADW
+   PUTINT
+   PUTEOL
+   RET 4
+_f3:
+   LDCSTR "in f3: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   PUTINT
+   PUTEOL
+   LDLADDR -4
+   LDLADDR -4
+   LOADW
+   LDCINT 1
+   ADD
+   STOREW
+   LDCSTR "in f3: x = "
+   PUTSTR 11
+   LDLADDR -4
+   LOADW
+   PUTINT
+   PUTEOL
+   RET 4

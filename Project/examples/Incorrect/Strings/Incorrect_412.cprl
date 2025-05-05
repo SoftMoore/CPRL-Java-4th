@@ -1,0 +1,7 @@
+type T = string[0];       // string capacity must be positive
+
+proc main()
+  {
+    var t1 : T;
+    var t2 : string[0];   // string capacity must be positive
+  }

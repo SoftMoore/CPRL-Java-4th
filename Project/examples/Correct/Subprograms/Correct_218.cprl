@@ -1,0 +1,14 @@
+proc main()
+  {
+    writeln f(3);
+    writeln f(7);
+  }
+
+// function with "if" and no "else"
+fun f(x : Integer) : Integer
+  {
+     if x < 5 then
+         x := x + 1;
+
+     return x;
+  }

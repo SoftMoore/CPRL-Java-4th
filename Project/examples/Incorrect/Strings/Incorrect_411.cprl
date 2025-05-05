@@ -1,0 +1,7 @@
+type T = string['e'];       // string capacity must be an Integer
+
+proc main()
+  {
+    var t1 : T;
+    var t2 : array[true];   // string capacity must be an Integer
+  }

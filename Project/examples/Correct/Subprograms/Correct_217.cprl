@@ -1,0 +1,16 @@
+proc main()
+  {
+    writeln f(3);
+    writeln f(7);
+  }
+
+fun f(x : Integer) : Integer
+  {
+    loop
+      {
+        if x < 5 then
+             x := x + 1;
+        else
+            return x;       // only return is in an else clause
+      }
+  }
