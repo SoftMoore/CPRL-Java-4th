@@ -167,11 +167,84 @@ to
 ___________________________________________________________________
 
 
+Page 255, in the excerpt from method parseArrayTypeConstr(), change
+   var numElements = parseConstIntValue();
+   ...
+   var elemType = parseTypeName();
+   var nElements = numElements.intValue();
+   var typeName  = "array[" + nElements + "] of " + elemType;
+   arrayType = new ArrayType(typeName, nElements, elemType);
+to
+   var numElements = parseIntConstValue();
+   match(Symbol.rightBracket);
+   match(Symbol.ofRW);
+   var elemType = parseTypeName();
+   var typeName = "array[" + numElements.intValue() + "] of " + elemType;
+
+___________________________________________________________________
+
+
+Page 256, under the first bullet labeled "Miscellaneous Rule", change
+   While most miscellaneous rules are handled in checkContraints() methods,
+   this one is conveniently handled in parser method parseParameterDecl().
+   Immediately after parsing the type name, we simply force the parameter to be a variable
+   parameter.
+      if (paramtype instanceof ArrayType)
+          isVarParam = true;
+to
+   This rule is handled in the checkContraints() methods for AST classes FunctionDecl and
+   ProcedureDecl.  If the type of a formal parameter is declared as an array type, we simply
+   force the parameter to be a variable parameter.
+      if (paramDecl.type() instanceof ArrayType)
+          paramDecl.setVarParam(true);
+
+___________________________________________________________________
+
+
+Page 257, under the the two rules for Variable, add the following clarifying paragraph.
+   Note that parser method parseArrayTypeConstr() returns an ArrayType, not an AST
+   class.  Therefore, this parser method must enforce a rule identical to the type rule stated
+   above for ArrayTypeDecl – there is no AST class to check the constraint.  For consistency,
+   parser method parseArrayTypeDecl() is written using logic similar to that of
+   parseArrayTypeConstr(), so enforcing the type rule in ArrayTypeDecl is technically
+   redundant; it was already checked in the parser.  So here we have a rare case of a type rule
+   being checked in the parser.
+
+___________________________________________________________________
+
+
 Page 257, approximately two-thirds the way down the page, checkInitializer()
 is misspelled.  Change
    simply calls checkInitialzer()
 to
    simply calls checkInitializer()
+
+___________________________________________________________________
+
+
+Page 265, in the excerpt from method parseStringTypeConstr(), change
+   var numElements = parseIntConstValue();
+   ...
+   var nElements = numElements.intValue();
+   var typeName  = "string[" + nElements() + "]";
+   stringType = new StringType(typeName, nElements);
+to
+   var capacity = parseIntConstValue();
+   match(Symbol.rightBracket);
+   var typeName  = "string[" + capacity.intValue() + "]";
+
+___________________________________________________________________
+
+
+Page 267, Insert the following clarifying paragraph at the top of the page before the bullet
+point Padding.
+   Analogous to arrays, parser method parseSringTypeConstr() returns a StringType, not
+   an AST class.  Therefore, this parser method must enforce a rule identical to the type rule
+   stated above for StringTypeDecl – there is no AST class to check the constraint.  For
+   consistency, parser method parseStringTypeDecl() is written using logic similar to that of
+   parseStringTypeConstr(), so enforcing the type rule in StringTypeDecl is technically
+   redundant; it was already checked in the parser.  So here we have another rare case of a
+   type rule being checked in the parser.
 
 ___________________________________________________________________
 
