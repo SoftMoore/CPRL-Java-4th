@@ -105,19 +105,6 @@ public abstract class SubprogramDecl extends Declaration
         return paramLength;
       }
 
-    @Override
-    public void checkConstraints()
-      {
-        for (ParameterDecl paramDecl : paramDecls)
-            paramDecl.checkConstraints();
-
-        for (InitialDecl decl : initialDecls)
-            decl.checkConstraints();
-
-        for (Statement statement : statements)
-            statement.checkConstraints();
-      }
-
     /**
     * Set the relative address (offset) for each variable and
     * parameter, and compute the length of all variables.

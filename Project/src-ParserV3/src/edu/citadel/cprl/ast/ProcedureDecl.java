@@ -1,7 +1,7 @@
 package edu.citadel.cprl.ast;
 
 import edu.citadel.common.CodeGenException;
-
+import edu.citadel.cprl.ArrayType;
 import edu.citadel.cprl.Token;
 
 /**
@@ -17,7 +17,24 @@ public class ProcedureDecl extends SubprogramDecl
         super(procId);
       }
 
-    // inherited checkConstraints() is sufficient
+    @Override
+    public void checkConstraints()
+      {
+        for (ParameterDecl paramDecl : parameterDecls())
+          {
+            paramDecl.checkConstraints();
+
+            // arrays are always passed as var params.
+            if (paramDecl.type() instanceof ArrayType)
+                paramDecl.setVarParam(true);
+          }
+
+        for (InitialDecl decl : initialDecls())
+            decl.checkConstraints();
+
+        for (Statement statement : statements())
+            statement.checkConstraints();
+      }
 
     @Override
     public void emit() throws CodeGenException

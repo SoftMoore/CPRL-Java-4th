@@ -77,9 +77,8 @@ public class FunctionCallExpr extends Expression
                 if (!matchTypes(paramDecl.type(), expr))
                     throw error(expr.position(), "Parameter type mismatch.");
 
-                // check that variable expressions are passed for var parameters
-                // (recall that arrays are passed as var parameters; checked in FunctionDecl)
-                if (paramDecl.isVarParam() && paramDecl.type() instanceof ArrayType)
+                // check that arrays are passed as var parameters
+                if (paramDecl.type() instanceof ArrayType)
                   {
                     if (expr instanceof VariableExpr variableExpr)
                       {
@@ -89,7 +88,7 @@ public class FunctionCallExpr extends Expression
                       }
                     else
                       {
-                        var errorMsg = "Expression for an array (var) parameter must be a variable.";
+                        var errorMsg = "Expression for an array parameter must be a variable.";
                         throw error(expr.position(), errorMsg);
                       }
                   }

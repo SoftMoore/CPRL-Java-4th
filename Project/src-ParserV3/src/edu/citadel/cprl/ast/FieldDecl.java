@@ -13,7 +13,7 @@ import edu.citadel.cprl.Type;
 public class FieldDecl extends Declaration
   {
     private int offset;   // offset for this field within the record; initialized
-                          // to 0 but updated when record type is constructed
+                          // to 0 but updated in constructor for RecordType
 
     // The size (number of bytes) associated with this field declaration,
     // which is simply the number of bytes associated with its type.

@@ -66,6 +66,15 @@ public final class ParameterDecl extends Declaration implements VariableDecl
         return isVarParam;
       }
 
+    /**
+     * Set the value for isVarParam.  Used primarily when working
+     * with arrays, which are always passed as var parameters.
+     */
+    public void setVarParam(boolean isVarParam)
+      {
+        this.isVarParam = isVarParam;
+      }
+
     @Override
     public void checkConstraints()
       {
