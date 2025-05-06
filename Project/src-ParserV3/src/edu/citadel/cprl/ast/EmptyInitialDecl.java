@@ -31,10 +31,4 @@ public class EmptyInitialDecl extends InitialDecl
       {
         // nothing to check
       }
-
-    @Override
-    public void emit()
-      {
-        // nothing to emit
-      }
   }
