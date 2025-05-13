@@ -27,7 +27,7 @@ public class RecordType extends Type
 // ... What is the size for the record type?  Hint: Read the book.
         this.fieldDecls = fieldDecls;
 
-        for (FieldDecl fieldDecl : fieldDecls)
+        for (var fieldDecl : fieldDecls)
             fieldNameMap.put(fieldDecl.idToken().text(), fieldDecl);
 
         // compute fieldDecl offsets

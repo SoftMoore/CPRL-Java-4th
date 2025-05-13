@@ -161,7 +161,7 @@ public class Assembler
     private static void printInstructions(List<Instruction> instructions)
       {
         System.out.println("There are " + instructions.size() + " instructions.");
-        for (Instruction instruction : instructions)
+        for (var instruction : instructions)
             System.out.println(instruction);
         System.out.println();
       }

@@ -229,7 +229,7 @@ public final class Parser
             var varDecl = new VarDecl(identifiers, varType, initializer,
                                       idTable.scopeLevel());
 
-            for (SingleVarDecl decl : varDecl.singleVarDecls())
+            for (var decl : varDecl.singleVarDecls())
                 idTable.add(decl);
 
             return varDecl;

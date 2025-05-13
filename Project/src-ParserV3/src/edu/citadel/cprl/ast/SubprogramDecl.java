@@ -99,7 +99,7 @@ public abstract class SubprogramDecl extends Declaration
       {
         int paramLength = 0;
 
-        for (ParameterDecl decl : paramDecls)
+        for (var decl : paramDecls)
             paramLength += decl.size();
 
         return paramLength;
@@ -114,12 +114,12 @@ public abstract class SubprogramDecl extends Declaration
         // initial relative address for a subprogram
         int currentAddr = Constants.BYTES_PER_CONTEXT;
 
-        for (InitialDecl decl : initialDecls)
+        for (var decl : initialDecls)
           {
             if (decl instanceof VarDecl varDecl)
               {
                 // set relative address for single variable declarations
-                for (SingleVarDecl svDecl : varDecl.singleVarDecls())
+                for (var svDecl : varDecl.singleVarDecls())
                   {
                     svDecl.setRelAddr(currentAddr);
                     currentAddr = currentAddr + svDecl.size();

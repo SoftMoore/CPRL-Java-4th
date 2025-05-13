@@ -31,7 +31,7 @@ public class DeadCodeElimination implements Optimization
         // if it has no labels OR if the total count of branches to it is zero.
         if (instNum == 1)
           {
-            for (Instruction inst : instructions)
+            for (var inst : instructions)
               {
                 if (isBranchOrCallInstruction(inst))
                   {
@@ -106,7 +106,7 @@ public class DeadCodeElimination implements Optimization
     private int getTotalBranchCounts(List<Token> labels)
       {
         int sum = 0;
-        for (Token label : labels)
+        for (var label : labels)
             sum = sum + labelBranchCounts.getOrDefault(label.text(), 0);
         return sum;
       }

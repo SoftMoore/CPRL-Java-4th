@@ -167,7 +167,7 @@ public enum Opcode
 
     static
       {
-        for (Opcode opcode: values())
+        for (var opcode: values())
             valueOpcodeMap.put(opcode.value, opcode);
       }
   }

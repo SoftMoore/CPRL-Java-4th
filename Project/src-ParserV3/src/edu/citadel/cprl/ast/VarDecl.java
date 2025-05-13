@@ -28,7 +28,7 @@ public class VarDecl extends InitialDecl
         super(new Token(), varType);
         singleVarDecls = new ArrayList<>(identifiers.size());
 
-        for (Token id : identifiers)
+        for (var id : identifiers)
             singleVarDecls.add(new SingleVarDecl(id, varType, initializer, scopeLevel));
       }
 
@@ -43,14 +43,14 @@ public class VarDecl extends InitialDecl
     @Override
     public void checkConstraints()
       {
-        for (SingleVarDecl singleVarDecl : singleVarDecls)
+        for (var singleVarDecl : singleVarDecls)
             singleVarDecl.checkConstraints();
       }
 
     @Override
     public void emit() throws CodeGenException
       {
-        for (SingleVarDecl singleVarDecl : singleVarDecls)
+        for (var singleVarDecl : singleVarDecls)
             singleVarDecl.emit();
       }
   }

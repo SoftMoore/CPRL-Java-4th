@@ -65,7 +65,7 @@ public abstract class Instruction extends AST
         this.address = address;
 
         // define addresses for labels
-        for (Token label : labels)
+        for (var label : labels)
           {
             if (labelMap.containsKey(label.text()))
               {
@@ -108,7 +108,7 @@ public abstract class Instruction extends AST
      */
     protected void checkLabels() throws ConstraintException
       {
-        for (Token label : labels)
+        for (var label : labels)
           {
             if (!labelMap.containsKey(label.text()))
               {
@@ -154,7 +154,7 @@ public abstract class Instruction extends AST
         // for now simply print the instruction
         if (labels != null)
           {
-            for (Token label : labels)
+            for (var label : labels)
                 buffer.append(label.text() + "\n");
           }
 

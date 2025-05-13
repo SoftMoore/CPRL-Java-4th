@@ -25,7 +25,7 @@ public class Disassembler
         if (args.length == 0)
             printUsageAndExit();
 
-        for (String fileName : args)
+        for (var fileName : args)
           {
             // get object code file name minus the suffix
             int suffixIndex = fileName.lastIndexOf(SUFFIX);
@@ -34,7 +34,7 @@ public class Disassembler
                 System.err.println("*** Invalid file name suffix: " + fileName + " ***");
                 System.exit(FAILURE);
               }
-              
+
             var codeFile = new FileInputStream(fileName);
 
             var baseName = fileName.substring(0, suffixIndex);

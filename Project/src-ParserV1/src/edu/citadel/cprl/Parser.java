@@ -135,7 +135,7 @@ public final class Parser
 
             match(Symbol.semicolon);
 
-            for (Token identifier : identifiers)
+            for (var identifier : identifiers)
                 idTable.add(identifier, IdType.variableId);
           }
         catch (ParserException e)

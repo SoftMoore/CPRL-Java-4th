@@ -40,7 +40,7 @@ public final class Scanner
 
         // initialize opcodeMap with reserved word symbols
         opcodeMap = new HashMap<>(100);
-        for (Symbol symbol : Symbol.values())
+        for (var symbol : Symbol.values())
           {
             if (symbol.isOpcode())
                 opcodeMap.put(symbol.toString(), symbol);

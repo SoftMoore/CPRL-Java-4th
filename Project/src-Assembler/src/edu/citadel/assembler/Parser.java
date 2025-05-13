@@ -31,7 +31,7 @@ public class Parser
         var followers = EnumSet.noneOf(Symbol.class);
 
         // add all opcodes
-        for (Symbol symbol : Symbol.values())
+        for (var symbol : Symbol.values())
           {
             if (symbol.isOpcode())
                 followers.add(symbol);

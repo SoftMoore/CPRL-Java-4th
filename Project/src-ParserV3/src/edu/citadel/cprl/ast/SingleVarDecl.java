@@ -115,7 +115,7 @@ public final class SingleVarDecl extends InitialDecl implements VariableDecl
                     throw error(initializer.position(), errorMsg);
                   }
 
-                for (Initializer i : initializers)
+                for (var i : initializers)
                     checkInitializer(arrayType.elementType(), i);
               }
             else

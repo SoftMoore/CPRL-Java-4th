@@ -34,7 +34,7 @@ public class Program extends AST
     @Override
     public void checkConstraints()
       {
-        for (Instruction inst : instructions)
+        for (var inst : instructions)
             inst.checkConstraints();
       }
 
@@ -62,7 +62,7 @@ public class Program extends AST
         // the starting address for the first instruction
         int address = 0;
 
-        for (Instruction inst : instructions)
+        for (var inst : instructions)
           {
             try
               {
@@ -79,7 +79,7 @@ public class Program extends AST
     @Override
     public void emit() throws IOException
       {
-        for (Instruction inst : instructions)
+        for (var inst : instructions)
             inst.emit();
       }
 
@@ -88,7 +88,7 @@ public class Program extends AST
       {
         var buffer = new StringBuffer(1000);
 
-        for (Instruction inst : instructions)
+        for (var inst : instructions)
             buffer.append(inst.toString())
                   .append("\n");
 

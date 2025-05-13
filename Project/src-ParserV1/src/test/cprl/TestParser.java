@@ -21,7 +21,7 @@ public class TestParser
         if (args.length == 0)
             printUsageAndExit();
 
-        for (String fileName : args)
+        for (var fileName : args)
           {
             var errorHandler = new ErrorHandler();
 

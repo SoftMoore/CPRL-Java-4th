@@ -57,14 +57,14 @@ public final class CompositeInitializer extends AST implements Initializer
     @Override
     public void checkConstraints()
       {
-        for (Initializer initializer : initializers)
+        for (var initializer : initializers)
             initializer.checkConstraints();
       }
 
     @Override
     public void emit() throws CodeGenException
       {
-        for (Initializer initializer : initializers)
+        for (var initializer : initializers)
             initializer.emit();
       }
 

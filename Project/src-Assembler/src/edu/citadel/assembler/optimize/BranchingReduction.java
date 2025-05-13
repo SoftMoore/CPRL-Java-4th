@@ -103,7 +103,7 @@ public class BranchingReduction implements Optimization
     private static boolean containsLabel(List<Token> labels, Token label)
       {
         var labelStr = label.text() + ":";
-        for (Token l : labels)
+        for (var l : labels)
           {
             if (l.text().equals(labelStr))
                 return true;

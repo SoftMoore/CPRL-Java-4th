@@ -27,7 +27,7 @@ public class Compiler
         if (args.length == 0)
             printUsageAndExit();
 
-        for (String fileName : args)
+        for (var fileName : args)
           {
             try
               {

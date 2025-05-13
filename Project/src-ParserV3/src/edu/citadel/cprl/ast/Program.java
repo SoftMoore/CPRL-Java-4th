@@ -40,10 +40,10 @@ public class Program extends AST
       {
         try
           {
-            for (InitialDecl decl : initialDecls)
+            for (var decl : initialDecls)
                 decl.checkConstraints();
 
-            for (SubprogramDecl decl : subprogramDecls)
+            for (var decl : subprogramDecls)
                 decl.checkConstraints();
 
             // check procedure main
@@ -80,12 +80,12 @@ public class Program extends AST
         // initial relative address is 0 for a program
         int currentAddr = 0;
 
-        for (InitialDecl decl : initialDecls)
+        for (var decl : initialDecls)
           {
             if (decl instanceof VarDecl varDecl)
               {
                 // set relative address for single variable declarations
-                for (SingleVarDecl singleVarDecl : varDecl.singleVarDecls())
+                for (var singleVarDecl : varDecl.singleVarDecls())
                   {
                     singleVarDecl.setRelAddr(currentAddr);
                     currentAddr = currentAddr + singleVarDecl.size();
@@ -106,13 +106,13 @@ public class Program extends AST
         if (varLength > 0)
             emit("PROGRAM " + varLength);
 
-        for (InitialDecl decl : initialDecls)
+        for (var decl : initialDecls)
             decl.emit();
 
         emit("CALL _main");
         emit("HALT");
 
-        for (SubprogramDecl decl : subprogramDecls)
+        for (var decl : subprogramDecls)
             decl.emit();
       }
   }

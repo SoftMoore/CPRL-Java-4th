@@ -64,7 +64,7 @@ public class Variable extends Expression
           {
             assert decl instanceof SingleVarDecl || decl instanceof ParameterDecl;
 
-            for (Expression expr : selectorExprs)
+            for (var expr : selectorExprs)
               {
                 expr.checkConstraints();
 
@@ -171,7 +171,7 @@ public class Variable extends Expression
 
         // For an array, record, or string, at this point the base address is on the
         // top of the stack.  We need to replace it by the sum base address + offset
-        for (Expression expr : selectorExprs)
+        for (var expr : selectorExprs)
           {
             if (type instanceof ArrayType arrayType)
               {
