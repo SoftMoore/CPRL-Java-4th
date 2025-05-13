@@ -44,7 +44,7 @@ public class InstructionLDCSTR extends InstructionOneArg
     @Override
     protected int argSize()
       {
-        // Note: We must return the size for both the integer arg and
+        // Note: We must return the size for both the length arg and
         // the string arg that will be generated in machine code.
         return Constants.BYTES_PER_INTEGER + Constants.BYTES_PER_CHAR*strLength();
       }

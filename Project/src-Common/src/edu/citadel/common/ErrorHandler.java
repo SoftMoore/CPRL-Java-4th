@@ -33,13 +33,14 @@ public class ErrorHandler
      */
     public void reportError(CompilerException e)
       {
+        var message = e.getMessage() != null ? e.getMessage() : "";
         if (errorCount <= MAX_ERRORS)
           {
-            if (shouldPrint(e.getMessage()))
+            if (shouldPrint(message))
               {
-                err.println(e.getMessage());
+                printMessage(message);
                 ++errorCount;
-                lastMessage = e.getMessage();
+                lastMessage = message;
               }
           }
         else
@@ -69,7 +70,7 @@ public class ErrorHandler
      */
     private boolean shouldPrint(String message)
       {
-        if (message == null || message.equals(lastMessage))
+        if (message.isEmpty() || message.equals(lastMessage))
             return false;
 
         lastMessage = message;
