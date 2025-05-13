@@ -65,7 +65,7 @@ public class FunctionCallExpr extends Expression
               }
 
             // check constraints for each actual parameter
-            for (Expression expr : actualParams)
+            for (var expr : actualParams)
                 expr.checkConstraints();
 
             for (int i = 0; i < actualParams.size(); ++i)
@@ -139,7 +139,7 @@ public class FunctionCallExpr extends Expression
         emit("ALLOC " + funDecl.type().size());
 
         // emit code for actual parameters
-        for (Expression expr : actualParams)
+        for (var expr : actualParams)
             expr.emit();
 
         emit("CALL " + funDecl.subprogramLabel());

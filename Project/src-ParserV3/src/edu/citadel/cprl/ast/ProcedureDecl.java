@@ -20,7 +20,7 @@ public class ProcedureDecl extends SubprogramDecl
     @Override
     public void checkConstraints()
       {
-        for (ParameterDecl paramDecl : parameterDecls())
+        for (var paramDecl : parameterDecls())
           {
             paramDecl.checkConstraints();
 
@@ -29,10 +29,10 @@ public class ProcedureDecl extends SubprogramDecl
                 paramDecl.setVarParam(true);
           }
 
-        for (InitialDecl decl : initialDecls())
+        for (var decl : initialDecls())
             decl.checkConstraints();
 
-        for (Statement statement : statements())
+        for (var statement : statements())
             statement.checkConstraints();
       }
 
@@ -46,10 +46,10 @@ public class ProcedureDecl extends SubprogramDecl
         if (varLength() > 0)
             emit("PROC " + varLength());
 
-        for (InitialDecl decl : initialDecls())
+        for (var decl : initialDecls())
             decl.emit();
 
-        for (Statement statement : statements())
+        for (var statement : statements())
             statement.emit();
 
         emit("RET " + paramLength());   // required for procedures

@@ -45,7 +45,7 @@ public class OutputStmt extends Statement
     @Override
     public void checkConstraints()
       {
-        for (Expression expr : expressions)
+        for (var expr : expressions)
           {
             expr.checkConstraints();
 
@@ -69,7 +69,7 @@ public class OutputStmt extends Statement
     @Override
     public void emit() throws CodeGenException
       {
-        for (Expression expr : expressions)
+        for (var expr : expressions)
           {
             expr.emit();
 
