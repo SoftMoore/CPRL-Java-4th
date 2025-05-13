@@ -3,6 +3,17 @@ release of the book sometime around the middle of 2025.
 
 ____________________________________________________________________
 
+This is not technically an error, but the following change was made on multiple pages.
+Replaced type name with "var" in enhanced for loops.
+For example,
+   for (Statement stmt : statements)
+       stmt.emit();
+is replaced with
+   for (var stmt : statements)
+       stmt.emit();
+
+____________________________________________________________________
+
 
 Page 31, change
    One such place is the rule for subprogramDecls, which always includes at least one subprogramDecl.
@@ -201,7 +212,7 @@ to
 ___________________________________________________________________
 
 
-Page 257, under the the two rules for Variable, add the following clarifying paragraph.
+Page 257, under the two rules for Variable, add the following clarifying paragraph.
    Note that parser method parseArrayTypeConstr() returns an ArrayType, not an AST
    class.  Therefore, this parser method must enforce a rule identical to the type rule stated
    above for ArrayTypeDecl – there is no AST class to check the constraint.  For consistency,
