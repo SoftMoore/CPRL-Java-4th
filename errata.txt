@@ -178,6 +178,16 @@ to
 ___________________________________________________________________
 
 
+Page 219, near the bottom of the page, change
+   We start with a brief overview of the CVM instructions mentioned in the fourth bullet
+   above.  These instructions are used specifically in the implementation subprograms.
+to
+   We start with a brief overview of the CVM instructions mentioned in the first bullet above.
+   These instructions are used specifically in the implementation of subprograms.
+
+___________________________________________________________________
+
+
 Page 255, in the excerpt from method parseArrayTypeConstr(), change
    var numElements = parseConstIntValue();
    ...
