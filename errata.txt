@@ -1,9 +1,12 @@
-Errata for original printing of the book.  These changes will be made in a subsequent
-release of the book sometime around the middle of 2025.
+Errata for original printing of the book.  The errata listed below were corrected in a
+subsequent release of the book on May 17, 2025.  Look for the line
+   Republished with minor revisions May 2025
+just below the ISBN number on page ii (the back of the title page) to ensure that you have
+the latest revision of the book with these corrections.
 
 ____________________________________________________________________
 
-This is not technically an error, but the following change was made on multiple pages.
+These are not technically an errors, but the following changes were made on multiple pages.
 Replaced type name with "var" in enhanced for loops.
 For example,
    for (Statement stmt : statements)
