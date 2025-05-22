@@ -88,7 +88,6 @@ public class ByteUtil
      */
     public static byte[] charToBytes(char c)
       {
-        
         byte[] result = new byte[2];
         result[0] = (byte) ((c >>> 8) & 0x00FF);
         result[1] = (byte) ((c >>> 0) & 0x00FF);
