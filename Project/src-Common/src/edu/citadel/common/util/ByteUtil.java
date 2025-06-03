@@ -50,7 +50,7 @@ public class ByteUtil
 
     /**
      * Converts 2 bytes to a char.  The bytes passed as arguments are
-     * ordered with b0 as the high order byte and b1 as the low order byte.
+     * ordered with b0 as the high-order byte and b1 as the low-order byte.
      */
     public static char bytesToChar(byte b0, byte b1)
       {
@@ -60,7 +60,7 @@ public class ByteUtil
 
     /**
      * Converts 4 bytes to an int.  The bytes passed as arguments are
-     * ordered with b0 as the high order byte and b3 as the low order byte.
+     * ordered with b0 as the high-order byte and b3 as the low-order byte.
      */
     public static int bytesToInt(byte b0, byte b1, byte b2, byte b3)
       {
@@ -71,9 +71,9 @@ public class ByteUtil
       }
 
     /**
-     * Converts a byte to an int.  The specified byte is the the low
-     * order (least significant) byte for the int and the three high
-     * order bytes are all zero.
+     * Converts a byte to an int.  The specified byte is the low-order
+     * (least significant) byte for the int and the three high-order bytes
+     * are all zero.
      */
     public static int byteToInt(byte b)
       {
@@ -83,8 +83,8 @@ public class ByteUtil
 
     /**
      * Converts a char to an array of 2 bytes.  The bytes in the return
-     * array are ordered with the byte at index 0 as the high order byte
-     * and the byte at index 1 as the low order byte.
+     * array are ordered with the byte at index 0 as the high-order byte
+     * and the byte at index 1 as the low-order byte.
      */
     public static byte[] charToBytes(char c)
       {
@@ -96,8 +96,8 @@ public class ByteUtil
 
     /**
      * Converts a short to an array of 2 bytes.  The bytes in the return
-     * array are ordered with the byte at index 0 as the high order byte
-     * and the byte at index 1 as the low order byte.
+     * array are ordered with the byte at index 0 as the high-order byte
+     * and the byte at index 1 as the low-order byte.
      */
     public static byte[] shortToBytes(short n)
       {
@@ -109,8 +109,8 @@ public class ByteUtil
 
     /**
      * Converts an int to an array of 4 bytes.  The bytes in the return
-     * array are ordered with the byte at index 0 as the high order byte
-     * and the byte at index 3 as the low order byte.
+     * array are ordered with the byte at index 0 as the high-order byte
+     * and the byte at index 3 as the low-order byte.
      */
     public static byte[] intToBytes(int n)
       {
@@ -123,7 +123,7 @@ public class ByteUtil
       }
 
     /**
-     * Returns the low order (least significant) byte of the specified integer.
+     * Returns the low-order (least significant) byte of the specified integer.
      */
     public static byte intToByte(int n)
       {
