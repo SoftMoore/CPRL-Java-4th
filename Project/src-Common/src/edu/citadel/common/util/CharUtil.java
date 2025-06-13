@@ -76,7 +76,7 @@ public class CharUtil
      *
      * @return The string for an escaped character.
      */
-    public static String unescapedChar(int ch)
+    public static String unescapeChar(int ch)
       {
         return switch (ch)
           {

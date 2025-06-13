@@ -84,7 +84,7 @@ public class Disassembler
 
                     c = readChar(codeFile);
                     if (CharUtil.isEscapeChar(c))
-                        out.print(CharUtil.unescapedChar(c));
+                        out.print(CharUtil.unescapeChar(c));
                     else
                         out.print(c);
 
@@ -102,7 +102,7 @@ public class Disassembler
                       {
                         c = readChar(codeFile);
                         if (CharUtil.isEscapeChar(c))
-                            out.print(CharUtil.unescapedChar(c));
+                            out.print(CharUtil.unescapeChar(c));
                         else
                             out.print(c);
                       }
