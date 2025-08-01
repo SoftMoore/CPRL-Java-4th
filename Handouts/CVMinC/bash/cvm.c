@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
     if (argc != 2)
         error(L"Usage: cvm filename\n");
 
-    // set locale based on environment (see https://sourceforge.net/p/predef/wiki/OperatingSystems/)
+// set locale based on environment
 #if defined(_WIN64) || defined(_WIN32)
     setlocale(LC_ALL, ".UTF-8");   // works for windows
 #elif defined(__linux__) || defined(__MACH__) || defined(__unix__)
@@ -168,31 +168,27 @@ int bytesToInt(byte b0, byte b1, byte b2, byte b3)
   }
 
 /**
- * Converts a wide char to an array of 2 bytes.  The bytes in the return
- * array are ordered with the byte at index 0 as the high order byte
+ * Converts a wide char to an array of 2 bytes.  The elements in array
+ * bytes are ordered with the byte at index 0 as the high order byte
  * and the byte at index 1 as the low order byte.
  */
-byte* charToBytes(wchar_t c)
+void charToBytes(wchar_t c, byte* bytes)
   {
-    byte* result = (byte*) malloc(2);
-    result[0] = (byte) ((c >> 8) & 0x00FF);
-    result[1] = (byte) ((c >> 0) & 0x00FF);
-    return result;
+    bytes[0] = (byte) ((c >> 8) & 0x00FF);
+    bytes[1] = (byte) ((c >> 0) & 0x00FF);
   }
 
 /**
- * Converts an int to an array of 4 bytes.  The bytes in the return
- * array are ordered with the byte at index 0 as the high order byte
+ * Converts an int to an array of 4 bytes.  The elements in array
+ * bytes are ordered with the byte at index 0 as the high order byte
  * and the byte at index 3 as the low order byte.
  */
-byte* intToBytes(int n)
+void intToBytes(int n, byte* bytes)
   {
-    byte* result = (byte*) malloc(4);
-    result[0] = (byte) ((n >> 24) & 0x000000FF);
-    result[1] = (byte) ((n >> 16) & 0x000000FF);
-    result[2] = (byte) ((n >> 8)  & 0x000000FF);
-    result[3] = (byte) ((n >> 0)  & 0x000000FF);
-    return result;
+    bytes[0] = (byte) ((n >> 24) & 0x000000FF);
+    bytes[1] = (byte) ((n >> 16) & 0x000000FF);
+    bytes[2] = (byte) ((n >> 8)  & 0x000000FF);
+    bytes[3] = (byte) ((n >> 0)  & 0x000000FF);
   }
 
 /**
@@ -238,7 +234,8 @@ void pushByte(byte b)
  */
 void pushChar(wchar_t c)
   {
-    byte* bytes = charToBytes(c);
+    byte bytes[2];
+    charToBytes(c, bytes);
     pushByte(bytes[0]);
     pushByte(bytes[1]);
   }
@@ -248,7 +245,8 @@ void pushChar(wchar_t c)
  */
 void pushInt(int n)
   {
-    byte* bytes = intToBytes(n);
+    byte bytes[4];
+    intToBytes(n, bytes);
     pushByte(bytes[0]);
     pushByte(bytes[1]);
     pushByte(bytes[2]);
@@ -324,7 +322,8 @@ int getWordAtAddr(int address)
  */
 void putCharToAddr(wchar_t value, int address)
   {
-    byte* bytes = charToBytes(value);
+    byte bytes[2];
+    charToBytes(value, bytes);
     memory[address + 0] = bytes[0];
     memory[address + 1] = bytes[1];
   }
@@ -335,7 +334,8 @@ void putCharToAddr(wchar_t value, int address)
  */
 void putIntToAddr(int value, int address)
   {
-    byte* bytes = intToBytes(value);
+    byte bytes[4];
+    intToBytes(value, bytes);
     memory[address + 0] = bytes[0];
     memory[address + 1] = bytes[1];
     memory[address + 2] = bytes[2];
