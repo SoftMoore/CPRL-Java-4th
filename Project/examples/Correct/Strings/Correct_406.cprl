@@ -10,6 +10,6 @@ proc main()
 
 proc writeName(n : Name)
   {
-    write "Hello, ", n, ".";
+    writeln "Hello, ", n, ".";
   }
 

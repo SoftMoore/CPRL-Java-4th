@@ -18,4 +18,5 @@ _writeName:
    PUTSTR 20
    LDCSTR "."
    PUTSTR 1
+   PUTEOL
    RET 44
