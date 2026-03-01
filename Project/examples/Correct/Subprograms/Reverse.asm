@@ -2,6 +2,7 @@
    HALT
 _main:
    CALL _reverse
+   PUTEOL
    RET 0
 _reverse:
    PROC 2

@@ -1,10 +1,11 @@
-// Enter the letters ABCDE (one at a time)
+// Enter the letters ABCDE
 // Output should be
 // EDCBA
 
 proc main()
   {
    reverse();
+   writeln;
   }
 
 proc reverse()
