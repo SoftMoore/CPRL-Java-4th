@@ -23,6 +23,9 @@ public class ConstDecl extends InitialDecl
         this.literal = literal;
       }
 
+    /**
+     * Returns the token containing the literal value for this constant declaration.
+     */
     public Token literal()
       {
         return literal;
