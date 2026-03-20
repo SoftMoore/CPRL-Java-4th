@@ -253,7 +253,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(initialDeclFollowers());
+            recover(EnumSet.of(Symbol.comma, Symbol.rightBrace, Symbol.semicolon));
           }
       }
 
