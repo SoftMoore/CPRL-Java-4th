@@ -324,7 +324,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.semicolon));
+            recover(EnumSet.of(Symbol.assign, Symbol.semicolon));
           }
       }
 
@@ -407,7 +407,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.semicolon));
+            recover(EnumSet.of(Symbol.assign, Symbol.semicolon));
           }
       }
 

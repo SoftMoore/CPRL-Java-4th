@@ -399,7 +399,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.semicolon));
+            recover(EnumSet.of(Symbol.assign, Symbol.semicolon));
             return new ArrayType("_", 0, Type.UNKNOWN);
           }
       }
@@ -516,7 +516,7 @@ public final class Parser
         catch (ParserException e)
           {
             errorHandler.reportError(e);
-            recover(EnumSet.of(Symbol.semicolon));
+            recover(EnumSet.of(Symbol.assign, Symbol.semicolon));
             return new StringType("_", 0);
           }
       }
