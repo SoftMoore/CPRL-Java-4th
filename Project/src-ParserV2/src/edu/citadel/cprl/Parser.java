@@ -320,7 +320,6 @@ public final class Parser
             match(Symbol.rightBracket);
             match(Symbol.ofRW);
             parseTypeName();
-
           }
         catch (ParserException e)
           {
