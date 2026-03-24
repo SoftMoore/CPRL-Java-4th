@@ -33,10 +33,7 @@ public final class SingleVarDecl extends InitialDecl implements VariableDecl
         this.scopeLevel  = scopeLevel;
       }
 
-    /**
-     * Returns the size (number of bytes) associated with this single variable
-     * declaration, which is simply the number of bytes associated with its type.
-     */
+    @Override
     public int size()
       {
         return type().size();
@@ -48,19 +45,13 @@ public final class SingleVarDecl extends InitialDecl implements VariableDecl
         return scopeLevel;
       }
 
-    /**
-     * Sets the relative address for this declaration. <br>
-     * Note: This method should be called before calling method relAddr().
-     */
+    @Override
     public void setRelAddr(int relAddr)
       {
         this.relAddr = relAddr;
       }
 
-    /**
-     * Returns the relative address (offset) associated with this single
-     * variable declaration.
-     */
+    @Override
     public int relAddr()
       {
         return relAddr;
@@ -211,7 +202,7 @@ public final class SingleVarDecl extends InitialDecl implements VariableDecl
                   {
                     // need to add padding only for strings
                     // initializer must be a constant value with string type
-                    var constValue = (ConstValue) initializers.get(j);
+                    var constValue = (ConstValue) fieldInitializer;
                     assert matchTypes(stringType, constValue);
 
                     if (stringType.size() > constValue.size())

@@ -25,11 +25,11 @@ public final class ParameterDecl extends Declaration implements VariableDecl
       }
 
     /**
-     * Returns the size (number of bytes) associated with this parameter
-     * declaration.  The size of a value parameter declaration is the number
-     * of bytes associated with its type.  For variable parameters, the
+     * The size of a value parameter declaration is the number of
+     * bytes associated with its type.  For variable parameters, the
      * size is the number of bytes needed for a memory address.
      */
+    @Override
     public int size()
       {
         return isVarParam ? Type.Address.size() : type().size();
@@ -41,18 +41,13 @@ public final class ParameterDecl extends Declaration implements VariableDecl
         return ScopeLevel.LOCAL;   // always LOCAL for a parameter
       }
 
-    /**
-     * Sets the relative address for this declaration. <br>
-     * Note: This method should be called before calling method relAddr().
-     */
+    @Override
     public void setRelAddr(int relAddr)
       {
         this.relAddr = relAddr;
       }
 
-    /**
-     * Returns the relative address (offset) associated with this parameter declaration.
-     */
+    @Override
     public int relAddr()
       {
         return relAddr;

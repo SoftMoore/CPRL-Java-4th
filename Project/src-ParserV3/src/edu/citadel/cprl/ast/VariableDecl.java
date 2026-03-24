@@ -26,8 +26,8 @@ public sealed interface VariableDecl permits SingleVarDecl, ParameterDecl
     public ScopeLevel scopeLevel();
 
     /**
-     * Sets the relative address (offset) of the variable
-     * declared with this declaration.
+     * Sets the relative address for this declaration.<br>
+     * Note: This method should be called before calling method relAddr().
      */
     public void setRelAddr(int relAddr);
 
