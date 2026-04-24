@@ -23,7 +23,7 @@ public class IfStmt extends Statement
      * "then" statement, and "else" statement (which can be null).
      *
      * @param booleanExpr The boolean expression that, if true, will result
-     *                    in the execution of the list of "then" statements.
+     *                    in the execution of the "then" statement.
      * @param thenStmt    The statement to be executed when the boolean
      *                    expression evaluates to true.
      * @param elseStmt    The statement to be executed when the boolean
