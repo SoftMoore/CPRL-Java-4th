@@ -26,7 +26,8 @@ public final class Scanner
      * Construct a scanner with its associated source file, number of
      * lookahead tokens, and error handler.
      */
-    public Scanner(File sourceFile, int k, ErrorHandler errorHandler) throws IOException
+    public Scanner(File sourceFile, int k, ErrorHandler errorHandler)
+        throws IOException
       {
         var fileReader = new FileReader(sourceFile, StandardCharsets.UTF_8);
         var reader = new BufferedReader(fileReader);

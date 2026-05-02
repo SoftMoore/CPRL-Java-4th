@@ -855,7 +855,7 @@ public final class Parser
                     if (scanner.lookahead(2).symbol() == Symbol.leftParen)
                         parseFunctionCallExpr();
                     else
-                        throw error("Identifier \"" + scanner.token()
+                        throw error("Identifier \"" + idStr
                                   + "\" has not been declared.");
                   }
               }

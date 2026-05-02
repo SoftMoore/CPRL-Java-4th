@@ -915,14 +915,15 @@ public final class Parser
                         var errorMsg = "Identifier \"" + idStr
                                      + "\" is not valid as an expression.";
 
-                        // special handling when procedure call is used as a function call
+                        // special error recovery when procedure call
+                        // is mistakenly used as a function call
                         if (idType == IdType.procedureId)
                           {
                             scanner.advance();
                             if (scanner.symbol() == Symbol.leftParen)
                               {
                                 scanner.advanceTo(Symbol.rightParen);
-                                scanner.advance();   // advance past the right paren
+                                scanner.advance();   // advance past right paren
                               }
                           }
 
@@ -935,7 +936,7 @@ public final class Parser
                     if (scanner.lookahead(2).symbol() == Symbol.leftParen)
                         parseFunctionCallExpr();
                     else
-                        throw error("Identifier \"" + scanner.token()
+                        throw error("Identifier \"" + idStr
                                   + "\" has not been declared.");
                   }
               }
