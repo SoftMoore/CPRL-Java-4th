@@ -96,7 +96,7 @@ public class Disassembler
                     // special case LDCSTR
                     out.print(opcodeAddrStr + ":  " + opcode);
                     // now print the string
-                    out.print("  \"");
+                    out.print(" \"");
                     var strLength = readInt(codeFile);
                     for (int i = 0; i < strLength; ++i)
                       {
