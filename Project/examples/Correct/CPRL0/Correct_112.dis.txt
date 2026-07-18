@@ -34,7 +34,7 @@
   89:  MOD
   90:  LDCINT0
   91:  BNE 24
-  96:  LDCSTR  "even"
+  96:  LDCSTR "even"
  109:  PUTSTR 4
  114:  PUTEOL
  115:  BR 61
@@ -44,11 +44,11 @@
  131:  MOD
  132:  LDCINT1
  133:  BNE 22
- 138:  LDCSTR  "odd"
+ 138:  LDCSTR "odd"
  149:  PUTSTR 3
  154:  PUTEOL
  155:  BR 21
- 160:  LDCSTR  "weird"
+ 160:  LDCSTR "weird"
  175:  PUTSTR 5
  180:  PUTEOL
  181:  LDGADDR 0

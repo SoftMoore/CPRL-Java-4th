@@ -27,7 +27,7 @@
   74:  STOREW
   75:  LDLADDR 8
   80:  CALL -58
-  85:  LDCSTR  "x = "
+  85:  LDCSTR "x = "
   98:  PUTSTR 4
  103:  LDLADDR 8
  108:  LOADW

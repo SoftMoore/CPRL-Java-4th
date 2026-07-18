@@ -9,7 +9,7 @@
   28:  LDCINT 254
   33:  LDCINT 255
   38:  STORE 24
-  43:  LDCSTR  "array: "
+  43:  LDCSTR "array: "
   62:  PUTSTR 7
   67:  LDLADDR 32
   72:  LDCINT0
@@ -26,7 +26,7 @@
  107:  ADD
  108:  LOADW
  109:  PUTINT
- 110:  LDCSTR  "  "
+ 110:  LDCSTR "  "
  119:  PUTSTR 2
  124:  LDLADDR 32
  129:  LDLADDR 32

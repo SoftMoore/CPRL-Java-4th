@@ -27,13 +27,13 @@
   82:  LOADW
   83:  LDCINT 6
   88:  BNE -75
-  93:  LDCSTR  "x = "
+  93:  LDCSTR "x = "
  106:  PUTSTR 4
  111:  LDGADDR 0
  116:  LOADW
  117:  PUTINT
  118:  PUTEOL
- 119:  LDCSTR  "y = "
+ 119:  LDCSTR "y = "
  132:  PUTSTR 4
  137:  LDGADDR 4
  142:  LOADW

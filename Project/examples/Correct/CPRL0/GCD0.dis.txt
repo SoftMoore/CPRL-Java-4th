@@ -1,11 +1,11 @@
    0:  PROGRAM 20
    5:  CALL 1
   10:  HALT
-  11:  LDCSTR  "Enter value for a (0 to exit):  "
+  11:  LDCSTR "Enter value for a (0 to exit):  "
   80:  PUTSTR 32
   85:  LDGADDR 0
   90:  GETINT
-  91:  LDCSTR  "a = "
+  91:  LDCSTR "a = "
  104:  PUTSTR 4
  109:  LDGADDR 0
  114:  LOADW
@@ -16,11 +16,11 @@
  123:  LOADW
  124:  LDCINT0
  125:  BE 290
- 130:  LDCSTR  "Enter value for b:  "
+ 130:  LDCSTR "Enter value for b:  "
  175:  PUTSTR 20
  180:  LDGADDR 4
  185:  GETINT
- 186:  LDCSTR  "b = "
+ 186:  LDCSTR "b = "
  199:  PUTSTR 4
  204:  LDGADDR 4
  209:  LOADW
@@ -72,17 +72,17 @@
  335:  LOADW
  336:  LDCINT0
  337:  BNE -55
- 342:  LDCSTR  "GCD("
+ 342:  LDCSTR "GCD("
  355:  PUTSTR 4
  360:  LDGADDR 0
  365:  LOADW
  366:  PUTINT
- 367:  LDCSTR  ", "
+ 367:  LDCSTR ", "
  376:  PUTSTR 2
  381:  LDGADDR 4
  386:  LOADW
  387:  PUTINT
- 388:  LDCSTR  ") = "
+ 388:  LDCSTR ") = "
  401:  PUTSTR 4
  406:  LDGADDR 8
  411:  LOADW
@@ -90,7 +90,7 @@
  413:  PUTEOL
  414:  PUTEOL
  415:  BR -409
- 420:  LDCSTR  "Done."
+ 420:  LDCSTR "Done."
  435:  PUTSTR 5
  440:  PUTEOL
  441:  RET0

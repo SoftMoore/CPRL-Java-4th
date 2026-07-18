@@ -1,11 +1,11 @@
    0:  PROGRAM 8
    5:  CALL 1
   10:  HALT
-  11:  LDCSTR  "Enter value for i: "
+  11:  LDCSTR "Enter value for i: "
   54:  PUTSTR 19
   59:  LDGADDR 0
   64:  GETINT
-  65:  LDCSTR  "Enter value for j: "
+  65:  LDCSTR "Enter value for j: "
  108:  PUTSTR 19
  113:  LDGADDR 4
  118:  GETINT
@@ -36,12 +36,12 @@
  203:  ADD
  204:  STOREW
  205:  BR -91
- 210:  LDCSTR  "i = "
+ 210:  LDCSTR "i = "
  223:  PUTSTR 4
  228:  LDGADDR 0
  233:  LOADW
  234:  PUTINT
- 235:  LDCSTR  ", j = "
+ 235:  LDCSTR ", j = "
  252:  PUTSTR 6
  257:  LDGADDR 4
  262:  LOADW

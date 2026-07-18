@@ -6,7 +6,7 @@
   21:  LDGADDR 0
   26:  LOADW
   27:  STOREW
-  28:  LDCSTR  "n = "
+  28:  LDCSTR "n = "
   41:  PUTSTR 4
   46:  LDLADDR 8
   51:  LOADW

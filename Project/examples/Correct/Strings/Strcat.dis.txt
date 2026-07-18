@@ -2,22 +2,22 @@
    5:  HALT
    6:  PROC 328
   11:  LDLADDR 8
-  16:  LDCSTR  "Hello, "
+  16:  LDCSTR "Hello, "
   35:  STORE 18
   40:  LDLADDR 172
-  45:  LDCSTR  "world."
+  45:  LDCSTR "world."
   62:  STORE 16
-  67:  LDCSTR  "\""
+  67:  LDCSTR "\""
   74:  PUTSTR 1
   79:  LDLADDR 8
   84:  LOAD 164
   89:  PUTSTR 80
-  94:  LDCSTR  "\" concatenated with \""
+  94:  LDCSTR "\" concatenated with \""
  141:  PUTSTR 21
  146:  LDLADDR 172
  151:  LOAD 164
  156:  PUTSTR 80
- 161:  LDCSTR  "\" is "
+ 161:  LDCSTR "\" is "
  176:  PUTSTR 5
  181:  LDLADDR 8
  186:  LDLADDR 172

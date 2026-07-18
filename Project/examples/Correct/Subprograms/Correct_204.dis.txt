@@ -6,7 +6,7 @@
   21:  LOADW
   22:  INC
   23:  STOREW
-  24:  LDCSTR  "during p:  n = "
+  24:  LDCSTR "during p:  n = "
   59:  PUTSTR 15
   64:  LDLADDR -4
   69:  LOADW
@@ -16,7 +16,7 @@
   73:  LDGADDR 0
   78:  LDCINT 5
   83:  STOREW
-  84:  LDCSTR  "before p:  n = "
+  84:  LDCSTR "before p:  n = "
  119:  PUTSTR 15
  124:  LDGADDR 0
  129:  LOADW
@@ -25,7 +25,7 @@
  132:  LDGADDR 0
  137:  LOADW
  138:  CALL -132
- 143:  LDCSTR  " after p:  n = "
+ 143:  LDCSTR " after p:  n = "
  178:  PUTSTR 15
  183:  LDGADDR 0
  188:  LOADW

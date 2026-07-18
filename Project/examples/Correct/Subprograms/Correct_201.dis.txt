@@ -8,7 +8,7 @@
   27:  LOADW
   28:  LOADW
   29:  PUTINT
-  30:  LDCSTR  "   "
+  30:  LDCSTR "   "
   41:  PUTSTR 3
   46:  LDLADDR -4
   51:  LOADW
@@ -17,7 +17,7 @@
   58:  LDGADDR 0
   63:  LOADW
   64:  PUTINT
-  65:  LDCSTR  "   "
+  65:  LDCSTR "   "
   76:  PUTSTR 3
   81:  LDLADDR -4
   86:  LOADW

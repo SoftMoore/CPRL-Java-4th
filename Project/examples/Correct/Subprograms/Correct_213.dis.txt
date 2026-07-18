@@ -26,12 +26,12 @@
   85:  LDLADDR 12
   90:  LOADW
   91:  CALL -90
-  96:  LDCSTR  "x = "
+  96:  LDCSTR "x = "
  109:  PUTSTR 4
  114:  LDLADDR 8
  119:  LOADW
  120:  PUTINT
- 121:  LDCSTR  ", y = "
+ 121:  LDCSTR ", y = "
  138:  PUTSTR 6
  143:  LDLADDR 12
  148:  LOADW
@@ -47,12 +47,12 @@
  178:  LDLADDR 12
  183:  LOADW
  184:  CALL -183
- 189:  LDCSTR  "x = "
+ 189:  LDCSTR "x = "
  202:  PUTSTR 4
  207:  LDLADDR 8
  212:  LOADW
  213:  PUTINT
- 214:  LDCSTR  ", y = "
+ 214:  LDCSTR ", y = "
  231:  PUTSTR 6
  236:  LDLADDR 12
  241:  LOADW

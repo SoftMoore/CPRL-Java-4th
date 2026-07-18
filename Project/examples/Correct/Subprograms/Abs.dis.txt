@@ -1,16 +1,16 @@
    0:  CALL 1
    5:  HALT
    6:  PROC 4
-  11:  LDCSTR  "Enter an integer: "
+  11:  LDCSTR "Enter an integer: "
   52:  PUTSTR 18
   57:  LDLADDR 8
   62:  GETINT
-  63:  LDCSTR  "abs("
+  63:  LDCSTR "abs("
   76:  PUTSTR 4
   81:  LDLADDR 8
   86:  LOADW
   87:  PUTINT
-  88:  LDCSTR  ") = "
+  88:  LDCSTR ") = "
  101:  PUTSTR 4
  106:  ALLOC 4
  111:  LDLADDR 8

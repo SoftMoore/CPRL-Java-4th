@@ -165,34 +165,34 @@
  536:  LOAD 12
  541:  CALL -274
  546:  BZ 50
- 551:  LDCSTR  " is a valid date."
+ 551:  LDCSTR " is a valid date."
  590:  PUTSTR 17
  595:  PUTEOL
  596:  BR 53
- 601:  LDCSTR  " is not a valid date."
+ 601:  LDCSTR " is not a valid date."
  648:  PUTSTR 21
  653:  PUTEOL
  654:  RET 12
- 659:  LDCSTR  "Date("
+ 659:  LDCSTR "Date("
  674:  PUTSTR 5
  679:  LDLADDR -12
  684:  LDCINT 8
  689:  ADD
  690:  LOADW
  691:  PUTINT
- 692:  LDCSTR  "-"
+ 692:  LDCSTR "-"
  699:  PUTSTR 1
  704:  LDLADDR -12
  709:  LDCINT 4
  714:  ADD
  715:  LOADW
  716:  PUTINT
- 717:  LDCSTR  "-"
+ 717:  LDCSTR "-"
  724:  PUTSTR 1
  729:  LDLADDR -12
  734:  LOADW
  735:  PUTINT
- 736:  LDCSTR  ")"
+ 736:  LDCSTR ")"
  743:  PUTSTR 1
  748:  RET 12
  753:  ALLOC 1
@@ -206,7 +206,7 @@
  785:  LOADW
  786:  LOAD 12
  791:  CALL -137
- 796:  LDCSTR  " is not a valid date."
+ 796:  LDCSTR " is not a valid date."
  843:  PUTSTR 21
  848:  PUTEOL
  849:  LDLADDR -4
@@ -298,7 +298,7 @@
 1127:  LOAD 12
 1132:  CALL -626
 1137:  PUTEOL
-1138:  LDCSTR  "Adding a day to "
+1138:  LDCSTR "Adding a day to "
 1175:  PUTSTR 16
 1180:  LDLADDR 8
 1185:  LOAD 12
@@ -306,7 +306,7 @@
 1195:  PUTEOL
 1196:  LDLADDR 8
 1201:  CALL -453
-1206:  LDCSTR  "New date is "
+1206:  LDCSTR "New date is "
 1235:  PUTSTR 12
 1240:  LDLADDR 8
 1245:  LOAD 12
@@ -326,7 +326,7 @@
 1291:  LDLADDR 20
 1296:  LDCINT 31
 1301:  STOREW
-1302:  LDCSTR  "Adding a day to "
+1302:  LDCSTR "Adding a day to "
 1339:  PUTSTR 16
 1344:  LDLADDR 20
 1349:  LOAD 12
@@ -334,14 +334,14 @@
 1359:  PUTEOL
 1360:  LDLADDR 20
 1365:  CALL -617
-1370:  LDCSTR  "New date is "
+1370:  LDCSTR "New date is "
 1399:  PUTSTR 12
 1404:  LDLADDR 20
 1409:  LOAD 12
 1414:  CALL -760
 1419:  PUTEOL
 1420:  PUTEOL
-1421:  LDCSTR  "Adding a day to "
+1421:  LDCSTR "Adding a day to "
 1458:  PUTSTR 16
 1463:  LDLADDR 32
 1468:  LOAD 12
@@ -349,7 +349,7 @@
 1478:  PUTEOL
 1479:  LDLADDR 32
 1484:  CALL -736
-1489:  LDCSTR  "New date is "
+1489:  LDCSTR "New date is "
 1518:  PUTSTR 12
 1523:  LDLADDR 32
 1528:  LOAD 12

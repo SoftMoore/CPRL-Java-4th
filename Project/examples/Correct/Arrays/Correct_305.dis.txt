@@ -25,7 +25,7 @@
   68:  ADD
   69:  LOADW
   70:  PUTINT
-  71:  LDCSTR  "  "
+  71:  LDCSTR "  "
   80:  PUTSTR 2
   85:  LDLADDR 8
   90:  LDLADDR 8
@@ -43,7 +43,7 @@
  126:  LDCINT 6
  131:  LDCINT 8
  136:  STORE 20
- 141:  LDCSTR  "    initial array: "
+ 141:  LDCSTR "    initial array: "
  184:  PUTSTR 19
  189:  LDLADDR 8
  194:  CALL -177
@@ -67,7 +67,7 @@
  256:  INC
  257:  STOREW
  258:  BR -57
- 263:  LDCSTR  "incremented array: "
+ 263:  LDCSTR "incremented array: "
  306:  PUTSTR 19
  311:  LDLADDR 8
  316:  CALL -299

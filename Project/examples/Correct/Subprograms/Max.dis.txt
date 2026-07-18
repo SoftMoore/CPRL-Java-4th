@@ -1,6 +1,6 @@
    0:  CALL 1
    5:  HALT
-   6:  LDCSTR  "max(51, 3) = "
+   6:  LDCSTR "max(51, 3) = "
   37:  PUTSTR 13
   42:  ALLOC 4
   47:  LDCINT 51
@@ -8,7 +8,7 @@
   57:  CALL 177
   62:  PUTINT
   63:  PUTEOL
-  64:  LDCSTR  "max(9, 9) = "
+  64:  LDCSTR "max(9, 9) = "
   93:  PUTSTR 12
   98:  ALLOC 4
  103:  LDCINT 9
@@ -16,7 +16,7 @@
  113:  CALL 121
  118:  PUTINT
  119:  PUTEOL
- 120:  LDCSTR  "max(-1, 7) = "
+ 120:  LDCSTR "max(-1, 7) = "
  151:  PUTSTR 13
  156:  ALLOC 4
  161:  LDCINT -1
@@ -24,7 +24,7 @@
  171:  CALL 63
  176:  PUTINT
  177:  PUTEOL
- 178:  LDCSTR  "max(-1, -5) = "
+ 178:  LDCSTR "max(-1, -5) = "
  211:  PUTSTR 14
  216:  ALLOC 4
  221:  LDCINT -1

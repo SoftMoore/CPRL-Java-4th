@@ -15,7 +15,7 @@
   44:  LOADW
   45:  LOAD2B
   46:  PUTCH
-  47:  LDCSTR  "   "
+  47:  LDCSTR "   "
   58:  PUTSTR 3
   63:  LDLADDR -4
   68:  LOADW
@@ -25,7 +25,7 @@
   78:  LOADW
   79:  LOAD2B
   80:  PUTCH
-  81:  LDCSTR  "   "
+  81:  LDCSTR "   "
   92:  PUTSTR 3
   97:  LDLADDR -4
  102:  LOADW

@@ -1,7 +1,7 @@
    0:  PROGRAM 13
    5:  CALL 1
   10:  HALT
-  11:  LDCSTR  "Enter x:  "
+  11:  LDCSTR "Enter x:  "
   36:  PUTSTR 10
   41:  LDGADDR 0
   46:  GETINT
@@ -57,20 +57,20 @@
  200:  LDCB0
  201:  NOT
  202:  BZ 29
- 207:  LDCSTR  "TRUE   "
+ 207:  LDCSTR "TRUE   "
  226:  PUTSTR 7
  231:  BR 26
- 236:  LDCSTR  "FALSE   "
+ 236:  LDCSTR "FALSE   "
  257:  PUTSTR 8
  262:  LDGADDR 0
  267:  LOADW
  268:  PUTINT
- 269:  LDCSTR  "   "
+ 269:  LDCSTR "   "
  280:  PUTSTR 3
  285:  LDGADDR 4
  290:  LOADW
  291:  PUTINT
- 292:  LDCSTR  "   "
+ 292:  LDCSTR "   "
  303:  PUTSTR 3
  308:  LDGADDR 8
  313:  LOADW

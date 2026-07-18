@@ -15,11 +15,11 @@
   50:  LDGADDR 4
   55:  LOADW
   56:  BGE 30
-  61:  LDCSTR  "n1 < n2"
+  61:  LDCSTR "n1 < n2"
   80:  PUTSTR 7
   85:  PUTEOL
   86:  BR 27
-  91:  LDCSTR  "n1 >= n2"
+  91:  LDCSTR "n1 >= n2"
  112:  PUTSTR 8
  117:  PUTEOL
  118:  LDGADDR 0

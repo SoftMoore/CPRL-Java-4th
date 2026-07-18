@@ -2,9 +2,9 @@
    5:  HALT
    6:  PROC 48
   11:  LDLADDR 8
-  16:  LDCSTR  "John"
+  16:  LDCSTR "John"
   29:  STORE 12
-  34:  LDCSTR  "Hello, "
+  34:  LDCSTR "Hello, "
   53:  PUTSTR 7
   58:  LDLADDR 8
   63:  LOAD 24
@@ -21,7 +21,7 @@
  110:  ADD
  111:  LDCCH 'a'
  114:  STORE2B
- 115:  LDCSTR  "Hello, "
+ 115:  LDCSTR "Hello, "
  134:  PUTSTR 7
  139:  LDLADDR 32
  144:  LOAD 24

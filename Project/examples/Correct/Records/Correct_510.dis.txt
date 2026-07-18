@@ -5,19 +5,19 @@
   16:  LDCINT0
   17:  LDCINT 5
   22:  STORE 8
-  27:  LDCSTR  "Range("
+  27:  LDCSTR "Range("
   44:  PUTSTR 6
   49:  LDLADDR 8
   54:  LOADW
   55:  PUTINT
-  56:  LDCSTR  ".."
+  56:  LDCSTR ".."
   65:  PUTSTR 2
   70:  LDLADDR 8
   75:  LDCINT 4
   80:  ADD
   81:  LOADW
   82:  PUTINT
-  83:  LDCSTR  ")"
+  83:  LDCSTR ")"
   90:  PUTSTR 1
   95:  PUTEOL
   96:  LDLADDR 16
@@ -34,7 +34,7 @@
  131:  LDLADDR 16
  136:  LOADW
  137:  PUTINT
- 138:  LDCSTR  "  "
+ 138:  LDCSTR "  "
  147:  PUTSTR 2
  152:  LDLADDR 16
  157:  LDLADDR 16

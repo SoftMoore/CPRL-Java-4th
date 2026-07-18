@@ -2,14 +2,14 @@
    5:  HALT
    6:  PROC 164
   11:  LDLADDR 8
-  16:  LDCSTR  "12345"
+  16:  LDCSTR "12345"
   31:  STORE 14
-  36:  LDCSTR  "Reversing \""
+  36:  LDCSTR "Reversing \""
   63:  PUTSTR 11
   68:  LDLADDR 8
   73:  LOAD 164
   78:  PUTSTR 80
-  83:  LDCSTR  "\": "
+  83:  LDCSTR "\": "
   94:  PUTSTR 3
   99:  LDLADDR 8
  104:  CALL 17

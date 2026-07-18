@@ -1,18 +1,18 @@
    0:  CALL 523
    5:  HALT
-   6:  LDCSTR  "Point("
+   6:  LDCSTR "Point("
   23:  PUTSTR 6
   28:  LDLADDR -8
   33:  LOADW
   34:  PUTINT
-  35:  LDCSTR  ", "
+  35:  LDCSTR ", "
   44:  PUTSTR 2
   49:  LDLADDR -8
   54:  LDCINT 4
   59:  ADD
   60:  LOADW
   61:  PUTINT
-  62:  LDCSTR  ")"
+  62:  LDCSTR ")"
   69:  PUTSTR 1
   74:  RET 8
   79:  LDLADDR -17
@@ -135,7 +135,7 @@
  452:  LOADW
  453:  LDCINT 9
  458:  BG 64
- 463:  LDCSTR  "   "
+ 463:  LDCSTR "   "
  474:  PUTSTR 3
  479:  LDLADDR -4
  484:  LOADW
@@ -177,7 +177,7 @@
  620:  LDCINT0
  621:  LDCINT -3
  626:  STORE 80
- 631:  LDCSTR  "initial array:"
+ 631:  LDCSTR "initial array:"
  664:  PUTSTR 14
  669:  PUTEOL
  670:  LDLADDR 12
@@ -185,7 +185,7 @@
  680:  PUTEOL
  681:  LDLADDR 12
  686:  CALL -519
- 691:  LDCSTR  "sorted array:"
+ 691:  LDCSTR "sorted array:"
  722:  PUTSTR 13
  727:  PUTEOL
  728:  LDLADDR 12

@@ -1,10 +1,10 @@
    0:  CALL 1
    5:  HALT
    6:  PROC 332
-  11:  LDCSTR  "Enter an empty string to exit."
+  11:  LDCSTR "Enter an empty string to exit."
   76:  PUTSTR 30
   81:  PUTEOL
-  82:  LDCSTR  "First string?   "
+  82:  LDCSTR "First string?   "
  119:  PUTSTR 16
  124:  LDLADDR 8
  129:  GETSTR 80
@@ -12,7 +12,7 @@
  139:  LOADW
  140:  LDCINT0
  141:  BE 339
- 146:  LDCSTR  "Second string?  "
+ 146:  LDCSTR "Second string?  "
  183:  PUTSTR 16
  188:  LDLADDR 172
  193:  GETSTR 80
@@ -31,7 +31,7 @@
  246:  LDLADDR 8
  251:  LOAD 164
  256:  PUTSTR 80
- 261:  LDCSTR  " is less than "
+ 261:  LDCSTR " is less than "
  294:  PUTSTR 14
  299:  LDLADDR 172
  304:  LOAD 164
@@ -45,7 +45,7 @@
  332:  LDLADDR 8
  337:  LOAD 164
  342:  PUTSTR 80
- 347:  LDCSTR  " is greater than "
+ 347:  LDCSTR " is greater than "
  386:  PUTSTR 17
  391:  LDLADDR 172
  396:  LOAD 164
@@ -55,7 +55,7 @@
  412:  LDLADDR 8
  417:  LOAD 164
  422:  PUTSTR 80
- 427:  LDCSTR  " is equal to "
+ 427:  LDCSTR " is equal to "
  458:  PUTSTR 13
  463:  LDLADDR 172
  468:  LOAD 164

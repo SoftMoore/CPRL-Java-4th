@@ -31,17 +31,17 @@
  110:  LDLADDR 44
  115:  CALL 129
  120:  STORE 36
- 125:  LDCSTR  "Matrix a"
+ 125:  LDCSTR "Matrix a"
  146:  PUTSTR 8
  151:  PUTEOL
  152:  LDLADDR 8
  157:  CALL 587
- 162:  LDCSTR  "Matrix b"
+ 162:  LDCSTR "Matrix b"
  183:  PUTSTR 8
  188:  PUTEOL
  189:  LDLADDR 44
  194:  CALL 550
- 199:  LDCSTR  "Matrix c (a*b)"
+ 199:  LDCSTR "Matrix c (a*b)"
  232:  PUTSTR 14
  237:  PUTEOL
  238:  LDLADDR 80

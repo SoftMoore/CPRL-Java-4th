@@ -23,7 +23,7 @@
   70:  LDLADDR 8
   75:  LDCINT 10
   80:  CALL -79
-  85:  LDCSTR  "n = "
+  85:  LDCSTR "n = "
   98:  PUTSTR 4
  103:  LDLADDR 8
  108:  LOADW

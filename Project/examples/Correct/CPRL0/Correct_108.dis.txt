@@ -1,20 +1,20 @@
    0:  PROGRAM 10
    5:  CALL 1
   10:  HALT
-  11:  LDCSTR  "Enter value for n1:  "
+  11:  LDCSTR "Enter value for n1:  "
   58:  PUTSTR 21
   63:  LDGADDR 2
   68:  GETINT
-  69:  LDCSTR  "Enter value for n2:  "
+  69:  LDCSTR "Enter value for n2:  "
  116:  PUTSTR 21
  121:  LDGADDR 6
  126:  GETINT
- 127:  LDCSTR  "n1 = "
+ 127:  LDCSTR "n1 = "
  142:  PUTSTR 5
  147:  LDGADDR 2
  152:  LOADW
  153:  PUTINT
- 154:  LDCSTR  ";  n2 = "
+ 154:  LDCSTR ";  n2 = "
  175:  PUTSTR 8
  180:  LDGADDR 6
  185:  LOADW
@@ -38,7 +38,7 @@
  231:  BR 1
  236:  LDCB0
  237:  STOREB
- 238:  LDCSTR  "b1 and b2 = "
+ 238:  LDCSTR "b1 and b2 = "
  267:  PUTSTR 12
  272:  LDGADDR 0
  277:  LOADB
@@ -48,14 +48,14 @@
  289:  LDGADDR 1
  294:  LOADB
  295:  BZ 24
- 300:  LDCSTR  "true"
+ 300:  LDCSTR "true"
  313:  PUTSTR 4
  318:  PUTEOL
  319:  BR 21
- 324:  LDCSTR  "false"
+ 324:  LDCSTR "false"
  339:  PUTSTR 5
  344:  PUTEOL
- 345:  LDCSTR  "b1 or  b2 = "
+ 345:  LDCSTR "b1 or  b2 = "
  374:  PUTSTR 12
  379:  LDGADDR 0
  384:  LOADB
@@ -65,11 +65,11 @@
  396:  LDGADDR 1
  401:  LOADB
  402:  BZ 24
- 407:  LDCSTR  "true"
+ 407:  LDCSTR "true"
  420:  PUTSTR 4
  425:  PUTEOL
  426:  BR 21
- 431:  LDCSTR  "false"
+ 431:  LDCSTR "false"
  446:  PUTSTR 5
  451:  PUTEOL
  452:  RET0

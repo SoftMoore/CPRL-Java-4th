@@ -2,9 +2,9 @@
    5:  HALT
    6:  PROC 44
   11:  LDLADDR 8
-  16:  LDCSTR  "Mary"
+  16:  LDCSTR "Mary"
   29:  STORE 12
-  34:  LDCSTR  "length of \"Mary\" = "
+  34:  LDCSTR "length of \"Mary\" = "
   77:  PUTSTR 19
   82:  LDLADDR 8
   87:  LOADW
@@ -27,7 +27,7 @@
  138:  ADD
  139:  LDCCH 'e'
  142:  STORE2B
- 143:  LDCSTR  "name changed to "
+ 143:  LDCSTR "name changed to "
  180:  PUTSTR 16
  185:  LDLADDR 8
  190:  LOAD 44

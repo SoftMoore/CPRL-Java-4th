@@ -7,7 +7,7 @@
   18:  LDGADDR 0
   23:  LOADW
   24:  PUTINT
-  25:  LDCSTR  "    "
+  25:  LDCSTR "    "
   38:  PUTSTR 4
   43:  LDGADDR 4
   48:  LDCINT1
@@ -29,7 +29,7 @@
   96:  BR 1
  101:  LDCB0
  102:  BZ 26
- 107:  LDCSTR  "ERROR"
+ 107:  LDCSTR "ERROR"
  122:  PUTSTR 5
  127:  PUTEOL
  128:  BR 8

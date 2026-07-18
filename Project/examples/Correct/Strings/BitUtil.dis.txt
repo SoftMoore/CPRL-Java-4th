@@ -1,6 +1,6 @@
    0:  PROGRAM 36
    5:  LDGADDR 0
-  10:  LDCSTR  "0123456789ABCDEF"
+  10:  LDCSTR "0123456789ABCDEF"
   47:  STORE 36
   52:  CALL 1
   57:  HALT
@@ -8,13 +8,13 @@
   63:  LDLADDR 8
   68:  LDCINT 111226127
   73:  STOREW
-  74:  LDCSTR  "i = "
+  74:  LDCSTR "i = "
   87:  PUTSTR 4
   92:  LDLADDR 8
   97:  LOADW
   98:  PUTINT
   99:  PUTEOL
- 100:  LDCSTR  "to binary string: "
+ 100:  LDCSTR "to binary string: "
  141:  PUTSTR 18
  146:  ALLOC 68
  151:  LDLADDR 8
@@ -22,7 +22,7 @@
  157:  CALL 76
  162:  PUTSTR 32
  167:  PUTEOL
- 168:  LDCSTR  "   to hex string: "
+ 168:  LDCSTR "   to hex string: "
  209:  PUTSTR 18
  214:  ALLOC 20
  219:  LDLADDR 8

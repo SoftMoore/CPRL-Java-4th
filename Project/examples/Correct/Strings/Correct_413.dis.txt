@@ -2,20 +2,20 @@
    5:  HALT
    6:  PROC 164
   11:  LDLADDR 8
-  16:  LDCSTR  "Jane"
+  16:  LDCSTR "Jane"
   29:  STORE 12
   34:  LDLADDR 8
-  39:  LDCSTR  " "
+  39:  LDCSTR " "
   46:  ALLOC 158
   51:  CALL 73
   56:  LDLADDR 8
-  61:  LDCSTR  "Doe"
+  61:  LDCSTR "Doe"
   72:  ALLOC 154
   77:  CALL 47
   82:  LDLADDR 8
   87:  LOAD 164
   92:  CALL 182
-  97:  LDCSTR  "John Doe"
+  97:  LDCSTR "John Doe"
  118:  ALLOC 144
  123:  CALL 151
  128:  RET0

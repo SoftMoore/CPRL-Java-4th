@@ -14,7 +14,7 @@
   37:  INC
   38:  STOREW
   39:  BR 49
-  44:  LDCSTR  "bounds check failed"
+  44:  LDCSTR "bounds check failed"
   87:  PUTSTR 19
   92:  PUTEOL
   93:  RET 8
@@ -25,7 +25,7 @@
  114:  LDLADDR 8
  119:  LDCINT 10
  124:  CALL -123
- 129:  LDCSTR  "n = "
+ 129:  LDCSTR "n = "
  142:  PUTSTR 4
  147:  LDLADDR 8
  152:  LOADW
@@ -37,7 +37,7 @@
  166:  LDLADDR 8
  171:  LDCINT 10
  176:  CALL -175
- 181:  LDCSTR  "n = "
+ 181:  LDCSTR "n = "
  194:  PUTSTR 4
  199:  LDLADDR 8
  204:  LOADW

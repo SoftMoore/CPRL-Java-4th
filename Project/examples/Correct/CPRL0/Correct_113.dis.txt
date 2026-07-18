@@ -32,11 +32,11 @@
   99:  BR 1
  104:  LDCB0
  105:  BZ 26
- 110:  LDCSTR  "valid"
+ 110:  LDCSTR "valid"
  125:  PUTSTR 5
  130:  PUTEOL
  131:  BR 29
- 136:  LDCSTR  "not valid"
+ 136:  LDCSTR "not valid"
  159:  PUTSTR 9
  164:  PUTEOL
  165:  LDGADDR 0
@@ -55,11 +55,11 @@
  206:  BR 1
  211:  LDCB0
  212:  BZ 34
- 217:  LDCSTR  "not valid"
+ 217:  LDCSTR "not valid"
  240:  PUTSTR 9
  245:  PUTEOL
  246:  BR 21
- 251:  LDCSTR  "valid"
+ 251:  LDCSTR "valid"
  266:  PUTSTR 5
  271:  PUTEOL
  272:  LDGADDR 4
@@ -78,11 +78,11 @@
  313:  BR 1
  318:  LDCB0
  319:  BZ 34
- 324:  LDCSTR  "not valid"
+ 324:  LDCSTR "not valid"
  347:  PUTSTR 9
  352:  PUTEOL
  353:  BR 21
- 358:  LDCSTR  "valid"
+ 358:  LDCSTR "valid"
  373:  PUTSTR 5
  378:  PUTEOL
  379:  LDGADDR 4
@@ -102,11 +102,11 @@
  421:  BR 1
  426:  LDCB0
  427:  BZ 34
- 432:  LDCSTR  "not valid"
+ 432:  LDCSTR "not valid"
  455:  PUTSTR 9
  460:  PUTEOL
  461:  BR 21
- 466:  LDCSTR  "valid"
+ 466:  LDCSTR "valid"
  481:  PUTSTR 5
  486:  PUTEOL
  487:  LDGADDR 0
@@ -125,11 +125,11 @@
  528:  BR 1
  533:  LDCB0
  534:  BZ 26
- 539:  LDCSTR  "valid"
+ 539:  LDCSTR "valid"
  554:  PUTSTR 5
  559:  PUTEOL
  560:  BR 29
- 565:  LDCSTR  "not valid"
+ 565:  LDCSTR "not valid"
  588:  PUTSTR 9
  593:  PUTEOL
  594:  LDGADDR 0
@@ -149,11 +149,11 @@
  636:  BR 1
  641:  LDCB0
  642:  BZ 26
- 647:  LDCSTR  "valid"
+ 647:  LDCSTR "valid"
  662:  PUTSTR 5
  667:  PUTEOL
  668:  BR 29
- 673:  LDCSTR  "not valid"
+ 673:  LDCSTR "not valid"
  696:  PUTSTR 9
  701:  PUTEOL
  702:  LDGADDR 4
@@ -172,11 +172,11 @@
  743:  BR 1
  748:  LDCB0
  749:  BZ 26
- 754:  LDCSTR  "valid"
+ 754:  LDCSTR "valid"
  769:  PUTSTR 5
  774:  PUTEOL
  775:  BR 29
- 780:  LDCSTR  "not valid"
+ 780:  LDCSTR "not valid"
  803:  PUTSTR 9
  808:  PUTEOL
  809:  LDGADDR 0
@@ -196,11 +196,11 @@
  851:  BR 1
  856:  LDCB0
  857:  BZ 34
- 862:  LDCSTR  "not valid"
+ 862:  LDCSTR "not valid"
  885:  PUTSTR 9
  890:  PUTEOL
  891:  BR 21
- 896:  LDCSTR  "valid"
+ 896:  LDCSTR "valid"
  911:  PUTSTR 5
  916:  PUTEOL
  917:  LDGADDR 8
@@ -222,11 +222,11 @@
  965:  BR 1
  970:  LDCB0
  971:  BZ 34
- 976:  LDCSTR  "not valid"
+ 976:  LDCSTR "not valid"
  999:  PUTSTR 9
 1004:  PUTEOL
 1005:  BR 21
-1010:  LDCSTR  "valid"
+1010:  LDCSTR "valid"
 1025:  PUTSTR 5
 1030:  PUTEOL
 1031:  LDGADDR 13
@@ -245,22 +245,22 @@
 1068:  BR 1
 1073:  LDCB0
 1074:  BZ 26
-1079:  LDCSTR  "valid"
+1079:  LDCSTR "valid"
 1094:  PUTSTR 5
 1099:  PUTEOL
 1100:  BR 29
-1105:  LDCSTR  "not valid"
+1105:  LDCSTR "not valid"
 1128:  PUTSTR 9
 1133:  PUTEOL
 1134:  LDGADDR 12
 1139:  LOADB
 1140:  NOT
 1141:  BZ 26
-1146:  LDCSTR  "valid"
+1146:  LDCSTR "valid"
 1161:  PUTSTR 5
 1166:  PUTEOL
 1167:  BR 29
-1172:  LDCSTR  "not valid"
+1172:  LDCSTR "not valid"
 1195:  PUTSTR 9
 1200:  PUTEOL
 1201:  RET0

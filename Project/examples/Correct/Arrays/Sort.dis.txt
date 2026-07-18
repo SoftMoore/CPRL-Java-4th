@@ -102,7 +102,7 @@
  285:  ADD
  286:  LOADW
  287:  PUTINT
- 288:  LDCSTR  "  "
+ 288:  LDCSTR "  "
  297:  PUTSTR 2
  302:  LDLADDR 8
  307:  LDLADDR 8
@@ -125,14 +125,14 @@
  368:  LDCINT 16
  373:  LDCINT 5
  378:  STORE 40
- 383:  LDCSTR  "initial array:"
+ 383:  LDCSTR "initial array:"
  416:  PUTSTR 14
  421:  PUTEOL
  422:  LDLADDR 8
  427:  CALL -193
  432:  LDLADDR 8
  437:  CALL -436
- 442:  LDCSTR  "sorted array:"
+ 442:  LDCSTR "sorted array:"
  473:  PUTSTR 13
  478:  PUTEOL
  479:  LDLADDR 8

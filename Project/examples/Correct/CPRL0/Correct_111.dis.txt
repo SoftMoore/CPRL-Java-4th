@@ -7,19 +7,19 @@
   26:  STOREW
   27:  CALL 1
   32:  HALT
-  33:  LDCSTR  "      x = "
+  33:  LDCSTR "      x = "
   58:  PUTSTR 10
   63:  LDGADDR 0
   68:  LOADW
   69:  PUTINT
   70:  PUTEOL
-  71:  LDCSTR  "      y = "
+  71:  LDCSTR "      y = "
   96:  PUTSTR 10
  101:  LDGADDR 4
  106:  LOADW
  107:  PUTINT
  108:  PUTEOL
- 109:  LDCSTR  "  x + y = "
+ 109:  LDCSTR "  x + y = "
  134:  PUTSTR 10
  139:  LDGADDR 0
  144:  LOADW
@@ -28,7 +28,7 @@
  151:  ADD
  152:  PUTINT
  153:  PUTEOL
- 154:  LDCSTR  "  x - y = "
+ 154:  LDCSTR "  x - y = "
  179:  PUTSTR 10
  184:  LDGADDR 0
  189:  LOADW
@@ -37,7 +37,7 @@
  196:  SUB
  197:  PUTINT
  198:  PUTEOL
- 199:  LDCSTR  "    x*y = "
+ 199:  LDCSTR "    x*y = "
  224:  PUTSTR 10
  229:  LDGADDR 0
  234:  LOADW
@@ -46,7 +46,7 @@
  241:  MUL
  242:  PUTINT
  243:  PUTEOL
- 244:  LDCSTR  "    x/y = "
+ 244:  LDCSTR "    x/y = "
  269:  PUTSTR 10
  274:  LDGADDR 0
  279:  LOADW
@@ -55,7 +55,7 @@
  286:  DIV
  287:  PUTINT
  288:  PUTEOL
- 289:  LDCSTR  "x mod y = "
+ 289:  LDCSTR "x mod y = "
  314:  PUTSTR 10
  319:  LDGADDR 0
  324:  LOADW

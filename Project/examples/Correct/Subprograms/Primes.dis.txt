@@ -58,11 +58,11 @@
  165:  LDLADDR 12
  170:  LDCINT0
  171:  STOREW
- 172:  LDCSTR  "Enter an upper bound for the list of primes: "
+ 172:  LDCSTR "Enter an upper bound for the list of primes: "
  267:  PUTSTR 45
  272:  LDLADDR 8
  277:  GETINT
- 278:  LDCSTR  "List of primes from 1 to "
+ 278:  LDCSTR "List of primes from 1 to "
  333:  PUTSTR 25
  338:  LDLADDR 8
  343:  LOADW
@@ -81,7 +81,7 @@
  380:  LOADW
  381:  CALL -380
  386:  BZ 53
- 391:  LDCSTR  "  "
+ 391:  LDCSTR "  "
  400:  PUTSTR 2
  405:  LDLADDR 16
  410:  LOADW

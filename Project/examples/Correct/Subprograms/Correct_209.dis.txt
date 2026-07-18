@@ -3,11 +3,11 @@
    6:  LDLADDR -1
   11:  LOADB
   12:  BZ 24
-  17:  LDCSTR  "true"
+  17:  LDCSTR "true"
   30:  PUTSTR 4
   35:  PUTEOL
   36:  BR 21
-  41:  LDCSTR  "false"
+  41:  LDCSTR "false"
   56:  PUTSTR 5
   61:  PUTEOL
   62:  RET 1

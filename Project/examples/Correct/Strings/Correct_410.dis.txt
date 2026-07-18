@@ -1,7 +1,7 @@
    0:  CALL 25
    5:  HALT
    6:  LDLADDR -24
-  11:  LDCSTR  "Gaby"
+  11:  LDCSTR "Gaby"
   24:  STORE 12
   29:  RET0
   30:  PROC 24

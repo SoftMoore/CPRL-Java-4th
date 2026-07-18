@@ -8,7 +8,7 @@
   23:  LDLADDR 8
   28:  LDCINT 12
   33:  STOREW
-  34:  LDCSTR  "n = "
+  34:  LDCSTR "n = "
   47:  PUTSTR 4
   52:  LDLADDR 8
   57:  LOADW
@@ -18,14 +18,14 @@
   65:  LDCINT 5
   70:  STOREW
   71:  RET0
-  72:  LDCSTR  "x = "
+  72:  LDCSTR "x = "
   85:  PUTSTR 4
   90:  LDGADDR 0
   95:  LOADW
   96:  PUTINT
   97:  PUTEOL
   98:  CALL -85
- 103:  LDCSTR  "x = "
+ 103:  LDCSTR "x = "
  116:  PUTSTR 4
  121:  LDGADDR 0
  126:  LOADW

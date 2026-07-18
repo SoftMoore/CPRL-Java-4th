@@ -5,11 +5,11 @@
   16:  ALLOC 40
   21:  CALL 110
   26:  STORE 40
-  31:  LDCSTR  "array: "
+  31:  LDCSTR "array: "
   50:  PUTSTR 7
   55:  LDLADDR 8
   60:  CALL 157
-  65:  LDCSTR  "max value in array is "
+  65:  LDCSTR "max value in array is "
  114:  PUTSTR 22
  119:  ALLOC 4
  124:  LDLADDR 8
@@ -51,7 +51,7 @@
  268:  ADD
  269:  LOADW
  270:  PUTINT
- 271:  LDCSTR  "  "
+ 271:  LDCSTR "  "
  280:  PUTSTR 2
  285:  LDLADDR 8
  290:  LDLADDR 8

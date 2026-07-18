@@ -2,7 +2,7 @@
    5:  HALT
    6:  PROC 44
   11:  LDLADDR 8
-  16:  LDCSTR  "John"
+  16:  LDCSTR "John"
   29:  STORE 12
   34:  LDLADDR 8
   39:  LOAD 44

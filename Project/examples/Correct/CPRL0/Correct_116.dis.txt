@@ -13,7 +13,7 @@
   36:  LOADW
   37:  LDCINT 6
   42:  BNE -29
-  47:  LDCSTR  "x = "
+  47:  LDCSTR "x = "
   60:  PUTSTR 4
   65:  LDGADDR 0
   70:  LOADW

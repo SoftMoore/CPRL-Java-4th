@@ -1,7 +1,7 @@
    0:  CALL 1
    5:  HALT
    6:  PROC 4
-  11:  LDCSTR  "Enter number of disks to be moved:  "
+  11:  LDCSTR "Enter number of disks to be moved:  "
   88:  PUTSTR 36
   93:  LDLADDR 8
   98:  GETINT
@@ -26,12 +26,12 @@
  151:  LDLADDR -4
  156:  LOAD2B
  157:  CALL -42
- 162:  LDCSTR  "Move a disk from "
+ 162:  LDCSTR "Move a disk from "
  201:  PUTSTR 17
  206:  LDLADDR -6
  211:  LOAD2B
  212:  PUTCH
- 213:  LDCSTR  " to "
+ 213:  LDCSTR " to "
  226:  PUTSTR 4
  231:  LDLADDR -4
  236:  LOAD2B

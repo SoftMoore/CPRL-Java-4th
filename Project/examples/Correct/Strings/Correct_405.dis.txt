@@ -2,12 +2,12 @@
    5:  HALT
    6:  PROC 88
   11:  LDLADDR 8
-  16:  LDCSTR  "Moe"
+  16:  LDCSTR "Moe"
   27:  STORE 10
   32:  LDLADDR 52
-  37:  LDCSTR  "Larry"
+  37:  LDCSTR "Larry"
   52:  STORE 14
-  57:  LDCSTR  "name2 = "
+  57:  LDCSTR "name2 = "
   78:  PUTSTR 8
   83:  LDLADDR 52
   88:  LOAD 44
@@ -17,7 +17,7 @@
  104:  LDLADDR 8
  109:  LOAD 44
  114:  STORE 44
- 119:  LDCSTR  "name2 = "
+ 119:  LDCSTR "name2 = "
  140:  PUTSTR 8
  145:  LDLADDR 52
  150:  LOAD 44

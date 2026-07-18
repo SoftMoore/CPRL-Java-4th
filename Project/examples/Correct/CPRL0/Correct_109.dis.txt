@@ -14,7 +14,7 @@
   37:  LDCINT 6
   42:  BE 5
   47:  BR -34
-  52:  LDCSTR  "x = "
+  52:  LDCSTR "x = "
   65:  PUTSTR 4
   70:  LDGADDR 0
   75:  LOADW

@@ -10,7 +10,7 @@
   33:  LDGADDR 8
   38:  LDCINT 2
   43:  STOREW
-  44:  LDCSTR  " left-associative: "
+  44:  LDCSTR " left-associative: "
   87:  PUTSTR 19
   92:  LDGADDR 0
   97:  LOADW
@@ -22,7 +22,7 @@
  111:  SUB
  112:  PUTINT
  113:  PUTEOL
- 114:  LDCSTR  "right-associative: "
+ 114:  LDCSTR "right-associative: "
  157:  PUTSTR 19
  162:  LDGADDR 0
  167:  LOADW
@@ -34,7 +34,7 @@
  181:  SUB
  182:  PUTINT
  183:  PUTEOL
- 184:  LDCSTR  "             cprl: "
+ 184:  LDCSTR "             cprl: "
  227:  PUTSTR 19
  232:  LDGADDR 0
  237:  LOADW
@@ -47,7 +47,7 @@
  252:  PUTINT
  253:  PUTEOL
  254:  PUTEOL
- 255:  LDCSTR  " left-associative: "
+ 255:  LDCSTR " left-associative: "
  298:  PUTSTR 19
  303:  LDGADDR 0
  308:  LOADW
@@ -59,7 +59,7 @@
  322:  DIV
  323:  PUTINT
  324:  PUTEOL
- 325:  LDCSTR  "right-associative: "
+ 325:  LDCSTR "right-associative: "
  368:  PUTSTR 19
  373:  LDGADDR 0
  378:  LOADW
@@ -71,7 +71,7 @@
  392:  DIV
  393:  PUTINT
  394:  PUTEOL
- 395:  LDCSTR  "             cprl: "
+ 395:  LDCSTR "             cprl: "
  438:  PUTSTR 19
  443:  LDGADDR 0
  448:  LOADW

@@ -17,11 +17,11 @@
   52:  LDGADDR 4
   57:  LOADB
   58:  BZ 42
-  63:  LDCSTR  "not (x <= 10)"
+  63:  LDCSTR "not (x <= 10)"
   94:  PUTSTR 13
   99:  PUTEOL
  100:  BR 25
- 105:  LDCSTR  "x <= 10"
+ 105:  LDCSTR "x <= 10"
  124:  PUTSTR 7
  129:  PUTEOL
  130:  RET0

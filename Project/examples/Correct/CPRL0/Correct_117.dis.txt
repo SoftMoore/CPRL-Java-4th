@@ -1,7 +1,7 @@
    0:  PROGRAM 4
    5:  CALL 1
   10:  HALT
-  11:  LDCSTR  "Enter value for x: "
+  11:  LDCSTR "Enter value for x: "
   54:  PUTSTR 19
   59:  LDGADDR 0
   64:  GETINT

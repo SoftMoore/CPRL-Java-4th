@@ -13,7 +13,7 @@
   52:  LDCINT 16
   57:  LDCINT 5
   62:  STORE 40
-  67:  LDCSTR  "initial array:"
+  67:  LDCSTR "initial array:"
  100:  PUTSTR 14
  105:  PUTEOL
  106:  LDLADDR 12
@@ -22,7 +22,7 @@
  121:  LDCINT0
  122:  LDCINT 9
  127:  CALL 48
- 132:  LDCSTR  "sorted array:"
+ 132:  LDCSTR "sorted array:"
  163:  PUTSTR 13
  168:  PUTEOL
  169:  LDLADDR 12
@@ -185,7 +185,7 @@
  634:  ADD
  635:  LOADW
  636:  PUTINT
- 637:  LDCSTR  "  "
+ 637:  LDCSTR "  "
  646:  PUTSTR 2
  651:  LDLADDR 8
  656:  LDLADDR 8

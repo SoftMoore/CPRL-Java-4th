@@ -8,7 +8,7 @@
   23:  LDLADDR 8
   28:  LOADB
   29:  PUTBYTE
-  30:  LDCSTR  "   "
+  30:  LDCSTR "   "
   41:  PUTSTR 3
   46:  RET0
   47:  LDGADDR 0
