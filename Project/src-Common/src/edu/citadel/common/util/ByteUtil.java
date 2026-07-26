@@ -147,6 +147,6 @@ public class ByteUtil
     public static char intToChar(int n)
       {
         byte[] intBytes = intToBytes(n); 
-        return bytesToChar(intBytes[0], intBytes[1]);
+        return bytesToChar(intBytes[2], intBytes[3]);
       }
   }
