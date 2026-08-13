@@ -48,6 +48,7 @@ FunctionCallExpr.java
 * FunctionDecl.java
 IfStmt.java
 InitialDecl.java
+Initializer.java
 LogicalExpr.java
 * LoopStmt.java
 * MultiplyingExpr.java
