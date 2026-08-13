@@ -709,7 +709,7 @@ void negate()
     pushInt(-operand1);
   }
 
-void not()
+void logicalNot()
   {
     byte operand = popByte();
     pushByte(operand == FALSE ? TRUE : FALSE);
@@ -925,7 +925,7 @@ void printMemory()
             ++memAddr;
             byte0 = memory[memAddr++];
             byte1 = memory[memAddr++];
-            printf(" %c\n", bytesToChar(byte0, byte1));
+            printf(" \'%c\'\n", bytesToChar(byte0, byte1));
 
           }
         else if (opcode == LDCSTR)
@@ -1041,7 +1041,7 @@ void run()
             case MOD:      modulo();               break;
             case MUL:      multiply();             break;
             case NEG:      negate();               break;
-            case NOT:      not();                  break;
+            case NOT:      logicalNot();           break;
             case PROC:     procedure();            break;
             case PROGRAM:  program();              break;
             case PUTBYTE:  putByte();              break;
