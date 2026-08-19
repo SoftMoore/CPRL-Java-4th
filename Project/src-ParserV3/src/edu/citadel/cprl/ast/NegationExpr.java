@@ -9,8 +9,8 @@ import edu.citadel.cprl.Type;
 
 /**
  * The abstract syntax tree node for a negation expression.  A negation
- * expression is a unary expression where the operator is either "-" or "~".
- * A simple example would be "-x".
+ * expression is a unary expression where the operand has type Integer
+ * and the operator is "-".  A simple example would be "-x".
  */
 public class NegationExpr extends UnaryExpr
   {
@@ -21,7 +21,7 @@ public class NegationExpr extends UnaryExpr
       {
         super(operator, operand);
         setType(Type.Integer);
-        assert operator.symbol() == Symbol.minus || operator.symbol() == Symbol.bitwiseNot;
+        assert operator.symbol() == Symbol.minus;
       }
 
     @Override
